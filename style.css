@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+
+header {
+  background: transparent;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-bottom: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: calc(100% - 12rem);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .logo {
+  background-color: red;
+}
+
+/* main */
+
+/* first-content */
+main .first-content img {
+  width: 100%;
+  height: 100%;
+}
+
+main .first-content .first-content-details {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+/* layout 1 */
+main .first-content-layout {
+  display: flex;
+  margin: 3rem 12rem 3rem 12rem;
+}
+
+main .first-content-layout .content-layout-left,
+main .first-content-layout .content-layout-right {
+  flex: 1;
+  padding: 2rem;
+}
+
+main .first-content-layout img {
+  width: 100%;
+}
+
+main .first-content-layout .content-layout-left {
+  background-color: bisque;
+}
+
+main .first-content-layout .content-layout-right {
+  background-color: aliceblue;
+}
+
+/* layout 2 */
+main .second-content-layout {
+  display: flex;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+main .second-content-layout .content-layout-left,
+main .second-content-layout .content-layout-center,
+main .second-content-layout .content-layout-right {
+  flex: 1;
+  padding: 3rem;
+}
+
+main .second-content-layout img {
+  width: 100%;
+}
+
+main .second-content-layout .content-layout-left {
+  background-color: bisque;
+}
+
+main .second-content-layout .content-layout-center {
+  background-color:cadetblue;
+}
+
+main .second-content-layout .content-layout-right {
+  background-color: aliceblue;
+}
+
+/* footer */
