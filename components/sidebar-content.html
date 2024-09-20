@@ -1,0 +1,266 @@
+<style>
+    .fullbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      background-color: rgba(205, 205, 205, 0.7);
+      display: none;
+      z-index: 998;
+    }
+  
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -55%;
+      border-radius: 2rem 0 0 2rem;
+      width: 55%;
+      height: 100%;
+      background: #ffffff;
+      transition: right 0.3s ease;
+      z-index: 999;
+      overflow-y: auto;
+      -webkit-border-radius: 2rem 0 0 2rem;
+      -moz-border-radius: 2rem 0 0 2rem;
+      -ms-border-radius: 2rem 0 0 2rem;
+      -o-border-radius: 2rem 0 0 2rem;
+      -webkit-transition: right 0.3s ease;
+      -moz-transition: right 0.3s ease;
+      -ms-transition: right 0.3s ease;
+      -o-transition: right 0.3s ease;
+    }
+  
+    .fullbar.show {
+      display: block;
+    }
+  
+    .sidebar.show {
+      right: 0;
+      animation: slide-in 0.5s forwards;
+      -webkit-animation: slide-in 0.5s forwards;
+    }
+  
+    .sidebar:not(.show) {
+      animation: slide-out 0.5s forwards;
+      -webkit-animation: slide-out 0.5s forwards;
+    }
+  
+    @keyframes slide-in {
+      from {
+        right: -55%;
+      }
+      to {
+        right: 0%;
+      }
+    }
+  
+    @keyframes slide-out {
+      from {
+        right: 0%;
+      }
+      to {
+        right: -55%;
+      }
+    }
+  
+    .close {
+      background-color: transparent;
+      border: none;
+      position: fixed;
+      cursor: pointer;
+    }
+  
+    .close .material-icons {
+      background-color: transparent;
+      color: #333;
+      font-size: 3rem;
+      font-weight: 900;
+      padding: 1rem;
+      cursor: pointer;
+    }
+  
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hr-top {
+      background-color: #000000;
+      height: 0.1rem;
+      margin-top: 1.5rem;
+      padding: 0;
+      width: 60%;
+    }
+  
+    .main-sidebar {
+      padding: 0 4rem;
+    }
+  
+    .information-content {
+      margin: 0;
+      padding: 0 0 0 9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .content-lists {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .content-lists .list {
+      padding-left: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .content-lists .list img {
+      object-fit: cover;
+      width: 5rem;
+      height: 5rem;
+    }
+  
+    .content-lists .list .list-text {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .list-text h1 {
+      margin: 0;
+    }
+  
+    .footer-sidebar {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .footer-sidebar .heading h1 {
+      text-align: center;
+      margin: 1rem 0 0 0;
+    }
+  
+    .footer-sidebar .name {
+      display: flex;
+      flex-direction: row;
+      gap: 4rem;
+      margin-bottom: 2rem;
+    }
+  
+    .footer-sidebar .footer-logo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+  
+  <div class="fullbar">
+    <div class="sidebar">
+      <button class="close" id="close-sidebar">
+        <span class="material-icons"> close </span>
+      </button>
+      <div class="top">
+        <img
+          src="../assets/magazine/LifeWear-Magazine.png"
+          alt="LifeWear-Magazine"
+        />
+      </div>
+      <hr class="hr-top" />
+      <div class="main-sidebar">
+        <div class="information">
+          <h1>Information</h1>
+          <div class="information-content">
+            <a href="">
+              <img src="../assets/magazine/Magazine-Book.png" alt="" />
+            </a>
+            <p>
+              LifeWear adalah pakaian yang dirancang untuk membuat kehidupan
+              setiap orang menjadi lebih baik. Pakaian esensial yang simpel dan
+              berkualitas tinggi dengan nuansa keindahan serta keterampilan dalam
+              setiap detailnya. Didesain dan terus dikembangkan untuk memenuhi
+              kebutuhan hidup setiap orang
+            </p>
+          </div>
+        </div>
+        <div class="content-lists">
+          <h1>Content List</h1>
+          <div class="list">
+            <a href="">
+              <img src="../assets/sidebar/Dummy_Content_List.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru</p>
+            </div>
+          </div>
+          <div class="list">
+            <a href="">
+              <img src="../assets/sidebar/Dummy_Content_List.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru</p>
+            </div>
+          </div>
+          <div class="list">
+            <a href="">
+              <img src="../assets/sidebar/Dummy_Content_List.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru</p>
+            </div>
+          </div>
+          <div class="list">
+            <a href="">
+              <img src="../assets/sidebar/Dummy_Content_List.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru</p>
+            </div>
+          </div>
+          <div class="list">
+            <a href="">
+              <img src="../assets/sidebar/Dummy_Content_List.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-sidebar">
+        <div class="heading">
+          <h1>Life Wear Magazine</h1>
+        </div>
+        <div class="name">
+          <p>Bovilius Meidi (535230014)</p>
+          <p>Hans Thobie Sachio (535230135)</p>
+          <p>Aldian Yohanes (535230139)</p>
+        </div>
+  
+        <div class="footer-logo">
+          <img src="../assets/logo/Logo_1.png" alt="" />
+          <img src="../assets/logo/Logo_2.png" alt="" />
+          <img src="../assets/logo/Logo_3.png" alt="" />
+          <img src="../assets/logo/Logo_4.png" alt="" />
+          <img src="../assets/logo/Logo_5.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
