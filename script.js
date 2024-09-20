@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    // fetch data sidebar
+    $(".sidebar-container").load("components/sidebar.html", function () {
+        $("#close-sidebar").click(function () {
+            $(".sidebar").removeClass("show");
+            setTimeout(() => {
+                $(".fullbar").removeClass("show");
+            }, 500);
+        });
+    });
+
     // menu
     $('.menu').click(function () {
         $('.sidebar').addClass('show');
@@ -6,38 +16,38 @@ $(document).ready(function () {
         $('header').addClass('index');
     })
 
-    $('.close').click(function () {
+    $('#close-sidebar').click(function () {
         $('.sidebar').removeClass('show');
         setTimeout(() => {
             $('.fullbar').removeClass('show');
-        }, 500); 
+        }, 500);
     })
 
     // nav animation
     const $header = $('header');
     const $firstAnimation = $('.first-animation');
 
-    const firstAnimationHeight = $firstAnimation.outerHeight();
+    const firstAnimationHeight = $firstAnimation.outerHeight() - 10;
 
     let lastKnownScrollPosition = 0;
     let ticking = false;
 
     function toggleHeaderVisibility(scrollPos) {
-        if (scrollPos > firstAnimationHeight) {
+        if (scrollPos >= firstAnimationHeight) {
             $header.addClass('show');
         } else {
             $header.removeClass('show');
         }
     }
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         const currentScrollPosition = $(this).scrollTop();
         const isScrollingDown = currentScrollPosition > lastKnownScrollPosition;
 
         lastKnownScrollPosition = currentScrollPosition;
 
         if (!ticking) {
-            window.requestAnimationFrame(function() {
+            window.requestAnimationFrame(function () {
                 toggleHeaderVisibility(currentScrollPosition, isScrollingDown);
                 ticking = false;
             });
@@ -46,6 +56,13 @@ $(document).ready(function () {
     });
 
     // scroll magazine
+    const url = [
+        "contents/what-is-lifeware-magazine.html",
+        "contents/what-is-lifeware-magazine.html",
+        "contents/what-is-lifeware-magazine.html",
+        "contents/what-is-lifeware-magazine.html",
+    ]
+
     const images = [
         "assets/magazine/Magazine_1.png",
         "assets/magazine/Magazine_2.png",
@@ -63,6 +80,7 @@ $(document).ready(function () {
     let currentIndex = 0;
 
     function updateContent(index) {
+        $('.animation').attr('href', url[index]);
         $('#animation-img').attr('src', images[index]);
         $('#animation-text').text(texts[index]);
 
@@ -83,9 +101,7 @@ $(document).ready(function () {
     setInterval(() => {
         currentIndex = (currentIndex + 1) % images.length;
         updateContent(currentIndex);
-    }, 5000); 
+    }, 5000);
 
     updateContent(currentIndex);
 });
-
-
