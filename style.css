@@ -164,7 +164,7 @@ from{
 }
 
 .main-sidebar{
-  padding: 0 2rem;
+  padding: 0 4rem;
 }
 
 .information-content{
@@ -190,8 +190,8 @@ from{
 
 .content-lists .list img {
   object-fit: cover;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .content-lists .list .list-text{
