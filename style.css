@@ -7,65 +7,6 @@ body {
   padding: 0;
 }
 
-/* header */
-
-header {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 0.5rem;
-  transition: transform 0.3s ease;
-  display: none;
-}
-
-header.index {
-  z-index: 0;
-}
-
-/* header scroll show */
-header.show {
-  display: flex;
-  animation: popup 2s ease-out;
-  -webkit-animation: popup 2s ease-out;
-}
-/* finish header scroll show */
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-header nav .logo {
-  background-color: transparent;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-}
-
-header nav .logo img {
-  width: 3rem;
-  height: auto;
-}
-
-header nav .menu {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-header nav .menu .material-icons {
-  font-size: 36px;
-  color: #333;
-}
 
 /* main */
 

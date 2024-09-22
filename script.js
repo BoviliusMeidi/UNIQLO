@@ -1,59 +1,6 @@
 $(document).ready(function () {
-    // fetch data sidebar
-    $(".sidebar-container").load("components/sidebar.html", function () {
-        $("#close-sidebar").click(function () {
-            $(".sidebar").removeClass("show");
-            setTimeout(() => {
-                $(".fullbar").removeClass("show");
-            }, 500);
-        });
-    });
-
-    // menu
-    $('.menu').click(function () {
-        $('.sidebar').addClass('show');
-        $('.fullbar').addClass('show');
-        $('header').addClass('index');
-    })
-
-    $('#close-sidebar').click(function () {
-        $('.sidebar').removeClass('show');
-        setTimeout(() => {
-            $('.fullbar').removeClass('show');
-        }, 500);
-    })
-
-    // nav animation
-    const $header = $('header');
-    const $firstAnimation = $('.first-animation');
-
-    const firstAnimationHeight = $firstAnimation.outerHeight() - 10;
-
-    let lastKnownScrollPosition = 0;
-    let ticking = false;
-
-    function toggleHeaderVisibility(scrollPos) {
-        if (scrollPos >= firstAnimationHeight) {
-            $header.addClass('show');
-        } else {
-            $header.removeClass('show');
-        }
-    }
-
-    $(window).on('scroll', function () {
-        const currentScrollPosition = $(this).scrollTop();
-        const isScrollingDown = currentScrollPosition > lastKnownScrollPosition;
-
-        lastKnownScrollPosition = currentScrollPosition;
-
-        if (!ticking) {
-            window.requestAnimationFrame(function () {
-                toggleHeaderVisibility(currentScrollPosition, isScrollingDown);
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+    // fetch data header
+    $('.header-container').load('components/header.html');
 
     // scroll magazine
     const url = [
