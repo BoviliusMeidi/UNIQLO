@@ -7,9 +7,7 @@ body {
   padding: 0;
 }
 
-
 /* main */
-
 /* first-animation */
 main .first-animation {
   display: flex;
@@ -178,71 +176,4 @@ main .first-animation img {
   color: #333;
   margin: 0 2rem;
 }
-
 /* finish */
-
-/* first-content */
-main .first-content img {
-  width: 100%;
-  height: 100%;
-}
-
-main .first-content .first-content-details {
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-/* layout 1 */
-main .first-content-layout {
-  display: flex;
-  margin: 3rem 12rem 3rem 12rem;
-}
-
-main .first-content-layout .content-layout-left,
-main .first-content-layout .content-layout-right {
-  flex: 1;
-  padding: 2rem;
-}
-
-main .first-content-layout img {
-  width: 100%;
-}
-
-main .first-content-layout .content-layout-left {
-  background-color: bisque;
-}
-
-main .first-content-layout .content-layout-right {
-  background-color: aliceblue;
-}
-
-/* layout 2 */
-main .second-content-layout {
-  display: flex;
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
-main .second-content-layout .content-layout-left,
-main .second-content-layout .content-layout-center,
-main .second-content-layout .content-layout-right {
-  flex: 1;
-  padding: 3rem;
-}
-
-main .second-content-layout img {
-  width: 100%;
-}
-
-main .second-content-layout .content-layout-left {
-  background-color: bisque;
-}
-
-main .second-content-layout .content-layout-center {
-  background-color: cadetblue;
-}
-
-main .second-content-layout .content-layout-right {
-  background-color: aliceblue;
-}
-
