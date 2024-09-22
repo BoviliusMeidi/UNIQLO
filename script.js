@@ -5,7 +5,7 @@ $(document).ready(function () {
     // scroll magazine
     const url = [
         "contents/what-is-lifeware-magazine.html",
-        "contents/what-is-lifeware-magazine.html",
+        "contents/what-are-timeless-tone.html",
         "contents/what-is-lifeware-magazine.html",
         "contents/what-is-lifeware-magazine.html",
     ]
@@ -18,8 +18,8 @@ $(document).ready(function () {
     ];
 
     const texts = [
-        "What is LifeWear Magazine",
-        "The Future of Fashion",
+        "What is LifeWear Magazine?",
+        "What Are Timeless Tone?",
         "Sustainability and Style",
         "Comfort in Every Season"
     ];
