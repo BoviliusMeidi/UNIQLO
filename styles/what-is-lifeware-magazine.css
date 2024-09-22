@@ -1,69 +1,6 @@
-/* header */
-
-header {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-header.index {
-  z-index: 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-header nav .logo {
-  background-color: transparent;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-}
-
-header nav .logo img {
-  width: 3rem;
-  height: auto;
-}
-
-header nav .menu {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-header nav .menu .material-icons {
-  font-size: 36px;
-  color: #333;
-}
-
-main .img-header {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-/* img */
-main img {
-  width: 12rem;
-  object-fit: cover;
-}
-
 /* first page */
 .first-page {
-  height: 90vh;
+  height: 85vh;
   padding: 2rem 12rem 0;
   display: flex;
   flex-direction: column;
@@ -124,27 +61,95 @@ main img {
   align-items: center;
 }
 
-.second-page .content-section .text #up-text {
-  padding-left: 10rem;
+.second-page .content-section #down-content-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
+.second-page .content-section .text #up-text {
+  padding-left: 22rem;
+}
+
+.second-page .content-section .text #down-text{
+  padding-right: 14rem;
+}
+
+/* TODO */
 .second-page .content-section .text .link {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  justify-content: center;
+  align-self: flex-start;
+  height: 4rem;
+  gap: 1.5rem;
 }
 
-.second-page .content-section .image img {
+.second-page .content-section .text .link .readmore{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF0012;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.7rem;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+}
+
+.second-page .content-section .text .link .readmore a{
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.second-page .content-section .text .link a{
+  text-decoration: underline;
+  color: #000000;
+  font-weight: bold;
+}
+
+.second-page .content-section .text .link a #magazine-b, .second-page .content-section .text .link a i{
+  font-size: 1.5rem;
+}
+
+.second-page .content-section .text .link .instagram{
+  margin-top: 0.3rem;
+}
+
+.second-page .content-section #up-image img {
   object-fit: cover;
-  width: 24rem;
+  width: 20rem;
 }
 
-.second-page .content-section .image {
-  /* position: absolute; */
+.second-page .content-section #up-image p{
+  font-size: 0.8rem;
+}
 
-  /* top: 2rem; */
-  /* right: 2rem; */
-  z-index: 3;
+.second-page .content-section #down-image img {
+  object-fit: cover;
+  width: 16rem;
+}
+
+.second-page .content-section #down-image p{
+  margin: 0.1rem;
+}
+
+.second-page #first-content{
+  position: absolute;
+  top: 2rem;
+  right: 14rem;
+
+}
+
+.second-page #second-content{
+  position: absolute;
+  top: 15rem;
 }
 
 .second-page .content-section #up-image p {

@@ -19,16 +19,9 @@
     />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/" class="logo">
-          <img src="../assets/logo/Logo_7.png" alt="UNIQLO-Logo" />
-        </a>
-        <button class="menu">
-          <span class="material-icons"> menu </span>
-        </button>
-      </nav>
-    </header>
+    <!-- header -->
+    <header class="header-container"></header>
+    <!-- finish header -->
 
     <!-- sidebar -->
     <div class="sidebar-container"></div>
@@ -100,7 +93,7 @@
         </div>
       </div>
       <div class="second-page">
-        <div class="content-section">
+        <div class="content-section" id="first-content">
           <div class="text">
             <p id="up-text">
               The illustrations for this “Timeless Tone” cover and tutorial are
@@ -117,7 +110,7 @@
             <p>Artwork by Hanna Peterson and The Poster Club</p>
           </div>
         </div>
-        <div class="content-section">
+        <div class="content-section" id="second-content">
           <div class="image" id="down-image">
             <p>Magazine B x UNIQLO Special Issue!</p>
             <img
@@ -125,8 +118,8 @@
               alt=""
             />
           </div>
-          <div class="text">
-            <p>
+          <div class="text" id="down-content-text">
+            <p id="down-text">
               B Magazine is a documentary magazine from South Korea that
               introduces one brand in each issue, and selects “well-balanced
               brands” from around the world. Celebrating our fortieth
@@ -137,26 +130,28 @@
               mid-September, see the page below for more details.
             </p>
             <div class="link">
-                <div class="readmore">
-                    <p>Read more</p>
-                </div>
+              <div class="readmore">
+                <a href="https://en.magazine-b.com/"> Read more </a>
+              </div>
+              <div class="instagram">
                 <a href="">
-                    <i class="fab fa-instagram"></i>
+                  <i class="fab fa-instagram"></i>
                 </a>
+              </div>
+              <div class="tag">
                 <a href="">
-                    <p>@magazine.b</p>
+                  <p id="magazine-b">@magazine.b</p>
                 </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
+    <!-- footer -->
     <footer class="footer-container"></footer>
+    <!-- finish footer -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script>
-      $(".footer-container").load("../components/footer-content.html");
-    </script>
-    <script src="../scripts/sidebar-content.js"></script>
+    <script src="../scripts/components-script.js"></script>
   </body>
 </html>
