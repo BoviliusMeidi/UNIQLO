@@ -1,0 +1,152 @@
+/* first page */
+
+.first-page {
+  height: 100vh;
+  margin: 0 16rem;
+}
+
+.first-page #first-section {
+  justify-content: end;
+  align-items: end;
+}
+
+.first-page #second-section {
+  gap: 4rem;
+}
+
+.first-page .row-section #direction-90 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 0;
+  font-size: 2.4rem;
+  color: rgba(0, 0, 0, 0.5);
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+
+.first-page #first-section .column-section {
+  justify-content: end;
+  align-self: end;
+  margin-right: 6.6rem;
+}
+
+.first-page .row-section .column-section h1 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.first-page .row-section .column-section h1:first-child {
+  margin-bottom: 1rem;
+}
+
+.first-page #only-p {
+  margin: 0.5rem 16rem 0 0;
+}
+
+.first-page #second-section img {
+  width: 14rem;
+  object-fit: cover;
+}
+
+.first-page #second-section .column-section img {
+  width: 36rem;
+  height: 13rem;
+}
+
+/* end first page */
+
+/* second page */
+
+.second-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  margin: 2rem 16rem;
+  gap: 6rem;
+}
+
+.second-page .left-up-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.second-page .left-up-section #direction-90 {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  transform: rotate(180deg);
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.second-page .left-up-section img,
+.second-page .right-section img {
+  width: 22rem;
+}
+
+.second-page .left-up-section .caption-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.second-page .left-up-section .caption-image p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.second-page .right-section{
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+}
+
+/* end second page */
+
+/* section */
+
+.column-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-section {
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  text-align: justify;
+}
+
+.list-price, .list-left{
+    margin: 2rem 0;
+}
+
+.list-price p {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.list-left p {
+  text-align: left;
+}
+
+.list-right p {
+  text-align: right;
+}

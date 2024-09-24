@@ -6,21 +6,21 @@ $(document).ready(function () {
     const url = [
         "contents/what-is-lifeware-magazine.html",
         "contents/what-are-timeless-tone.html",
-        "contents/what-is-lifeware-magazine.html",
+        "contents/edinburgh-old-city-new-style.html",
         "contents/what-is-lifeware-magazine.html",
     ]
 
     const images = [
         "assets/magazine/Magazine_1.png",
         "assets/magazine/Magazine_2.png",
-        "assets/magazine/Magazine_1.png",
+        "assets/magazine/Magazine_3.png",
         "assets/magazine/Magazine_2.png"
     ];
 
     const texts = [
         "What is LifeWear Magazine?",
         "What Are Timeless Tone?",
-        "Sustainability and Style",
+        "Edinburgh: Old City, New Style",
         "Comfort in Every Season"
     ];
 
