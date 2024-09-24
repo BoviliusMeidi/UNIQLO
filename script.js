@@ -14,14 +14,23 @@ $(document).ready(function () {
         "assets/magazine/Magazine_1.png",
         "assets/magazine/Magazine_2.png",
         "assets/magazine/Magazine_3.png",
-        "assets/magazine/Magazine_2.png"
+        "assets/magazine/Magazine_4.png",
+        "assets/magazine/Magazine_5.png",
+        "assets/magazine/Magazine_6.png",
+        "assets/magazine/Magazine_7.png",
+        "assets/magazine/Magazine_8.png",
     ];
 
     const texts = [
         "What is LifeWear Magazine?",
         "What Are Timeless Tone?",
         "Edinburgh: Old City, New Style",
-        "Comfort in Every Season"
+        "The Playful Pairs",
+        "Coziness and Comfort in Stockholm",
+        "The Ins and Out of Easy Wear",
+        "Kagawa: Timeless Modern",
+        "Unique Clothing",
+
     ];
 
     let currentIndex = 0;
