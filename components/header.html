@@ -10,7 +10,7 @@
     z-index: 1000;
     padding: 0.5rem;
     transition: transform 0.3s ease;
-    display: none;
+    display: block; /*TODO: CHange */
   }
 
   header.index {
@@ -58,6 +58,22 @@
     font-size: 36px;
     color: #333;
   }
+
+  @media (max-width: 364px) {
+    .img-header img {
+      width: 40%;
+    }
+
+    header nav .logo img {
+      width: 2rem;
+      height: auto;
+    }
+
+    header nav .menu .material-icons {
+      font-size: 2rem;
+      color: #333;
+    }
+  }
 </style>
 
 <header>
@@ -104,27 +120,27 @@
     }
   });
 
-   // fetch data sidebar
-   $(".sidebar-container").load("components/sidebar.html", function () {
-        $("#close-sidebar").click(function () {
-            $(".sidebar").removeClass("show");
-            setTimeout(() => {
-                $(".fullbar").removeClass("show");
-            }, 500);
-        });
+  // fetch data sidebar
+  $(".sidebar-container").load("components/sidebar.html", function () {
+    $("#close-sidebar").click(function () {
+      $(".sidebar").removeClass("show");
+      setTimeout(() => {
+        $(".fullbar").removeClass("show");
+      }, 500);
     });
+  });
 
-    // menu
-    $('.menu').click(function () {
-        $('.sidebar').addClass('show');
-        $('.fullbar').addClass('show');
-        $('header').addClass('index');
-    })
+  // menu
+  $(".menu").click(function () {
+    $(".sidebar").addClass("show");
+    $(".fullbar").addClass("show");
+    $("header").addClass("index");
+  });
 
-    $('#close-sidebar').click(function () {
-        $('.sidebar').removeClass('show');
-        setTimeout(() => {
-            $('.fullbar').removeClass('show');
-        }, 500);
-    });
+  $("#close-sidebar").click(function () {
+    $(".sidebar").removeClass("show");
+    setTimeout(() => {
+      $(".fullbar").removeClass("show");
+    }, 500);
+  });
 </script>

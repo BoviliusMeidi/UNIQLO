@@ -59,6 +59,22 @@
     width: 12rem;
     object-fit: cover;
   }
+
+  @media (max-width: 364px) {
+    .img-header img {
+      width: 40%;
+    }
+
+    header nav .logo img {
+      width: 2rem;
+      height: auto;
+    }
+
+    header nav .menu .material-icons {
+      font-size: 2rem;
+      color: #333;
+    }
+  }
 </style>
 
 <header>
@@ -73,26 +89,29 @@
 </header>
 
 <script>
-    $(".sidebar-container").load("../components/sidebar-content.html", function () {
-    $("#close-sidebar").click(function () {
+  $(".sidebar-container").load(
+    "../components/sidebar-content.html",
+    function () {
+      $("#close-sidebar").click(function () {
         $(".sidebar").removeClass("show");
         setTimeout(() => {
-            $(".fullbar").removeClass("show");
+          $(".fullbar").removeClass("show");
         }, 500);
-    });
-});
+      });
+    }
+  );
 
-// menu
-$('.menu').click(function () {
-    $('.sidebar').addClass('show');
-    $('.fullbar').addClass('show');
-    $('header').addClass('index');
-})
+  // menu
+  $(".menu").click(function () {
+    $(".sidebar").addClass("show");
+    $(".fullbar").addClass("show");
+    $("header").addClass("index");
+  });
 
-$('#close-sidebar').click(function () {
-    $('.sidebar').removeClass('show');
+  $("#close-sidebar").click(function () {
+    $(".sidebar").removeClass("show");
     setTimeout(() => {
-        $('.fullbar').removeClass('show');
+      $(".fullbar").removeClass("show");
     }, 500);
-})
+  });
 </script>
