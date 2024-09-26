@@ -26,9 +26,9 @@
 
 .first-page #content-section-2 {
   position: absolute;
-  top: 20rem;
-  left: 10rem;
-  right: 8rem;
+  top: 40%;
+  left: 10%;
+  right: 8%;
 }
 
 /* end first page */
@@ -41,15 +41,15 @@
 
 .second-page #content-section-3 {
   position: absolute;
-  right: 24rem;
-  left: 14rem;
+  right: 24%;
+  left: 14%;
 }
 
 .second-page #content-section-4 {
   position: absolute;
-  top: 18rem;
-  left: 26rem;
-  right: 18rem;
+  top: 35%;
+  left: 26%;
+  right: 18%;
 }
 
 /* end second page */
@@ -62,15 +62,15 @@
 
 .third-page #content-section-5 {
   position: absolute;
-  right: 20rem;
-  left: 20rem;
+  right: 25%;
+  left: 15%;
 }
 
 .third-page #content-section-6 {
   position: absolute;
-  top: 16rem;
-  left: 10rem;
-  right: 45rem;
+  top: 35%;
+  left: 8%;
+  right: 50%;
   display: flex;
   gap: 0rem;
   flex-direction: column;
@@ -79,9 +79,9 @@
 .third-page #content-section-7 {
   position: absolute;
   display: flex;
-  top: 10rem;
-  left: 52rem;
-  right: 5rem;
+  top: 10%;
+  left: 52%;
+  right: 5%;
   gap: 0rem;
   flex-direction: column;
 }
@@ -176,3 +176,163 @@
 }
 
 /* finish text section */
+
+@media (max-width: 1080px) {
+  .first-page {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .img-header img {
+    width: 40%;
+  }
+
+  .first-page .text {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-page .text h1 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 1.6rem;
+  }
+
+  .first-page .text p {
+    text-align: center;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .first-page #content-section-2 {
+    position: static;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* second page */
+  .second-page {
+    position: static;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+  }
+
+  .second-page #content-section-3 {
+    position: static;
+    right: 24%;
+    left: 14%;
+  }
+
+  .second-page #content-section-4 {
+    position: static;
+    top: 35%;
+    left: 26%;
+    right: 18%;
+  }
+
+  /* end second page */
+
+  /* third page */
+  .third-page {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: static;
+    height: 100%;
+  }
+
+  .third-page #content-section-5 {
+    position: static;
+  }
+
+  .third-page #content-section-6 {
+    position: static;
+    display: flex;
+    gap: 0rem;
+    flex-direction: column;
+  }
+
+  .third-page #content-section-7 {
+    position: static;
+    display: flex;
+    gap: 0rem;
+    flex-direction: column;
+  }
+
+  /* end third page */
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .text-section h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-section p{
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .readmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7rem;
+    margin-top: 0.7rem;
+    background-color: #ff0000;
+    width: 12rem;
+    height: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+  }
+
+  .up-section h3 {
+    display: flex;
+    align-self: self-end;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .down-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    margin-left: 0;
+  }
+
+  #image-1 {
+    object-fit: cover;
+    width: 45%;
+  }
+  
+  #image-2, #image-3, #image-4, #image-5, #image-6, #image-7 {
+    object-fit: cover;
+    height: 100%;
+    width: 20%;
+  }
+}
