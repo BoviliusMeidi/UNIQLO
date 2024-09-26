@@ -61,7 +61,7 @@
   align-items: center;
 }
 
-.second-page .content-section #down-content-text{
+.second-page .content-section #down-content-text {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -72,11 +72,10 @@
   padding-left: 22rem;
 }
 
-.second-page .content-section .text #down-text{
+.second-page .content-section .text #down-text {
   padding-right: 14rem;
 }
 
-/* TODO */
 .second-page .content-section .text .link {
   display: flex;
   flex-direction: row;
@@ -86,12 +85,12 @@
   gap: 1.5rem;
 }
 
-.second-page .content-section .text .link .readmore{
+.second-page .content-section .text .link .readmore {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #FF0012;
+  background-color: #ff0012;
   width: 10rem;
   height: 2rem;
   border-radius: 0.7rem;
@@ -102,23 +101,24 @@
   -o-border-radius: 0.7rem;
 }
 
-.second-page .content-section .text .link .readmore a{
+.second-page .content-section .text .link .readmore a {
   text-decoration: none;
   color: #000000;
   font-weight: bold;
 }
 
-.second-page .content-section .text .link a{
+.second-page .content-section .text .link a {
   text-decoration: underline;
   color: #000000;
   font-weight: bold;
 }
 
-.second-page .content-section .text .link a #magazine-b, .second-page .content-section .text .link a i{
+.second-page .content-section .text .link a #magazine-b,
+.second-page .content-section .text .link a i {
   font-size: 1.5rem;
 }
 
-.second-page .content-section .text .link .instagram{
+.second-page .content-section .text .link .instagram {
   margin-top: 0.3rem;
 }
 
@@ -127,7 +127,7 @@
   width: 20rem;
 }
 
-.second-page .content-section #up-image p{
+.second-page .content-section #up-image p {
   font-size: 0.8rem;
 }
 
@@ -136,18 +136,17 @@
   width: 16rem;
 }
 
-.second-page .content-section #down-image p{
+.second-page .content-section #down-image p {
   margin: 0.1rem;
 }
 
-.second-page #first-content{
+.second-page #first-content {
   position: absolute;
   top: 2rem;
   right: 14rem;
-
 }
 
-.second-page #second-content{
+.second-page #second-content {
   position: absolute;
   top: 15rem;
 }
@@ -171,4 +170,157 @@
 
 .content-section .text p:first-child {
   margin-top: 0;
+}
+
+@media (max-width: 1080px) {
+  .img-header img {
+    width: 40%;
+  }
+  /* first page */
+  .first-page {
+    height: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .first-page .content-section .text .up-text img {
+    width: 12rem;
+  }
+
+  .first-page .content-section .video img {
+    width: 18rem;
+    height: 10rem;
+  }
+
+  .first-page .content-section .image {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-page .content-section .image img {
+    object-fit: cover;
+    width: 10rem;
+  }
+
+  .first-page .content-section .image p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  /* end first page */
+
+  /* second page */
+  .second-page {
+    position: static;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .second-page .content-section .text #up-text, .second-page .content-section .text #down-text {
+    padding: 0 2rem;
+  }
+
+  .second-page .content-section .text .link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: flex-start;
+    height: 2rem;
+    gap: 1rem;
+  }
+
+  .second-page .content-section .text .link .readmore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0012;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 0.7rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+  }
+
+  .second-page .content-section .text .link .readmore a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .second-page .content-section .text .link a {
+    text-decoration: underline;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .second-page .content-section .text .link a #magazine-b,
+  .second-page .content-section .text .link a i {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .second-page .content-section .text .link .instagram, .second-page .content-section .text .link .tag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-page .content-section #up-image, .second-page .content-section #down-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .second-page .content-section #up-image img, .second-page .content-section #down-image img {
+    object-fit: cover;
+    width: 50%;
+  }
+
+  .second-page .content-section #up-image p {
+    font-size: 0.8rem;
+  }
+
+  .second-page .content-section #down-image p {
+    margin: 0.1rem;
+  }
+
+  .second-page #first-content, .second-page #second-content {
+    position: static;
+  }
+
+  .second-page .content-section #up-image p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  /* end second page */
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .content-section .text p {
+    text-align: justify;
+    font-size: 0.9rem;
+  }
+
+  .content-section .text p:first-child {
+    margin-top: 0;
+  }
 }
