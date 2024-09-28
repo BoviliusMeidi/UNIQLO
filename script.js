@@ -7,7 +7,7 @@ $(document).ready(function () {
         "contents/what-is-lifeware-magazine.html",
         "contents/what-are-timeless-tone.html",
         "contents/edinburgh-old-city-new-style.html",
-        "contents/what-is-lifeware-magazine.html",
+        "contents/the-playful-pairs.html",
     ]
 
     const images = [
