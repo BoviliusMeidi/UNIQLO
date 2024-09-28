@@ -119,27 +119,63 @@
 .second-page .up-section .right-section {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Agar teks berada di tengah vertikal */
-  align-items: center; /* Agar teks berada di tengah secara horizontal */
+  justify-content: center; 
+  align-items: center; 
   text-align: justify;
-  max-width: 50%; /* Batasi lebar teks agar tidak terlalu melebar */
+  max-width: 50%; 
 }
 
 .second-page .up-section .right-section h1 {
-  margin-bottom: 1rem; /* Tambahkan jarak antara judul dan isi */
+  margin-bottom: 1rem;
   font-size: 2rem;
-  text-align: center; /* Agar judul berada di tengah */
+  text-align: center; 
 }
 
 .second-page .up-section .right-section p {
   font-size: 1rem;
   line-height: 1.5;
-  text-align: justify; /* Buat paragraf justify */
+  text-align: justify; 
   max-width: 100%;
 }
 
 /* end second page */
 
+/* third page */
+/* .third-page {
+  height: 100vh;
+  margin: 0 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-page #third-row-section {
+  gap: 3rem;
+}
+
+.third-page .row-section #third-first-section,
+.third-page .row-section #third-second-section,
+.third-page .row-section #third-third-section {
+  width: 24rem;
+}
+
+.third-page .row-section .column-section .list-price {
+  margin: 0;
+}
+
+.third-page .row-section .column-section img {
+  width: 18rem;
+  /* height: 24rem; */
+  /* object-fit: cover;
+}
+
+.third-page .row-section .column-section p {
+  margin: 0;
+}
+ */ 
+
+
+/* end third page */
 .list-price,
 .list-left {
   margin: 0.5rem 0;
