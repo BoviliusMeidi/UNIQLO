@@ -87,11 +87,10 @@
 
 .second-page {
   height: 100vh;
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: start;
-  margin: 2rem 16rem;
+  align-items: center;
+  margin: 6rem 16rem;
   gap: 5rem;
 }
 
@@ -100,6 +99,7 @@
   flex-direction: row;
   justify-content: left;
   align-self: left; 
+  gap: 4rem;
 }
 
 .second-page .up-section .left-section {
@@ -111,23 +111,42 @@
 
 .second-page .up-section .left-section img {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 2rem;
   width: 25rem;
+  margin-left: 5rem;
 }
 
-.second-page #second-section .column-section img {
-  width: 45rem;
-  height: 45vh;
+.second-page .up-section .right-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* Agar teks berada di tengah vertikal */
+  align-items: center; /* Agar teks berada di tengah secara horizontal */
+  text-align: justify;
+  max-width: 50%; /* Batasi lebar teks agar tidak terlalu melebar */
 }
 
-/* .second-page .up-section .right-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
+.second-page .up-section .right-section h1 {
+  margin-bottom: 1rem; /* Tambahkan jarak antara judul dan isi */
+  font-size: 2rem;
+  text-align: center; /* Agar judul berada di tengah */
+}
+
+.second-page .up-section .right-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify; /* Buat paragraf justify */
+  max-width: 100%;
+}
 
 /* end second page */
+
+.list-price,
+.list-left {
+  margin: 0.5rem 0;
+}
+
+.list-price p {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 0;
+}
