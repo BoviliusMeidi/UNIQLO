@@ -84,9 +84,8 @@
 /* end first page */
 
 /* second page */
-
 .second-page {
-  height: 100vh;
+  height: 80vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -191,6 +190,62 @@
 }
 /* end third page */
 
+/* fourth page */
+.fourth-page {
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 16rem;
+  gap: 5rem;
+}
+
+.fourth-page .up-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.fourth-page .up-section .left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: justify;
+  max-width: 50%; 
+}
+
+.fourth-page .up-section .left-section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.fourth-page .up-section .left-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify; 
+  max-width: 95%;
+}
+
+
+.fourth-page .up-section .right-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-self: right;
+}
+
+.fourth-page .up-section .right-section img {
+  display: flex;
+  margin-top: 2rem;
+  width: 25rem;
+  margin-left: 5rem;
+}
+/* end fourth page */
+
 /* fifth page */
 .fifth-page {
   height: 105vh;
@@ -242,6 +297,74 @@
   max-width: 95%;
 }
 /* end fifth page */
+
+/* third page */
+.sixth-page {
+  height: 105vh;
+  margin: 0 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: flex-start; 
+}
+
+.sixth-page #third-row-section {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 2rem; 
+}
+
+.sixth-page .column-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sixth-page .row-section #third-first-section,
+.sixth-page .row-section #third-second-section,
+.sixth-page .row-section #third-third-section {
+  width: 24rem; 
+}
+
+.sixth-page .column-section img {
+  width: 23rem;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem; 
+}
+
+.sixth-page .column-section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.sixth-page .column-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 18rem;
+  max-width: 95%;
+}
+
+/* .sixth-page .column-section #direction-90 {
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  transform: rotate(180deg);
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+} */
+/*  */
 
 /* Section */
 p {
