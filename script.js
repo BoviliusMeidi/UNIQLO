@@ -9,6 +9,9 @@ $(document).ready(function () {
         "contents/edinburgh-old-city-new-style.html",
         "contents/the-playful-pairs.html",
         "contents/coziness-and-comfort-in-stockholm.html",
+        "contents/the-ins-and-out-of-easy-wear.html",
+        "contents/kagawa-timeless-modern.html",
+        "contents/unique-clothing.html",
     ]
 
     const images = [
