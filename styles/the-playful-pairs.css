@@ -191,6 +191,58 @@
 }
 /* end third page */
 
+/* fifth page */
+.fifth-page {
+  height: 105vh;
+  margin: 0 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: flex-start; 
+}
+
+.fifth-page #third-row-section {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 2rem; 
+}
+
+.fifth-page .column-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fifth-page .row-section #third-first-section,
+.fifth-page .row-section #third-second-section,
+.fifth-page .row-section #third-third-section {
+  width: 24rem; 
+}
+
+.fifth-page .column-section img {
+  width: 23rem;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem; 
+}
+
+.fifth-page .column-section h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.fifth-page .column-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 18rem;
+  max-width: 95%;
+}
+/* end fifth page */
+
 /* Section */
 p {
   text-align: justify;
