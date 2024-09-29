@@ -126,9 +126,9 @@
 }
 
 .second-page .up-section .right-section h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  text-align: center; 
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .second-page .up-section .right-section p {
@@ -137,52 +137,89 @@
   text-align: justify; 
   max-width: 100%;
 }
-
 /* end second page */
 
 /* third page */
-/* .third-page {
-  height: 100vh;
+.third-page {
+  height: 105vh;
   margin: 0 10rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 2rem;
+  align-items: flex-start; 
 }
 
 .third-page #third-row-section {
-  gap: 3rem;
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 2rem; 
+}
+
+.third-page .column-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .third-page .row-section #third-first-section,
 .third-page .row-section #third-second-section,
 .third-page .row-section #third-third-section {
-  width: 24rem;
+  width: 24rem; 
 }
 
-.third-page .row-section .column-section .list-price {
+.third-page .column-section img {
+  width: 23rem;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem; 
+}
+
+.third-page .column-section h1 {
   margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
-.third-page .row-section .column-section img {
-  width: 18rem;
-  /* height: 24rem; */
-  /* object-fit: cover;
+.third-page .column-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 18rem;
+  max-width: 95%;
 }
-
-.third-page .row-section .column-section p {
-  margin: 0;
-}
- */ 
-
-
 /* end third page */
-.list-price,
-.list-left {
-  margin: 0.5rem 0;
+
+/* Section */
+p {
+  text-align: justify;
+}
+
+.list-price {
+  font-weight: bold;
+  margin: 0.5rem;
+  width: 95%;
+  display: absolute;
 }
 
 .list-price p {
-  font-weight: bold;
-  font-size: 0.8rem;
   margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.list-left .list-right{
+  line-height: 1.2;
+  width: 100%;
+}
+
+.list-price .list-left p {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.list-price .list-right p {
+  font-size: 0.9rem;
+  text-align: right;
 }
