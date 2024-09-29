@@ -8,6 +8,7 @@ $(document).ready(function () {
         "contents/what-are-timeless-tone.html",
         "contents/edinburgh-old-city-new-style.html",
         "contents/the-playful-pairs.html",
+        "contents/coziness-and-comfort-in-stockholm.html",
     ]
 
     const images = [
