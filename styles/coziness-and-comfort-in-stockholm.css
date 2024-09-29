@@ -1,0 +1,79 @@
+/* fourth page */
+.fourth-page {
+height: 115vh;
+margin: 0 10rem;
+display: flex;
+justify-content: center;
+margin-top: 2rem;
+align-items: flex-start; 
+}
+
+.fourth-page #fourth-row-section {
+display: flex;
+flex-direction: row; 
+justify-content: center;
+gap: 10rem; 
+}
+
+.fourth-page .column-section {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.fourth-page .row-section #fourth-first-section,
+.fourth-page .row-section #fourth-second-section,
+.fourth-page .row-section #fourth-third-section {
+width: 24rem; 
+}
+
+.fourth-page .column-section img {
+width: 26rem;
+height: 35rem;
+object-fit: cover;
+margin-bottom: 0.5rem; 
+}
+
+.fourth-page .column-section h1 {
+margin: 0;
+font-size: 2.5rem;
+font-weight: 500;
+}
+
+.fourth-page .column-section p {
+font-size: 1rem;
+line-height: 1.5;
+text-align: justify;
+max-width: 26rem;
+width: 120%;  
+}
+/* end fourth page */
+
+
+
+/* Section */
+.list-price {
+font-weight: bold;
+width:110%;
+justify-content: flex;
+max-width: 120%;
+}
+
+.list-left .list-right{
+width: 100%;
+text-align: center;
+}
+
+.list-price .list-left p {
+margin: 0;
+font-size: 0.9rem;
+text-align: left;
+}
+
+.list-price .list-right p {
+margin: 0;
+font-size: 0.9rem;
+text-align: right;
+width: 100%;
+}
