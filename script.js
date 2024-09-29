@@ -30,7 +30,6 @@ $(document).ready(function () {
         "The Ins and Out of Easy Wear",
         "Kagawa: Timeless Modern",
         "Unique Clothing",
-
     ];
 
     let currentIndex = 0;
