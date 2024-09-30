@@ -384,6 +384,16 @@
   justify-content: flex;
   max-width: 100%;
 }
+
+#price-tidy .list-right,
+#price-buddies .list-right {
+  margin-top: 0.5rem;
+}
+
+#price-a .list-right, 
+#price-b .list-right {
+  margin-top: 1rem;
+}
 /*  */
 
 /* Section */
@@ -393,6 +403,11 @@
   width:100%;
   justify-content: flex;
   max-width: 100%;
+}
+
+.list-price a {
+  text-decoration: none;
+  color: black;
 }
 
 .list-left .list-right{
