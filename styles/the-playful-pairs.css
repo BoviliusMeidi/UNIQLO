@@ -368,6 +368,22 @@
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
 }
+
+#price-a{
+  font-weight: bold;
+  margin-left: 4rem;
+  width:100%;
+  justify-content: flex;
+  max-width: 100%;
+}
+
+#price-b{
+  font-weight: bold;
+  margin-left: 4rem;
+  width:100%;
+  justify-content: flex;
+  max-width: 100%;
+}
 /*  */
 
 /* Section */
