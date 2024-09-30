@@ -118,6 +118,13 @@
     margin-bottom: 3rem;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-lists .list .list-left {
+    display: flex;
+    flex-direction: row;
   }
 
   .content-lists .list img {
@@ -134,6 +141,18 @@
 
   .list-text h1 {
     margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .favorite-icon {
+    font-size: 3rem;
+    color: #999;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+
+  .favorite-container.favorited .favorite-icon {
+    color: red;
   }
 
   .footer-sidebar {
@@ -241,7 +260,7 @@
       margin-bottom: 0rem;
     }
 
-    .footer-sidebar .name p{
+    .footer-sidebar .name p {
       font-size: 0.7rem;
     }
 
@@ -374,7 +393,7 @@
       margin-bottom: 0rem;
     }
 
-    .footer-sidebar .name p{
+    .footer-sidebar .name p {
       font-size: 0.7rem;
     }
 
@@ -507,7 +526,7 @@
       margin-bottom: 0rem;
     }
 
-    .footer-sidebar .name p{
+    .footer-sidebar .name p {
       font-size: 0.7rem;
     }
 
@@ -556,84 +575,141 @@
       <div class="content-lists">
         <h1>Content List</h1>
         <div class="list">
-          <a href="/contents/what-is-lifeware-magazine.html">
-            <img src="assets/magazine/Magazine_1.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>What is LifeWear Magazine?</h1>
-            <p>Bagaimana pakaian timeless selalu terasa sepeti baru?</p>
+          <div class="list-left">
+            <a href="/contents/what-is-lifeware-magazine.html">
+              <img src="assets/magazine/Magazine_1.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What is LifeWear Magazine?</h1>
+              <p>Bagaimana pakaian timeless selalu terasa sepeti baru?</p>
+            </div>
+          </div>
+          <div class="item" data-id="1">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
         <div class="list">
-          <a href="/contents/what-are-timeless-tone.html">
-            <img src="assets/magazine/Magazine_2.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>What are Timeless Tone?</h1>
-            <p>
-              Bagaimana pakaian timeless selalu terasa sepeti baru dan cocok di
-              setiap waktunya?
-            </p>
+          <div class="list-left">
+            <a href="/contents/what-are-timeless-tone.html">
+              <img src="assets/magazine/Magazine_2.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>What are Timeless Tone?</h1>
+              <p>
+                Bagaimana pakaian timeless selalu terasa sepeti baru dan cocok
+                di setiap waktunya?
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="2">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
         <div class="list">
-          <a href="/contents/edinburgh-old-city-new-style.html">
-            <img src="assets/magazine/Magazine_3.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>Edinburgh: Old City, New Style</h1>
-            <p>Edinburgh, kota lama dengan gaya berpakaian yang baru.</p>
+          <div class="list-left">
+            <a href="/contents/edinburgh-old-city-new-style.html">
+              <img src="assets/magazine/Magazine_3.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>Edinburgh: Old City, New Style</h1>
+              <p>Edinburgh, kota lama dengan gaya berpakaian yang baru.</p>
+            </div>
+          </div>
+          <div class="item" data-id="3">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
         <div class="list">
-          <a href="/contents/the-playful-pairs.html">
-            <img src="assets/magazine/Magazine_4.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>The Playful Pairs?</h1>
-            <p>Desain baju yang nyaman dan seru untuk dilihat dan digunakan.</p>
+          <div class="list-left">
+            <a href="/contents/the-playful-pairs.html">
+              <img src="assets/magazine/Magazine_4.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>The Playful Pairs?</h1>
+              <p>
+                Desain baju yang nyaman dan seru untuk dilihat dan digunakan.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="4">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
         <div class="list">
-          <a href="/contents/coziness-and-comfort-in-stockholm.html">
-            <img src="assets/magazine/Magazine_5.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>Coziness and Comfort in Stockholm</h1>
-            <p>Gaya Nordic yang modern dan fungsional serta bergaya modern.</p>
+          <div class="list-left">
+            <a href="/contents/coziness-and-comfort-in-stockholm.html">
+              <img src="assets/magazine/Magazine_5.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>Coziness and Comfort in Stockholm</h1>
+              <p>
+                Gaya Nordic yang modern dan fungsional serta bergaya modern.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="5">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
-
         <div class="list">
-          <a href="/contents/the-ins-and-out-of-easy-wear.html">
-            <img src="assets/magazine/Magazine_6.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>The Ins and Out of Easy Wear</h1>
-            <p>Gaya kasual outfit untuk di dalam maupun di luar ruangan.</p>
+          <div class="list-left">
+            <a href="/contents/the-ins-and-out-of-easy-wear.html">
+              <img src="assets/magazine/Magazine_6.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>The Ins and Out of Easy Wear</h1>
+              <p>Gaya kasual outfit untuk di dalam maupun di luar ruangan.</p>
+            </div>
+          </div>
+          <div class="item" data-id="6">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
-
         <div class="list">
-          <a href="/contents/kagawa-timeless-modern.html">
-            <img src="assets/magazine/Magazine_7.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>Kagawa: Timeless Modern</h1>
-            <p>
-              Desainer Kagawa dengan pakaian autentiknya, bertema pakaian cocok
-              di setiap waktu.
-            </p>
+          <div class="list-left">
+            <a href="/contents/kagawa-timeless-modern.html">
+              <img src="assets/magazine/Magazine_7.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>Kagawa: Timeless Modern</h1>
+              <p>
+                Desainer Kagawa dengan pakaian autentiknya, bertema pakaian
+                cocok di setiap waktu.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="7">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
-
         <div class="list">
-          <a href="/contents/unique-clothing.html">
-            <img src="assets/magazine/Magazine_8.png" alt="" />
-          </a>
-          <div class="list-text">
-            <h1>Unique Clothing</h1>
-            <p>Barang Unilo yang Unique</p>
+          <div class="list-left">
+            <a href="/contents/unique-clothing.html">
+              <img src="assets/magazine/Magazine_8.png" alt="" />
+            </a>
+            <div class="list-text">
+              <h1>Unique Clothing</h1>
+              <p>Barang Unilo yang Unique</p>
+            </div>
+          </div>
+          <div class="item" data-id="8">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
           </div>
         </div>
       </div>
@@ -659,3 +735,34 @@
     </div>
   </div>
 </div>
+
+<script>
+  let favoriteItems = JSON.parse(localStorage.getItem("favoriteItems")) || [];
+
+  function updateIcons() {
+    $(".item").each(function () {
+      const itemId = $(this).data("id");
+      if (favoriteItems.includes(itemId)) {
+        $(this).find(".favorite-container").addClass("favorited");
+      } else {
+        $(this).find(".favorite-container").removeClass("favorited");
+      }
+    });
+  }
+
+  $(".favorite-container").click(function () {
+    const itemId = $(this).closest(".item").data("id");
+
+    if (!favoriteItems.includes(itemId)) {
+      favoriteItems.push(itemId);
+      localStorage.setItem("favoriteItems", JSON.stringify(favoriteItems));
+      $(this).addClass("favorited");
+    } else {
+      favoriteItems = favoriteItems.filter((id) => id !== itemId);
+      localStorage.setItem("favoriteItems", JSON.stringify(favoriteItems));
+      $(this).removeClass("favorited");
+    }
+  });
+
+  updateIcons();
+</script>
