@@ -57,6 +57,10 @@
   height: 13rem;
 }
 
+.list-price a {
+  text-decoration: none;
+  color: black;
+}
 /* end first page */
 
 /* second page */
