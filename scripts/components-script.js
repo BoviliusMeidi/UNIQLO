@@ -1,14 +1,9 @@
 $(".header-container").load("../components/header-content.html");
+$(".header-search-container").load("../components/header-search.html");
 $(".footer-container").load("../components/footer-content.html");
 
 const favoriteItems = JSON.parse(localStorage.getItem("favoriteItems")) || [];
 const allItems = {
-    1: {
-        title: "What is LifeWear Magazine?",
-        url: "/contents/what-is-lifeware-magazine.html",
-        description: "Bagaimana pakaian timeless selalu terasa seperti baru?",
-        img: "../assets/magazine/Magazine_1.png",
-    },
     2: {
         title: "What are Timeless Tone?",
         url: "/contents/what-are-timeless-tone.html",
@@ -73,6 +68,6 @@ if (favoriteItems.length === 0) {
     $("#favorite-list").append("<p>No favorite items found.</p>");
 }
 
-if (favoriteItems.length < 5){
+if (favoriteItems.length < 5) {
     $(".favorite-magazine").css("height", "100vh");
 }
