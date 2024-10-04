@@ -1,10 +1,10 @@
 $(document).ready(function () {
     // fetch data header
     $('.header-container').load('components/header.html');
+    $(".footer-container").load("components/footer.html");
 
     // scroll magazine
     const url = [
-        "contents/what-is-lifeware-magazine.html",
         "contents/what-are-timeless-tone.html",
         "contents/edinburgh-old-city-new-style.html",
         "contents/the-playful-pairs.html",
@@ -15,7 +15,6 @@ $(document).ready(function () {
     ]
 
     const images = [
-        "assets/magazine/Magazine_1.png",
         "assets/magazine/Magazine_2.png",
         "assets/magazine/Magazine_3.png",
         "assets/magazine/Magazine_4.png",
@@ -26,7 +25,6 @@ $(document).ready(function () {
     ];
 
     const texts = [
-        "What is LifeWear Magazine?",
         "What Are Timeless Tone?",
         "Edinburgh: Old City, New Style",
         "The Playful Pairs",
