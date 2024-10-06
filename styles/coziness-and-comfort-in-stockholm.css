@@ -1,3 +1,58 @@
+/* first page */
+
+.first-page {
+    height: 110vh;
+    margin: 0 16rem;
+}
+
+.first-page #first-section {
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page #first-section .column-section {
+    justify-content: center;
+    align-self: center;
+    margin-right: 6.6rem;
+}
+
+.first-page .row-section .column-section h1 {
+    margin: 0;
+    margin-top: 5rem;
+    margin-right: 10rem;
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.first-page .row-section .column-section h1:first-child {
+    margin-bottom: 1rem;
+}
+
+.first-page #only-p {
+    margin:0;
+}
+
+.first-page .row-section {
+    display: flex; 
+    margin:0;       
+    gap: 2rem;
+    justify-content: center;
+              
+  }
+  
+.first-page #first-section img {
+    width: 38rem;            
+    height: 25rem;
+    margin-top: 2rem;
+    margin-right: 7rem;
+}
+  
+.first-page #second-section img {
+    width: 15rem;           
+    height: 25rem;
+}
+/* end first page */
+
 /* fourth page */
 .fourth-page {
 height: 115vh;
