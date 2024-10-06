@@ -53,132 +53,212 @@
 }
 /* end first page */
 
+
+/* fourth page */
+.third-page {
+    height: 115vh;
+    margin: 0 10rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start; 
+}
+
+.third-page #third-row-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 5rem; 
+}
+
+.third-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.third-page .row-section #third-first-section,
+.third-page .row-section #third-second-section,
+.third-page .row-section #third-third-section {
+    width: 24rem; 
+}
+
+.third-page .column-section img {
+    width: 23rem;
+    height: 30rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
+    margin-top: 1rem; 
+}
+
+.third-page .column-section h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.third-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 95%;  
+}
+
+#price-a{
+    font-weight: bold;
+    margin-right: 1rem;
+    width:100%;
+    justify-content: flex;
+    max-width: 100%;
+}
+  
+#price-b{
+    font-weight: bold;
+    margin-left: 1rem;
+    width:100%;
+    justify-content: flex;
+    max-width: 100%;
+}
+
+#price-tidy .list-right,
+#price-buddies .list-right {
+    margin-top: 0.5rem;
+}
+
+#price-a .list-right, 
+#price-b .list-right {
+    margin-top: 1rem;
+}
+/* end third page */
+
 /* fourth page */
 .fourth-page {
-height: 115vh;
-margin: 0 10rem;
-display: flex;
-justify-content: center;
-margin-top: 2rem;
-align-items: flex-start; 
+    height: 115vh;
+    margin: 0 10rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start; 
 }
 
 .fourth-page #fourth-row-section {
-display: flex;
-flex-direction: row; 
-justify-content: center;
-gap: 10rem; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10rem; 
 }
 
 .fourth-page .column-section {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .fourth-page .row-section #fourth-first-section,
 .fourth-page .row-section #fourth-second-section,
 .fourth-page .row-section #fourth-third-section {
-width: 24rem; 
+    width: 24rem; 
 }
 
 .fourth-page .column-section img {
-width: 26rem;
-height: 35rem;
-object-fit: cover;
-margin-bottom: 0.5rem; 
+    width: 26rem;
+    height: 35rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
 }
 
 .fourth-page .column-section h1 {
-margin: 0;
-font-size: 2.5rem;
-font-weight: 500;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
 .fourth-page .column-section p {
-font-size: 1rem;
-line-height: 1.5;
-text-align: justify;
-max-width: 26rem;
-width: 120%;  
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 120%;  
 }
 /* end fourth page */
 
 /* sixth page */
 .sixth-page {
-height: 105vh;
-margin: 0 10rem;
-display: flex;
-justify-content: center;
-margin-top: 2rem;
-align-items: flex-start; 
+    height: 105vh;
+    margin: 0 10rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start; 
 }
 
 .sixth-page #sixth-row-section {
-display: flex;
-flex-direction: row; 
-justify-content: center;
-gap: 10rem; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10rem; 
 }
 
 .sixth-page .column-section {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .sixth-page .row-section #sixth-first-section,
 .sixth-page .row-section #sixth-second-section,
 .sixth-page .row-section #sixth-third-section {
-width: 24rem; 
+    width: 24rem; 
 }
 
 .sixth-page .column-section img {
-width: 26rem;
-height: 35rem;
-object-fit: cover;
-margin-bottom: 0.5rem; 
+    width: 26rem;
+    height: 35rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
 }
 
 .sixth-page .column-section h1 {
-margin: 0;
-font-size: 2.5rem;
-font-weight: 500;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
 .sixth-page .column-section p {
-font-size: 1rem;
-line-height: 1.5;
-text-align: justify;
-max-width: 26rem;
-width: 120%;  
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 120%;  
 }
 /* end sixth page */
 
 /* Section */
 .list-price {
-font-weight: bold;
-width:110%;
-justify-content: flex;
-max-width: 120%;
+    font-weight: bold;
+    width:110%;
+    justify-content: flex;
+    max-width: 120%;
 }
 
 .list-left .list-right{
-width: 100%;
-text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .list-price .list-left p {
-margin: 0;
-font-size: 0.9rem;
-text-align: left;
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: left;
 }
 
 .list-price .list-right p {
-margin: 0;
-font-size: 0.9rem;
-text-align: right;
-width: 100%;
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: right;
+    width: 100%;
 }
