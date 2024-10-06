@@ -53,10 +53,117 @@
 }
 /* end first page */
 
+/* second page */
+.second-page {
+    height: 100vh;
+    margin: 0 8rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start; 
+}
+
+.second-page #second-row-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10rem; 
+}
+
+.second-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.second-page .row-section #second-first-section,
+.second-page .row-section #second-second-section,
+.second-page .row-section #second-third-section {
+    width: 24rem; 
+}
+
+.second-page .column-section .gambar1 img {
+    width: 36rem;
+    height: 20rem;
+    object-fit: none;
+    margin-bottom: 0.5rem;
+     
+}
+
+.second-page .column-section .gambar2 img {
+    width: 38rem;
+    height: 19rem;
+    object-fit: none;
+
+    margin-left: 2rem;
+}
+
+.second-page .column-section h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 30rem;
+    text-align: center;
+    align-items: center;
+}
+
+.second-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 40rem;
+    width: 130%;  
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-right: 4rem;
+}
+
+.second-page .subbab {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 26rem;
+    width: 100%;
+    margin-right: 2.5rem; 
+}
+
+#price-a{
+    font-weight: bold;
+    margin-right: 1rem;
+    width:100%;
+    justify-content: flex;
+    max-width: 100%;
+}
+  
+#price-b{
+    font-weight: bold;
+    margin-left: 1rem;
+    width:100%;
+    justify-content: flex;
+    max-width: 100%;
+}
+
+#price-tidy .list-right,
+#price-buddies .list-right {
+    margin-top: 0.5rem;
+}
+
+#price-a .list-right, 
+#price-b .list-right {
+    margin-top: 1rem;
+}
+
+#a{
+    align-items: left;
+    margin-right: 7rem;
+}
+/* end second page */
 
 /* third page */
 .third-page {
-    height: 115vh;
+    height: 110vh;
     margin: 0 10rem;
     display: flex;
     justify-content: center;
@@ -135,7 +242,7 @@
 
 /* fourth page */
 .fourth-page {
-    height: 115vh;
+    height: 105vh;
     margin: 0 10rem;
     display: flex;
     justify-content: center;
