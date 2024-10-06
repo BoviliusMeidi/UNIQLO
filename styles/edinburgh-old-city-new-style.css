@@ -107,6 +107,9 @@
   width: 22rem;
 }
 
+#price-a{
+  margin-left: 2rem;
+}
 /* end second page */
 
 /* third page */
@@ -602,6 +605,10 @@ p {
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+
+  #price-a{
+    margin-left: 2rem;
   }
 
   /* end second page */
