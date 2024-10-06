@@ -185,6 +185,119 @@
 }
 /* end fourth page */
 
+/* fifth page */
+.fifth-page {
+    height: 115vh;
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.fifth-page #fifth-row-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 6rem; 
+}
+
+.fifth-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fifth-page .row-section #fifth-first-section,
+.fifth-page .row-section #fifth-second-section,
+.fifth-page .row-section #fifth-third-section {
+    width: 24rem; 
+}
+
+.fifth-page .column-section img {
+    width: 26rem;
+    height: 35rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
+}
+
+.fifth-page h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.fifth-page p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 26rem;
+    width: 100%;  
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.fifth-page .subbab {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 26rem;
+    width: 100%;  
+    margin-top: -1.5rem;
+}
+
+.fifth-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 90%;  
+}
+
+#price-b{
+    font-weight: bold;
+    margin-left: 1rem;
+    width:100%;
+    justify-content: flex;
+    max-width: 100%;
+}
+
+#price-tidy .list-right,
+#price-buddies .list-right {
+    margin-top: 0.5rem;
+}
+
+#price-a .list-right, 
+#price-b .list-right {
+    margin-top: 1rem;
+}
+
+.link {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    flex-direction: row;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+
+}
+  
+.link a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-left: -1.5rem;
+    
+}
+/* end fifth page */
+
 /* sixth page */
 .sixth-page {
     height: 105vh;
