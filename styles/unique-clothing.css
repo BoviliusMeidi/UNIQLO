@@ -1,3 +1,56 @@
+/* third page */
+.third-page {
+    height: 125vh;
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.third-page #third-row-section {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 8rem; 
+}
+
+.third-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.third-page .row-section #third-first-section,
+.third-page .row-section #third-second-section,
+.third-page .row-section #third-third-section {
+    width: 24rem; 
+}
+
+.third-page .column-section img {
+    width: 26rem;
+    height: 35rem;
+    object-fit: cover;
+    margin-bottom: 0.5rem; 
+}
+
+.third-page h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.third-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 120%;  
+}
+/* end third page */
 
 /* fourth page */
 .fourth-page {
