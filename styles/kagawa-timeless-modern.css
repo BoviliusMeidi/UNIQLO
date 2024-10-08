@@ -7,7 +7,7 @@
 }
 
 .first-page .second-section {
-    height: 105vh;
+    height: 120vh;
     margin: -6rem 10rem 0 10rem;
     display: flex;
     flex-direction: row;
@@ -50,7 +50,7 @@
 
 /* Second Page */
 .second-page {
-    height: 100vh;
+    height: 110vh;
     margin: 0 10rem;
     display: flex;
     flex-direction: row;
@@ -91,7 +91,7 @@
 
 /* Third Page */
 .third-page {
-    height: 120vh;
+    height: 130vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -131,4 +131,66 @@
 .third-page .list-price p {
     font-weight: bold;
     line-height: 1;
+}
+
+.fourth-page {
+    height: 130vh;
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.fourth-page .first-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+}
+
+.fourth-page .first-row img,
+.fourth-page .first-row #image {
+    width: 40rem;
+    margin-right: 3rem;
+}
+
+.fourth-page .first-row #text {
+    font-size: 14pt;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.fourth-page .list-price {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0.9;
+}
+
+.fourth-page .second-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.fourth-page .second-row .first-col,
+.fourth-page .second-row .second-col,
+.fourth-page .second-row .third-col {
+    max-width: 35%;
+    margin-right: 3rem;
+}
+
+.fourth-page .second-row .second-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fourth-page .second-row img {
+    width: 19rem;
+}
+
+.fourth-page .second-row .second-col {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 0.9;
+}
+
+.fourth-page .second-row .second-col .bottom-price {
+    text-align: right;
 }
