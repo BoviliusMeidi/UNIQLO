@@ -1,0 +1,48 @@
+.first-page .first-section {
+    text-align: center;
+    font-size: 3rem;
+}
+.first-page .first-section h1:first-child {
+    margin-bottom: -3rem;
+}
+
+.first-page .second-section {
+    height: 100vh;
+    margin: -6rem 16rem 0 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-page .left-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+}
+
+.first-page .right-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.first-page .right-container p {
+    font-size: 14pt;
+    box-sizing: border-box;
+}
+
+.first-page .left-container p {
+    margin-top: 0rem;
+    font-weight: bold;
+}
+.first-page .left-container img {
+    width: 25rem;
+}
+
+.first-page .right-container img {
+    display: flex;
+    height: 18rem;
+    width: 100%;
+    object-fit: cover;
+}
