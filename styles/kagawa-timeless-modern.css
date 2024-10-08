@@ -7,8 +7,8 @@
 }
 
 .first-page .second-section {
-    height: 100vh;
-    margin: -6rem 16rem 0 16rem;
+    height: 105vh;
+    margin: -6rem 10rem 0 10rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,11 +24,12 @@
 .first-page .right-container {
     display: flex;
     flex-direction: column;
-    line-height: 1.3;
 }
 
 .first-page .right-container p {
     font-size: 14pt;
+    line-height: 1.3;
+    text-align: justify;
     box-sizing: border-box;
 }
 
@@ -45,4 +46,89 @@
     height: 18rem;
     width: 100%;
     object-fit: cover;
+}
+
+/* Second Page */
+.second-page {
+    height: 100vh;
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.second-page .left-container {
+    margin-right: 6rem;
+}
+
+.second-page .right-container {
+    font-size: 14pt;
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.second-page .right-container .rotate-section {
+    text-align: center;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+}
+
+.second-page img {
+    width: 22rem;
+}
+
+.second-page .left-container .list-price {
+    font-weight: bold;
+    line-height: 0.5;
+}
+
+.second-page .left-container .list-price .list-right {
+    margin-top: 4rem;
+    margin-right: -4rem;
+    text-align: right;
+}
+
+
+/* Third Page */
+.third-page {
+    height: 120vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 3rem;
+}
+
+.third-page .first-col,
+.third-page .second-col,
+.third-page .third-col {
+    max-width: 23%;
+}
+
+.third-page .first-col img,
+.third-page .second-col img,
+.third-page .third-col img { 
+    width: 100%
+}
+
+.third-page .list-price .first-row {
+    margin-bottom: 2rem;
+}
+
+.third-page .list-price .second-row {
+    margin-bottom: 4rem;
+}
+
+.third-page .list-price .third-row {
+    text-align: right;
+}
+
+.third-page .first-col { 
+    font-size: 14pt;
+    text-align: justify;
+    line-height: 1.3;
+}
+
+.third-page .list-price p {
+    font-weight: bold;
+    line-height: 1;
 }
