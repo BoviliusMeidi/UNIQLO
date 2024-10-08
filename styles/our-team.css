@@ -1,0 +1,92 @@
+.first-page {
+    position: absolute;
+    min-height: 110vh;
+    margin: 2rem 10rem;
+    border-radius: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #D32F2F;
+    color: white;
+}
+
+.first-page-hidden {
+    min-height: 110vh;
+    margin: 4rem 7rem 3rem 13rem;
+    border-radius: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #952537;
+    color: white;
+}
+
+.first-page .first-section {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.first-page .first-section img {
+    margin-top: -3rem;
+    width: 100%;
+}
+
+.first-page .second-section {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.first-page .second-section .bovilius,
+.first-page .second-section .hansthobie, 
+.first-page .second-section .aldian {
+    display: block;
+    margin: 0 5rem;
+}
+
+.second-page {
+    min-height: 25vh;
+    padding: 1rem;
+    margin: 0 14rem;
+    max-width: 75%;
+    font-size: 2rem;
+    font-style: italic;
+    color: #D32F2F;
+
+    border-left: 1rem solid #D32F2F;
+}
+
+.project-info {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-left: 4px solid #D32F2F; /* Red accent border */
+    background-color: #F9F9F9; /* Soft neutral background */
+    display: inline-block;
+    width: fit-content;
+    position: relative;
+  }
+  
+  .project-info p {
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .project-info::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    height: 15px;
+    width: 15px;
+    background-color: #D32F2F; /* Red accent circle */
+    border-radius: 50%;
+  }
