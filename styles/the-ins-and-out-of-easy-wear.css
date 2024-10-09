@@ -5,7 +5,7 @@ h1 {
 }
 
 .first-page {
-    min-height: 120vh;
+    min-height: 155vh;
     margin: 0 10rem;
     display: flex;
     flex-direction: column;
@@ -25,6 +25,7 @@ h1 {
     max-width: 50%;
     font-size: 1.2rem;
     line-height: 1.3;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,4 +203,132 @@ iframe{
 
 .list-price a:hover {
     color:red;
+}
+
+@media screen and (max-width: 520px) {
+    h1 {
+        font-size: 3rem;
+        width: auto;
+    }
+
+    .first-page {
+        min-height: 130vh;
+        margin: 0 1rem;
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .first-page iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .first-page .first-row {
+        max-width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .first-page .first-row .paragraph {
+        max-width: 100%;
+        margin: 0;
+        width: 120rem;
+    }
+
+    .first-page .first-row .paragraph p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .first-page .first-row img {
+        margin: 0;
+    }
+    
+    .first-page .second-row {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .second-page {
+        min-height: 150vh;
+        margin: 0 1rem;
+        max-width: 100%;
+    }
+
+    .second-page .first-row {
+        flex-direction: column;
+    }
+    .second-page p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .second-page .first-row .text {
+        max-width: 100%;
+    }
+
+    .second-page .first-row .list-price {
+        margin-left: 12rem;
+    }
+    .second-page .list-price p {
+        font-size: 0.8rem;
+    }
+
+    .second-page .text h2 {
+        font-size: 2rem;
+    }
+
+    .second-page .text .profile {
+        flex-direction: column;
+    }
+
+    .second-page .first-row .image {
+        margin-top: -15rem;
+        width: 40%;
+        height: auto;
+    }
+    .second-page .first-row img {
+        width: 100%;
+        height: auto;
+    }
+
+    .second-page .second-row {
+        flex-direction: column;
+    }
+
+    .second-page .second-row .text {
+        margin-top: 1rem;
+        max-width: 100%;
+        z-index: 1;
+    }
+
+    .second-page .second-row .image {
+        position: absolute;
+        width: 42%;
+        margin-top: 18rem;
+        z-index: 0;
+        margin-left: 15rem;
+    }
+
+    .second-page .second-row .list-price {
+        max-width: 50%;
+    }
+
+
+    .third-page, .fourth-page {
+        min-height: 100vh;
+        margin: 0 1rem;
+    }
+
+    .third-page p, .fourth-page p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .third-page .list-price a, .fourth-page .list-price a {
+        font-size: 0.9rem;
+        line-height: 1px;
+    }
 }
