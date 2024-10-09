@@ -296,7 +296,7 @@ a:hover {
 
 
     .third-page {
-        min-height: 320vh;
+        min-height: 380vh;
         margin: 0 1rem;
         flex-direction: column;
         font-size: 1rem;
@@ -311,5 +311,40 @@ a:hover {
     .third-page .second-col,
     .third-page .third-col {
         max-width: 90%;
+    }
+    
+    .fourth-page {
+        margin: 0 1rem;
+        flex-direction: column;
+    }
+
+    .fourth-page .first-row {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .fourth-page .first-row img {
+        width: 70%;
+    }
+
+    .fourth-page .first-row p {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .fourth-page .second-row {
+        margin: 0;
+        max-width: 100%;
+        flex-direction: column;
+}
+    .fourth-page .second-row .first-col, 
+    .fourth-page .second-row .second-col,
+    .fourth-page .second-row .third-col {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .fourth-page .second-row img {
+        width: 100%;
     }
 }
