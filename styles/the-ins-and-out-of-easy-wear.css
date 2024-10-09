@@ -1,3 +1,9 @@
+h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 100;
+}
+
 .first-page {
     min-height: 120vh;
     margin: 0 10rem;
@@ -36,133 +42,158 @@
     width: 50%;
 }
 
+/* Second Page */
+.second-page {
+    min-height: 130vh;
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-page .first-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}  
+
+.second-page .first-row .text {
+    max-width: 55%;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.second-page h2 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+.second-page .first-row .text .profile {
+    text-align: right;
+    line-height: 1px;
+}
+
+.second-page .first-row .text .list-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-page .first-row img {
+    width: 100%;
+}
+
+.second-page .first-row .image {
+    width: 30%;
+    height: auto;
+}
+
+.second-page .first-row .list-price {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 0.5;
+}
+.second-page .first-row .text .list-price .right-col {
+    text-align: right;
+}
+
+.second-page .second-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.second-page .second-row .text {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.second-page .second-row .text .profile {
+    line-height: 1px;
+}
+
+.second-page .second-row .image {
+    width: 30%;
+    height: auto;
+}
+
+.second-page .second-row img {
+    margin-top: -3rem;
+    width: 100%;
+}
+
+.second-page .second-row .text {
+    max-width: 55%;
+    text-align: justify;
+}
+
+.second-page .second-row .text .list-price {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 0.5;
+}
 
 /* third page */
 .third-page {
-height: 110vh;
-margin: 0 10rem;
-display: flex;
-justify-content: center;
-margin-top: 2rem;
-align-items: flex-start; 
+    min-height: 120vh;
+    margin: 0 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.third-page #third-row-section {
-display: flex;
-flex-direction: row; 
-justify-content: center;
-gap: 10rem; 
+.third-page .first-col,
+.third-page .second-col {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: justify;
 }
 
-.third-page .column-section {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+.third-page img {
+    width: 100%;
 }
 
-.third-page .row-section #third-first-section,
-.third-page .row-section #third-second-section,
-.third-page .row-section #third-third-section {
-width: 24rem; 
-}
-
-.third-page .column-section img {
-width: 26rem;
-height: 35rem;
-object-fit: cover;
-margin-bottom: 0.5rem; 
-}
-
-.third-page .column-section h1 {
-margin: 0;
-font-size: 2.5rem;
-font-weight: 500;
-}
-
-.third-page .column-section p {
-font-size: 1rem;
-line-height: 1.5;
-text-align: justify;
-max-width: 26rem;
-width: 120%;  
+.third-page .list-price {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 0.5;
 }
 /* end third page */
 
 /* fourth page */
 .fourth-page {
-height: 115vh;
-margin: 0 10rem;
-display: flex;
-justify-content: center;
-margin-top: 2rem;
-align-items: flex-start; 
+    min-height: 120vh;
+    margin: 0 16rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.fourth-page #fourth-row-section {
-display: flex;
-flex-direction: row; 
-justify-content: center;
-gap: 10rem; 
+.fourth-page .first-col,
+.fourth-page .second-col {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: justify;
 }
 
-.fourth-page .column-section {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+.fourth-page img {
+    width: 100%;
 }
 
-.fourth-page .row-section #fourth-first-section,
-.fourth-page .row-section #fourth-second-section,
-.fourth-page .row-section #fourth-third-section {
-width: 24rem; 
-}
-
-.fourth-page .column-section img {
-width: 26rem;
-height: 35rem;
-object-fit: cover;
-margin-bottom: 0.5rem; 
-}
-
-.fourth-page .column-section h1 {
-margin: 0;
-font-size: 2.5rem;
-font-weight: 500;
-}
-
-.fourth-page .column-section p {
-font-size: 1rem;
-line-height: 1.5;
-text-align: justify;
-max-width: 26rem;
-width: 120%;  
+.fourth-page .list-price {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 0.5;
 }
 /* end fourth page */
 
-/* Section */
-.list-price {
-font-weight: bold;
-width:110%;
-justify-content: flex;
-max-width: 120%;
-}
-
-.list-left .list-right{
-width: 100%;
-text-align: center;
-}
-
-.list-price .list-left p {
-margin: 0;
-font-size: 0.9rem;
-text-align: left;
-}
-
-.list-price .list-right p {
-margin: 0;
-font-size: 0.9rem;
-text-align: right;
-width: 100%;
+.list-price a:hover {
+    color:red;
 }
