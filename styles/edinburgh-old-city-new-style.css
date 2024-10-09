@@ -486,6 +486,10 @@ p {
   text-align: right;
 }
 
+.list-price a:hover {
+  color: red;
+}
+
 @media (max-width: 1080px) {
   .img-header img {
     width: 40%;
