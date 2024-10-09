@@ -202,9 +202,9 @@ main .first-animation img {
   font-size: 1rem;
 }
 
-.third-page .content-section .video img {
-  width: 40rem;
-  height: 15rem;
+iframe{
+  width: 560px;
+  height: 315px;
 }
 
 .third-page .content-section .image {
@@ -423,9 +423,20 @@ main .first-animation img {
     width: 12rem;
   }
 
-  .third-page .content-section .video img {
-    width: 18rem;
-    height: 10rem;
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .third-page .content-section .image {
