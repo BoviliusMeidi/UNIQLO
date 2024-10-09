@@ -1,296 +1,674 @@
 /* first page */
 .first-page {
-    height: 100vh;
-    margin: 0 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    text-align: center;
+  height: 100vh;
+  margin: 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .first-page #first-row-section {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 8rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .first-page .column-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .first-page .row-section #first-first-section,
 .first-page .row-section #first-second-section,
 .first-page .row-section #first-third-section {
-    width: 24rem; 
+  width: 24rem;
 }
 
 .first-page .column-section img {
-    width: 26rem;
-    height: 35rem;
-    object-fit: cover;
-    margin-bottom: 0.5rem; 
+  width: 26rem;
+  height: 35rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
 .first-page h1 {
-    margin: 0;
-    font-size: 5rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .first-page p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-    max-width: 26rem;
-    width: 120%;  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 26rem;
+  width: 120%;
 }
 
 .first-page .column-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    max-width: 26rem;
-    width: 120%;  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 26rem;
+  width: 120%;
 }
 /* end first page */
 
 /* second page */
 .second-page {
-    height: 100vh;
-    margin: 0 10rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    align-items: flex-start; 
+  height: 100vh;
+  margin: 0 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: flex-start;
 }
 
 .second-page #second-row-section {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 10rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
 }
 
 .second-page .column-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .second-page .row-section #second-first-section,
 .second-page .row-section #second-second-section,
 .second-page .row-section #second-third-section {
-    width: 24rem; 
+  width: 24rem;
 }
 
 .second-page .column-section img {
-    width: 40rem;
-    height: 30rem;
-    object-fit: none;
-    margin-bottom: 0.5rem; 
-    margin-top: 1rem; 
+  width: 40rem;
+  height: 30rem;
+  object-fit: none;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .second-page .column-section h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 500;
-    width:150%;
-    max-width: 150%;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 150%;
+  max-width: 150%;
 }
 
 .second-page .column-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    max-width: 26rem;
-    width: 95%;  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 26rem;
+  width: 95%;
 }
 
-#price-a{
-    font-weight: bold;
-    margin-left: 2rem;
-    width:150%;
-    justify-content: flex;
-    max-width: 150%;
+#price-a {
+  font-weight: bold;
+  margin-left: 2rem;
+  width: 150%;
+  justify-content: flex;
+  max-width: 150%;
 }
 
-#price-a .list-right, 
+#price-a .list-right,
 #price-b .list-right {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 /* end fourth page */
 
 /* third page */
 .third-page {
-    height: 125vh;
-    margin: 0 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+  height: 125vh;
+  margin: 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .third-page #third-row-section {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 8rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .third-page .column-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .third-page .row-section #third-first-section,
 .third-page .row-section #third-second-section,
 .third-page .row-section #third-third-section {
-    width: 24rem; 
+  width: 24rem;
 }
 
 .third-page .column-section img {
-    width: 26rem;
-    height: 35rem;
-    object-fit: cover;
-    margin-bottom: 0.5rem; 
+  width: 26rem;
+  height: 35rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 
 .third-page h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .third-page .column-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    max-width: 26rem;
-    width: 120%;  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 26rem;
+  width: 120%;
 }
 /* end third page */
 
 /* fourth page */
 .fourth-page {
-    height: 120vh;
-    margin: 0 10rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    align-items: flex-start; 
+  height: 120vh;
+  margin: 0 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: flex-start;
 }
 
 .fourth-page #fourth-row-section {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 5rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
 }
 
 .fourth-page .column-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .fourth-page .row-section #fourth-first-section,
 .fourth-page .row-section #fourth-second-section,
 .fourth-page .row-section #fourth-third-section {
-    width: 24rem; 
+  width: 24rem;
 }
 
 .fourth-page .column-section img {
-    width: 23rem;
-    height: 30rem;
-    object-fit: cover;
-    margin-bottom: 0.5rem; 
-    margin-top: 1rem; 
+  width: 23rem;
+  height: 30rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .fourth-page .column-section h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 500;
-    width:100%;
-    max-width: 100%;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 500;
+  width: 100%;
+  max-width: 100%;
 }
 
 .fourth-page .column-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: justify;
-    max-width: 26rem;
-    width: 95%;  
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  max-width: 26rem;
+  width: 95%;
 }
 
-#price-a{
-    font-weight: bold;
-    margin-right: 1rem;
-    width:110%;
-    justify-content: flex;
-    max-width: 100%;
+#price-a {
+  font-weight: bold;
+  margin-right: 1rem;
+  width: 110%;
+  justify-content: flex;
+  max-width: 100%;
 }
-  
-#price-b{
-    font-weight: bold;
-    margin-left: 1rem;
-    width:100%;
-    justify-content: flex;
-    max-width: 100%;
+
+#price-b {
+  font-weight: bold;
+  margin-left: 1rem;
+  width: 100%;
+  justify-content: flex;
+  max-width: 100%;
 }
 
 #price-tidy .list-right,
 #price-buddies .list-right {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-#price-a .list-right, 
+#price-a .list-right,
 #price-b .list-right {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 /* end fourth page */
 
 /* Section */
 .list-price {
-    font-weight: bold;
-    width:110%;
-    justify-content: flex;
-    max-width: 120%;
+  font-weight: bold;
+  width: 110%;
+  justify-content: flex;
+  max-width: 120%;
 }
 
-.list-left .list-right{
-    width: 100%;
-    text-align: center;
+.list-left .list-right {
+  width: 100%;
+  text-align: center;
 }
 
 .list-price .list-left p {
-    margin: 0;
-    font-size: 0.9rem;
-    text-align: left;
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: left;
 }
 
 .list-price .list-right p {
-    margin: 0;
-    font-size: 0.9rem;
-    text-align: right;
-    width: 100%;
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: right;
+  width: 100%;
 }
 
 .list-price a:hover {
-    color: red;
+  color: red;
 }
 
+@media (max-width: 1024px) {
+    /* first page */
+.first-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .first-page #first-row-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .first-page .row-section #first-first-section,
+  .first-page .row-section #first-second-section,
+  .first-page .row-section #first-third-section {
+    width: auto;
+  }
+
+  .first-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 100%;
+  }
+  /* end first page */
+  
+  /* second page */
+  .second-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+  
+  .second-page #second-row-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .second-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .second-page .row-section #second-first-section,
+  .second-page .row-section #second-second-section,
+  .second-page .row-section #second-third-section {
+    width: auto;
+  }
+  
+  .second-page .column-section img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .second-page .column-section h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    width: 100%;
+    max-width: 150%;
+  }
+  
+  .second-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 95%;
+  }
+
+  /* third page */
+  .third-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .third-page #third-row-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .third-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .third-page .row-section #third-first-section,
+  .third-page .row-section #third-second-section,
+  .third-page .row-section #third-third-section {
+    width: auto;
+  }
+  
+  .third-page .column-section img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+  .third-page h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  
+  .third-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 100%;
+  }
+  /* end third page */
+  
+  /* fourth page */
+  .fourth-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+  
+  .fourth-page #fourth-row-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .fourth-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .fourth-page .row-section #fourth-first-section,
+  .fourth-page .row-section #fourth-second-section,
+  .fourth-page .row-section #fourth-third-section {
+    width: auto;
+  }
+  
+  .fourth-page .column-section img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .fourth-page .column-section h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .fourth-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 320px) {
+  /* first page */
+  .first-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .first-page #first-row-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .first-page .column-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .first-page .row-section #first-first-section,
+  .first-page .row-section #first-second-section,
+  .first-page .row-section #first-third-section {
+    width: 100%;
+  }
+
+  .first-page h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .first-page .row-section .column-section p{
+    margin: 0;
+  }
+  /* end first page */
+
+  /* second page */
+  .second-page {
+    height: 100%;
+    margin: 0 10rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+
+  .second-page #second-row-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .second-page .row-section #second-first-section,
+  .second-page .row-section #second-second-section,
+  .second-page .row-section #second-third-section {
+    width: auto;
+  }
+
+  .second-page .column-section img {
+    width: 15rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .second-page .column-section h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    width: auto;
+    max-width: auto;
+  }
+
+  .second-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 95%;
+  }
+  /* end fourth page */
+
+  /* third page */
+  .third-page {
+    height: 100%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .third-page #third-row-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .third-page .row-section #third-first-section,
+  .third-page .row-section #third-second-section,
+  .third-page .row-section #third-third-section {
+    width: auto;
+  }
+
+  .third-page .column-section img {
+    width: 14rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+
+  .third-page h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .third-page .column-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 26rem;
+    width: 100%;
+  }
+  /* end third page */
+
+  /* fourth page */
+  .fourth-page {
+    height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+
+  .fourth-page #fourth-row-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .fourth-page .row-section #fourth-first-section,
+  .fourth-page .row-section #fourth-second-section,
+  .fourth-page .row-section #fourth-third-section {
+    width: auto;
+  }
+
+  .fourth-page .column-section img {
+    width: 14rem;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+  /* end fourth page */
+
+  #price-a {
+    font-weight: bold;
+    margin-right: 1rem;
+    width: 110%;
+    justify-content: flex;
+    max-width: 100%;
+  }
+}
