@@ -48,6 +48,11 @@
     object-fit: cover;
 }
 
+iframe{
+    width: 560px;
+    height: 315px;
+}
+
 /* Second Page */
 .second-page {
     min-height: 110vh;
