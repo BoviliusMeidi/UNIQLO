@@ -81,6 +81,11 @@
   width: 14rem;
   object-fit: cover;
 }
+
+iframe{
+  width: 560px;
+  height: 315px;
+}
 /* end first page */
 
 /* second page */
@@ -431,4 +436,8 @@
   font-size: 0.9rem;
   text-align: right;
   width: 100%;
+}
+
+.list-price a:hover {
+  color: red;
 }
