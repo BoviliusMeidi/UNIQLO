@@ -194,3 +194,7 @@
 .fourth-page .second-row .second-col .bottom-price {
     text-align: right;
 }
+
+a:hover {
+    color: red;
+}
