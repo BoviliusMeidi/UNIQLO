@@ -91,6 +91,11 @@
      
 }
 
+.second-page .column-section .video iframe{
+    width: 560px;
+    height: 315px;
+}
+
 .second-page .column-section .gambar2 img {
     width: 38rem;
     height: 19rem;

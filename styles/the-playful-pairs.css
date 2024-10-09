@@ -410,6 +410,11 @@
   color: black;
 }
 
+.list-price a:hover {
+  color: red;
+}
+
+
 .list-left .list-right{
   width: 100%;
   text-align: center;

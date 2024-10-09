@@ -290,3 +290,7 @@
     width: 100%;
 }
 
+.list-price a:hover {
+    color: red;
+}
+
