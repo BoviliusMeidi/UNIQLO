@@ -81,6 +81,11 @@
   width: 14rem;
   object-fit: cover;
 }
+
+iframe{
+  width: 560px;
+  height: 315px;
+}
 /* end first page */
 
 /* second page */
