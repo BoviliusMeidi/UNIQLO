@@ -42,6 +42,12 @@ h1 {
     width: 50%;
 }
 
+iframe{
+    width: 560px;
+    height: 315px;
+    margin-right: 2rem;
+}
+
 /* Second Page */
 .second-page {
     min-height: 130vh;
