@@ -208,22 +208,23 @@ a:hover {
     color: red;
 }
 
-@media screen and (max-width: 520px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
+@media screen and (max-width: 320px) {
     .first-page {
         min-height: 130vh;
+        margin: 0 1rem;
+    }
+
+    .first-page .first-section h1 {
+        font-size: 2rem;
     }
     .first-page .first-section {
         min-height: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     .first-page .second-section {
         flex-direction: column;
-        margin: 0 2rem;
+        margin: 0 1rem;
         align-items: center;
     }
 
@@ -249,25 +250,26 @@ a:hover {
     .second-page {
         min-height: 95vh;
         margin: 0 1rem;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 1rem;
         gap: 0.7rem;
     }
 
     .second-page .left-container {
-        max-width: 37%;
-        margin-right: 0.2rem;
+        max-width: 100%;
+        margin: 0;
     }
 
     .second-page .left-container .list-price {
         flex-direction: column;
-        max-width: 75%;
+        max-width: 100%;
+        font-size: 0.9rem;
         line-height: 1;
     }
 
     .second-page .left-container .list-price .list-right {
-        margin-top: 6rem;
-        margin-right: -2rem;
+        margin-top: 2rem;
+        margin-right: 0rem;
         margin-left: 2rem;
         text-align: right;;
     }
@@ -277,7 +279,7 @@ a:hover {
     }
 
     .second-page .right-container {
-        max-width: 63%;
+        max-width: 100%;
         font-size: 1rem;
     }
 
@@ -296,7 +298,7 @@ a:hover {
 
 
     .third-page {
-        min-height: 380vh;
+        min-height: 320vh;
         margin: 0 1rem;
         flex-direction: column;
         font-size: 1rem;
@@ -306,15 +308,17 @@ a:hover {
     .third-page p {
         font-size: 1rem;
         line-height: 1.2;
+        margin: 0 1rem;
     }
     .third-page .first-col,
     .third-page .second-col,
     .third-page .third-col {
-        max-width: 90%;
+        max-width: 100%;
     }
     
     .fourth-page {
         margin: 0 1rem;
+        min-height: 310vh;
         flex-direction: column;
     }
 
@@ -324,7 +328,7 @@ a:hover {
     }
 
     .fourth-page .first-row img {
-        width: 70%;
+        width: 17rem;
     }
 
     .fourth-page .first-row p {
@@ -346,5 +350,9 @@ a:hover {
 
     .fourth-page .second-row img {
         width: 100%;
+    }
+
+    .list-price {
+        font-size: 0.9rem;
     }
 }
