@@ -208,6 +208,117 @@ a:hover {
     color: red;
 }
 
+@media only screen and (max-width: 1080px) {
+
+    .first-page .first-section {
+        font-size: 2rem; 
+        margin: 0 2rem; 
+    }
+
+    .first-page .second-section {
+        flex-direction: column; 
+        margin: 0 2rem; 
+    }
+
+    .first-page .left-container {
+        margin-right: 0; 
+        margin-bottom: 2rem; 
+    }
+
+    .first-page .left-container img {
+        margin-top: 5rem;
+        align-items: center;
+        width: 100%; 
+        max-width: 20rem; 
+    }
+
+    .second-page {
+        margin: 0 2rem;
+        flex-direction: column; 
+        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-page .left-container {
+        margin-right: 0; 
+        margin-bottom: 2rem; 
+    }
+
+    .second-page img {
+        margin-top: 3rem;
+        width: 100%; 
+        max-width: 18rem; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second-page .right-container .rotate-section{
+        align-items: center;
+        justify-content: center;
+        max-width: fit-content;
+    }
+
+    .second-page .right-container .rotate-section img{
+        align-items: center;
+        justify-content: center;
+        margin-left: 10rem;
+        margin-bottom: 5rem;
+    }
+
+    .third-page {
+        flex-direction: column; 
+        align-items: center; 
+        margin: 0 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .third-page .first-col,
+    .third-page .second-col,
+    .third-page .third-col {
+        max-width: 100%; 
+        margin-bottom: 2rem;
+    }
+
+    .fourth-page {
+        margin: 0 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fourth-page .first-row {
+        flex-direction: column; 
+        margin-bottom: 2rem;
+    }
+
+    .fourth-page .first-row img {
+        width: 100%; 
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .fourth-page .second-row {
+        flex-direction: column;
+    }
+
+    .fourth-page .second-row .first-col,
+    .fourth-page .second-row .second-col,
+    .fourth-page .second-row .third-col {
+        max-width: 100%; 
+        margin-right: 0;
+        margin-bottom: 1.5rem; 
+    }
+
+    iframe {
+        width: 95%; 
+        height: 23rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 520px) {
     h1 {
         font-size: 2.5rem;

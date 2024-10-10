@@ -205,6 +205,95 @@ iframe{
     color:red;
 }
 
+@media only screen and (max-width: 1080px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .first-page {
+        margin: 0 2rem; 
+    }
+
+    .first-page .first-row {
+        flex-direction: column; 
+    }
+
+    .first-page .first-row img {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        height: auto; 
+    }
+
+    .first-page .first-row .paragraph {
+        max-width: 100%; 
+    }
+
+    .first-page .second-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .first-page .second-row img {
+        width: 100%; 
+    }
+
+    iframe {
+        width: 100%; 
+        height: 25rem; 
+    }
+
+    /* Second Page */
+    .second-page {
+        margin: 0 2rem;
+    }
+
+    .second-page .first-row,
+    .second-page .second-row {
+        flex-direction: column; 
+    }
+
+    .second-page .first-row .text,
+    .second-page .second-row .text {
+        max-width: 100%; 
+    }
+
+    .second-page .first-row img,
+    .second-page .second-row img {
+        margin-top: 0;
+        width: 100%; 
+    }
+
+    .second-page .first-row .image,
+    .second-page .second-row .image {
+        width: 100%; 
+    }
+
+    /* Third Page */
+    .third-page {
+        flex-direction: column; 
+        margin: 0 2rem;
+    }
+
+    .third-page .first-col,
+    .third-page .second-col {
+        max-width: 100%; 
+        margin-bottom: 2rem; 
+    }
+
+    /* Fourth Page */
+    .fourth-page {
+        flex-direction: column; 
+        margin: 0 2rem;
+    }
+
+    .fourth-page .first-col,
+    .fourth-page .second-col {
+        max-width: 100%; 
+        margin-bottom: 2rem; 
+    }
+}
+
 @media screen and (max-width: 520px) {
     h1 {
         font-size: 3rem;
