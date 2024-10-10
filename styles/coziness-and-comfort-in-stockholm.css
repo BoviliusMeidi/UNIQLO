@@ -752,14 +752,12 @@
     }
 }
 
-
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 320px) {
     .first-page  {
         min-height: 80vh;
         margin: 0 1rem;
         flex-direction: column;
         max-width: 100%;
-        margin-top: -20rem;
     }
     .first-page .row-section .column-section {
         max-width: 100%;
@@ -777,8 +775,7 @@
         text-align: center;
     }
     .first-page .row-section #second-row {
-        max-width: 40%;
-        background-color: red;
+        max-width: 100%;
     }
 
     .first-page #first-section img {
@@ -793,19 +790,29 @@
 
     .second-page {
         margin: 0 1rem;
+        min-height: 200vh;
+        max-width: 100%;
     }
 
     .second-page #second-row-section {
         flex-direction: column;
         gap: 2rem;
+        max-width: 100%;
     }
 
+    .second-page .row-section #second-first-section,
+    .second-page .row-section #second-second-section,
+    .second-page .row-section #second-third-section {  
+        max-width: 100%;
+    }
     .second-page .column-section h1 {
         font-size: 1.8rem;
+        max-width: 100%;
     }
 
     .second-page .column-section .gambar1 img,
     .second-page .column-section .gambar2 img {
+        max-width: 100%;
         width: 100%;
         height: auto;
     }
@@ -821,19 +828,46 @@
         height: auto;
         aspect-ratio: 16/9;
     }
+    
+    .second-page .subbab {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .second-page #a {
+        width: 100%;
+        margin: 0;
+        font-size: 0.7rem;
+    }
+
+    .second-page .list-price {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    #price-a, #price-b {
+        margin: 0;
+    }
 
     .third-page {
-        min-height: 220vh;
+        min-height: 240vh;
+        max-width: 100%;
         margin: 0 1rem;
     }
 
+    .third-page .row-section #third-first-section,
+    .third-page .row-section #third-second-section,
+    .third-page .row-section #third-third-section {
+    max-width: 100%;
+}
     .third-page #third-row-section {
+        max-width: 100%;
         flex-direction: column;
         gap: 2rem;
     }
 
     .third-page .column-section img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -842,8 +876,9 @@
     }
 
     .fourth-page {
-        min-height: 230vh;
+        min-height: 250vh;
         margin: 0 1rem;
+        max-width: 100%;
     }
 
     .fourth-page #fourth-row-section {
@@ -851,10 +886,16 @@
         gap: 2rem;
     }
 
+    .fourth-page .row-section #fourth-first-section,
+    .fourth-page .row-section #fourth-second-section,
+    .fourth-page .row-section #fourth-third-section {
+        width: 100%; 
+    }
     .fourth-page .row-section .column-section p, 
     .fourth-page .row-section .column-section .list-price {
         max-width: 100%;
     }
+
     .fourth-page .column-section img {
         width: 100%;
         height: auto;
@@ -864,13 +905,28 @@
         font-size: 1.8rem;
     }
     .fifth-page {
-        min-height: 190vh;
-        margin: 0 2rem;
+        min-height: 240vh;
+        margin: 0 1rem;
     }
 
+    .fifth-page .subbab {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .fifth-page .subbab p {
+        margin: 2rem 0 2rem 0;
+        max-width: 100%;
+    }
+
+    .fifth-page .row-section #fifth-first-section,
+    .fifth-page .row-section #fifth-second-section,
+    .fifth-page .row-section #fifth-third-section {
+        width: 100%; 
+    }
     .fifth-page #fifth-row-section {
         flex-direction: column;
-        gap: 2rem;
+        gap: 0rem;
     }
 
     .fifth-page .column-section img {
@@ -885,6 +941,12 @@
     .sixth-page {
         min-height: 220vh;
         margin: 0 1rem;
+    }
+
+    .sixth-page .row-section #sixth-first-section,
+    .sixth-page .row-section #sixth-second-section,
+    .sixth-page .row-section #sixth-third-section {
+        width: 100%; 
     }
 
     .sixth-page #sixth-row-section {
@@ -908,10 +970,16 @@
     }
 
     .seventh-page {
-        min-height: 240vh;
+        min-height: 280vh;
         margin: 0 2rem;
     }
 
+    .seventh-page .row-section #seventh-first-section,
+    .seventh-page .row-section #seventh-second-section,
+    .seventh-page .row-section #seventh-third-section {
+        width: 100%; 
+    }
+    
     .seventh-page #seventh-row-section {
         flex-direction: column;
         gap: 2rem;
