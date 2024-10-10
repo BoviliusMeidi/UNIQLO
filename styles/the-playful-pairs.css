@@ -235,7 +235,6 @@ iframe{
   max-width: 95%;
 }
 
-
 .fourth-page .up-section .right-section {
   display: flex;
   flex-direction: row;
@@ -440,4 +439,160 @@ iframe{
 
 .list-price a:hover {
   color: red;
+}
+
+@media screen and (max-width: 520px) {
+  .first-page {
+    margin: 0 1rem;
+    flex-direction: col;
+    max-width: 100%;
+    min-height: 150vh;
+    justify-content: center;
+  }
+
+  .first-page #second-section {
+    max-width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .first-page #second-section iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  .first-page #second-section .text-awal {
+    width: 100%;
+    margin: 0;
+  }
+  .first-page #second-section .row-section {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .first-page #second-section .row-section .image {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .first-page #second-section .column-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .first-page #second-section .column-section img {
+    width: 100%; 
+    height: auto;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .first-page #second-section .row-section .produk img {
+    display: block;
+    width: 35%; 
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  .first-page #second-section .row-section .produk2 img {
+    display: block;
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .second-page {
+    margin: 0 1rem;
+    min-height: 130vh;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .second-page .up-section {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .second-page .up-section .left-section {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .second-page .up-section .left-section img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .second-page .up-section .right-section {
+    margin: 0 1rem;
+    max-width: 100%;
+  }
+
+  .second-page .up-section .right-section h1 {
+    margin-top: -2rem;
+  }
+  .second-page .up-section .right-section p {
+    font-size: 1rem;
+  }
+  .third-page {
+    margin: 0 1rem;
+    min-height: 320vh;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .third-page #third-row-section {
+    margin: 0;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .third-page #third-first-section, 
+  .third-page #third-second-section,
+  .third-page #third-third-section {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .fourth-page {
+    margin: 1rem 1rem 1rem;
+    min-height: 90vh;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .fourth-page .up-section {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    gap: 0;
+  }
+
+  .fourth-page .up-section .left-section {
+    max-width: 100%;
+  }
+
+  .fourth-page .up-section .right-section img {
+    width: 75%;
+  }
+
+  .fifth-page {
+    margin: 0 1rem;
+    min-height: 300vh;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .fifth-page #fifth-row-section {
+    flex-direction: column;
+  }
+  
+  .sixth-page {
+    margin: 0 1rem;
+    min-height: 240vh;
+    flex-direction: column;
+    max-width: 100%;
+  }
 }
