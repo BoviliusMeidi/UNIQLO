@@ -474,7 +474,7 @@ iframe{
 
   /* second page */
   .second-page {
-    margin:20rem  2rem;
+    margin:4rem  2rem;
     gap: 3rem;
     display: flex;
     align-items: center;
@@ -547,7 +547,7 @@ iframe{
 
   /* fourth page */
   .fourth-page {
-    margin: 10rem 2rem;
+    margin: 1rem 2rem;
   }
 
   .fourth-page .up-section {
@@ -565,8 +565,8 @@ iframe{
 
   /* fifth page */
   .fifth-page {
-    margin: 5rem  2rem;
-    height: auto;
+    margin: 1rem  2rem;
+    height: 100%;
     margin-top: 5rem;
   }
 
@@ -582,7 +582,8 @@ iframe{
 
   /* sixth page */
   .sixth-page {
-    margin: 30rem 2rem;
+    height: 100%;
+    margin: 2rem 2rem;
     flex-direction: column;
     display: flex;
     justify-content: center;

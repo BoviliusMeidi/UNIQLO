@@ -846,15 +846,14 @@
         margin: 0;
         font-size: 0.7rem;
     }
-    
-    .second-page .list-price #price-a {
+
+    .second-page .list-price {
         max-width: 100%;
-        margin-right: 20rem;
-        align-items: center;
+        margin: 0;
     }
 
-    #price-a, #price-a {
-        margin-right: 20rem;
+    #price-a, #price-b {
+        margin: 0;
     }
 
     .third-page {
