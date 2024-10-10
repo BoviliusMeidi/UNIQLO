@@ -13,6 +13,7 @@
 }
 
 .first-page-hidden {
+    position: inherit;
     min-height: 110vh;
     margin: 4rem 7rem 3rem 13rem;
     border-radius: 5rem;
@@ -89,4 +90,47 @@
     width: 15px;
     background-color: #D32F2F; /* Red accent circle */
     border-radius: 50%;
-  }
+}
+
+@media screen and (max-width: 520px) {
+    .first-page {
+        position: absolute;
+        z-index: 5;
+        margin: 2rem 0 1rem;
+        min-height: 53vh;
+        border-radius: 2rem;
+        max-width: 95%;
+    }
+
+    .first-page-hidden {
+        position: absolute;
+        z-index: 0;
+        min-height: 53vh;
+        border-radius: 2rem;
+        width: 95%;
+        margin: 3rem 1rem 10rem;
+    }
+
+    .first-page .first-section {
+        font-size: 2.5rem;
+    }
+
+    .first-page .second-section {
+        font-size: 1rem;
+        max-width: 100%;
+        gap: 2rem;
+    }
+
+    .first-page .second-section .bovilius, 
+    .first-page .second-section .hansthobie, 
+    .first-page .second-section .aldian {
+        margin: 0;
+    } 
+
+    .second-page {
+        position: relative;
+        margin: 30rem 0 1rem;
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+}
