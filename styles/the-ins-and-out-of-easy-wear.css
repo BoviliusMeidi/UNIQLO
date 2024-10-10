@@ -205,7 +205,7 @@ iframe{
     color:red;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 320px) {
     h1 {
         font-size: 3rem;
         width: auto;
@@ -252,7 +252,7 @@ iframe{
     }
 
     .second-page {
-        min-height: 150vh;
+        min-height: 270vh;
         margin: 0 1rem;
         max-width: 100%;
     }
@@ -268,10 +268,6 @@ iframe{
     .second-page .first-row .text {
         max-width: 100%;
     }
-
-    .second-page .first-row .list-price {
-        margin-left: 12rem;
-    }
     .second-page .list-price p {
         font-size: 0.8rem;
     }
@@ -285,13 +281,15 @@ iframe{
     }
 
     .second-page .first-row .image {
-        margin-top: -15rem;
-        width: 40%;
+        width: 100%;
         height: auto;
     }
     .second-page .first-row img {
         width: 100%;
         height: auto;
+    }
+    .second-page .first-row .list-price {
+        width: 100%;
     }
 
     .second-page .second-row {
@@ -305,21 +303,25 @@ iframe{
     }
 
     .second-page .second-row .image {
-        position: absolute;
-        width: 42%;
-        margin-top: 18rem;
+        width: 100%;
+        margin-top: 5rem;
         z-index: 0;
-        margin-left: 15rem;
     }
 
     .second-page .second-row .list-price {
-        max-width: 50%;
+        max-width: 100%;
     }
-
 
     .third-page, .fourth-page {
         min-height: 100vh;
+        max-width: 100%;
         margin: 0 1rem;
+        flex-direction: column;
+    }
+
+    .third-page .first-col, .third-page .second-col,
+    .fourth-page .first-col, .fourth-page .second-col {
+        max-width: 100%;
     }
 
     .third-page p, .fourth-page p {
