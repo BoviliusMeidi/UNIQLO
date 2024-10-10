@@ -444,12 +444,13 @@ iframe{
 @media only screen and (max-width: 1080px) {
   /* first page */
   .first-page {
-    margin: 5rem 4rem;
+    height: 100%;
+    margin: 5rem 4rem 0 4rem;
   }
   
   .first-page #second-section .column-section img {
     width: 30rem;
-    height: 35vh;
+    height: auto;
   }
 
   .first-page #second-section .row-section{
@@ -460,8 +461,8 @@ iframe{
   }
   
   .first-page #second-section .text-awal {
-    margin-right: 2rem;
-    padding: 1rem;
+    margin-right: 0rem;
+    padding: 2rem 0rem;
     width: 80%;
   }
 
@@ -472,8 +473,9 @@ iframe{
 
   /* second page */
   .second-page {
-    margin:10rem  2rem;
-    gap: 3rem;
+    height: 100%;
+    margin: 1rem 2rem;
+    gap: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -482,19 +484,19 @@ iframe{
   .second-page .up-section {
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 0rem;
   }
 
   .second-page .up-section .left-section {
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
+    gap: 0rem;
   }
 
   .second-page .up-section .left-section img {
     width: 20rem;
     margin-left: 0;
-    margin-top: 1rem;
+    margin-top: 0rem;
     align-items: center;
     justify-content: center;
   }
@@ -530,7 +532,8 @@ iframe{
 
   /* third page */
   .third-page {
-    margin: 15rem 2rem;
+    height: 100%;
+    margin: 1rem 2rem;
   }
 
   .third-page #third-row-section {
@@ -544,15 +547,15 @@ iframe{
 
   /* fourth page */
   .fourth-page {
-    margin: 90rem 2rem;
-    margin-bottom: -95rem;
+    height: 100%;
+    margin: 1rem 2rem;
   }
 
   .fourth-page .up-section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .fourth-page .up-section .right-section img {
@@ -563,7 +566,8 @@ iframe{
 
   /* fifth page */
   .fifth-page {
-    margin: 100rem  2rem;
+    margin: 1rem 2rem;
+    height: 100%;
   }
 
   .fifth-page #fifth-row-section {
@@ -577,7 +581,8 @@ iframe{
 
   /* sixth page */
   .sixth-page {
-    margin: 20rem 2rem;
+    height: 100%;
+    margin: 1rem 2rem;
     flex-direction: column;
     display: flex;
     justify-content: center;
@@ -711,7 +716,7 @@ iframe{
   }
 
   .second-page .up-section .right-section h1 {
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
   .second-page .up-section .right-section p {
     font-size: 1rem;
@@ -778,11 +783,11 @@ iframe{
   }
   
   .sixth-page {
+    height: 100%;
     margin: 0 1rem;
-    margin-top: -13rem;
-    min-height: 300vh;
     flex-direction: column;
     max-width: 100%;
+    gap: 1rem;
   }
   .sixth-page .row-section #sixth-first-section,
   .sixth-page .row-section #sixth-second-section,
@@ -791,9 +796,13 @@ iframe{
   }
 
   .sixth-page #sixth-row-section #direction-90 {
-    transform: rotate(-90deg);
-    margin-bottom: -4rem;
-  }
+    transform: rotate(180deg);
+    margin-bottom: 0rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
 
   .sixth-page .column-section p {
     margin: 0;
@@ -801,7 +810,7 @@ iframe{
 
   #price-a, #price-b {
     margin: 0;
-    margin-bottom: -8rem;
+    margin-bottom: 0rem;
   }
   
 }
