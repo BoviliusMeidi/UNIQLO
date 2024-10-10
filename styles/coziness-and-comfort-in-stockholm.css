@@ -628,7 +628,7 @@
 
     /* Third Page */
     .third-page {
-        margin: 40rem 2rem; 
+        margin: 30rem 2rem; 
         flex-direction: column;
         align-items: center;
     }
@@ -649,7 +649,7 @@
 
     /* Fourth Page */
     .fourth-page {
-        margin: 40rem 2rem;
+        margin: 60rem 2rem;
         flex-direction: column;
         align-items: center;
     }
@@ -660,6 +660,12 @@
     }
 
     .fourth-page .column-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page .row-section #fourth-row-section {
+        margin-top: 20rem;
         width: 100%;
         height: auto;
     }
@@ -693,10 +699,10 @@
 
     /* Sixth Page */
     .sixth-page {
-        margin: 30rem 2rem;
+        margin: 0 2rem;
         flex-direction: column;
         align-items: center;
-        margin-bottom: -25rem;
+        height: auto;
     }
 
     .sixth-page #sixth-row-section {
@@ -715,10 +721,10 @@
 
     /* Seventh Page */
     .seventh-page {
-        margin: 60rem 2rem;
+        margin: 5rem 2rem;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 25rem;
+        height: auto;
     }
 
     .seventh-page #seventh-row-section {
