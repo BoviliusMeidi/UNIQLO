@@ -605,7 +605,7 @@ iframe{
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 320px) {
   .first-page {
     margin: 0 1rem;
     flex-direction: col;
@@ -618,6 +618,10 @@ iframe{
     max-width: 100%;
     justify-content: center;
     align-content: center;
+  }
+
+  .first-page .row-section .column-section h1 {
+    font-size: 3rem;
   }
   
   .first-page #second-section iframe {
@@ -656,7 +660,7 @@ iframe{
 
   .second-page {
     margin: 0 1rem;
-    min-height: 130vh;
+    min-height: 140vh;
     flex-direction: column;
     max-width: 100%;
   }
@@ -689,8 +693,9 @@ iframe{
     font-size: 1rem;
   }
   .third-page {
+    background-color: rd;
     margin: 0 1rem;
-    min-height: 320vh;
+    min-height: 340vh;
     flex-direction: column;
     max-width: 100%;
   }
@@ -711,7 +716,7 @@ iframe{
   }
   .fourth-page {
     margin: 1rem 1rem 1rem;
-    min-height: 90vh;
+    min-height: 100vh;
     flex-direction: column;
     max-width: 100%;
   }
@@ -738,14 +743,41 @@ iframe{
     max-width: 100%;
   }
 
+  .fifth-page .row-section #fifth-first-section,
+  .fifth-page .row-section #fifth-second-section,
+  .fifth-page .row-section #fifth-third-section {
+    width: 100%; 
+  }
+
   .fifth-page #fifth-row-section {
     flex-direction: column;
   }
   
   .sixth-page {
     margin: 0 1rem;
-    min-height: 240vh;
+    margin-top: -13rem;
+    min-height: 300vh;
     flex-direction: column;
     max-width: 100%;
   }
+  .sixth-page .row-section #sixth-first-section,
+  .sixth-page .row-section #sixth-second-section,
+  .sixth-page .row-section #sixth-third-section {
+    width: 100%; 
+  }
+
+  .sixth-page #sixth-row-section #direction-90 {
+    transform: rotate(-90deg);
+    margin-bottom: -4rem;
+  }
+
+  .sixth-page .column-section p {
+    margin: 0;
+  }
+
+  #price-a, #price-b {
+    margin: 0;
+    margin-bottom: -8rem;
+  }
+  
 }
