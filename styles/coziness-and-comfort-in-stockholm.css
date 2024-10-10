@@ -790,13 +790,14 @@
 
     .second-page {
         margin: 0 1rem;
-        min-height: 200vh;
+        margin-top: 2rem;
+        min-height: 180vh;
         max-width: 100%;
+
     }
 
     .second-page #second-row-section {
         flex-direction: column;
-        gap: 2rem;
         max-width: 100%;
     }
 
@@ -850,7 +851,7 @@
     }
 
     .third-page {
-        min-height: 240vh;
+        min-height: 210vh;
         max-width: 100%;
         margin: 0 1rem;
     }
@@ -905,7 +906,7 @@
         font-size: 1.8rem;
     }
     .fifth-page {
-        min-height: 240vh;
+        min-height: 222vh;
         margin: 0 1rem;
     }
 
@@ -932,6 +933,7 @@
     .fifth-page .column-section img {
         width: 100%;
         height: auto;
+        margin: 0;
     }
 
     .fifth-page h1 {
@@ -939,7 +941,7 @@
     }
 
     .sixth-page {
-        min-height: 220vh;
+        min-height: 210vh;
         margin: 0 1rem;
     }
 
