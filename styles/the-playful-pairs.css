@@ -444,7 +444,7 @@ iframe{
 @media only screen and (max-width: 1080px) {
   /* first page */
   .first-page {
-    margin: 5rem 4rem;
+    margin: 10rem 4rem;
   }
   
   .first-page #second-section .column-section img {
@@ -472,7 +472,7 @@ iframe{
 
   /* second page */
   .second-page {
-    margin:10rem  2rem;
+    margin:20rem  2rem;
     gap: 3rem;
     display: flex;
     align-items: center;
@@ -530,7 +530,8 @@ iframe{
 
   /* third page */
   .third-page {
-    margin: 15rem 2rem;
+    margin: 0 2rem;
+    height: auto;
   }
 
   .third-page #third-row-section {
@@ -544,8 +545,7 @@ iframe{
 
   /* fourth page */
   .fourth-page {
-    margin: 90rem 2rem;
-    margin-bottom: -95rem;
+    margin: 10rem 2rem;
   }
 
   .fourth-page .up-section {
@@ -563,21 +563,24 @@ iframe{
 
   /* fifth page */
   .fifth-page {
-    margin: 100rem  2rem;
+    margin: 5rem  2rem;
+    height: auto;
+    margin-top: 5rem;
   }
 
   .fifth-page #fifth-row-section {
+    margin-top: 5rem;
     flex-direction: column;
   }
 
   .fifth-page .column-section img {
-    width: 90%;
+    width:100%;
     height: auto;
   }
 
   /* sixth page */
   .sixth-page {
-    margin: 20rem 2rem;
+    margin: 30rem 2rem;
     flex-direction: column;
     display: flex;
     justify-content: center;

@@ -578,57 +578,57 @@
     /* First Page */
     .first-page {
         margin: 0 2rem; 
-        margin-bottom: -35rem;
+        
     }
 
     .first-page #first-section {
-        flex-direction: column; /* Ubah tata letak menjadi kolom */
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
     }
 
     .first-page #first-section .column-section {
         margin-right: 0;
-        margin-bottom: 2rem; /* Tambahkan jarak antara gambar dan teks */
+        margin-bottom: 2rem; 
     }
 
     .first-page .row-section .column-section h1 {
-        font-size: 3.5rem; /* Perkecil ukuran font pada layar lebih kecil */
-        margin-right: 0; /* Hapus margin agar lebih rapi */
+        font-size: 3.5rem; 
+        margin-right: 0; 
     }
 
     .first-page #first-section img {
-        width: 90%; /* Gambar lebih responsif */
-        height: auto; /* Tetap jaga proporsi gambar */
+        width: 90%; 
+        height: auto; 
         margin-right: 0;
     }
 
     /* Second Page */
     .second-page {
-        margin: 20rem 2rem; /* Kurangi margin untuk layar tablet */
-        flex-direction: column; /* Ubah tata letak menjadi kolom */
+        margin: 0rem 2rem;
+        flex-direction: column; 
         align-items: center;
-        margin-bottom: -20rem;
+        
     }
 
     .second-page #second-row-section {
-        flex-direction: column; /* Stack elemen secara vertikal */
-        gap: 2rem; /* Tambahkan jarak antar elemen */
+        flex-direction: column; 
+        gap: 2rem; 
     }
 
     .second-page .column-section .gambar1 img,
     .second-page .column-section .gambar2 img {
-        width: 100%; /* Buat gambar lebih responsif */
+        width: 100%; 
         height: auto;
     }
 
     .second-page .column-section h1 {
-        font-size: 2rem; /* Ukuran font lebih kecil */
+        font-size: 2rem; 
     }
 
     /* Third Page */
     .third-page {
-        margin: 40rem 2rem; /* Margin untuk layar tablet */
+        margin: 40rem 2rem; 
         flex-direction: column;
         align-items: center;
     }
@@ -666,10 +666,10 @@
 
     /* Fifth Page */
     .fifth-page {
-        margin: 40rem 2rem;
+        margin: 20rem 2rem;
         flex-direction: column;
         align-items: center;
-        margin-bottom: -40rem;
+        
     }
 
     .fifth-page #fifth-row-section {
@@ -693,7 +693,7 @@
 
     /* Sixth Page */
     .sixth-page {
-        margin: 70rem 2rem;
+        margin: 30rem 2rem;
         flex-direction: column;
         align-items: center;
         margin-bottom: -25rem;
@@ -718,7 +718,7 @@
         margin: 60rem 2rem;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20rem;
+        margin-bottom: 25rem;
     }
 
     .seventh-page #seventh-row-section {
@@ -840,14 +840,15 @@
         margin: 0;
         font-size: 0.7rem;
     }
-
-    .second-page .list-price {
+    
+    .second-page .list-price #price-a {
         max-width: 100%;
-        margin: 0;
+        margin-right: 20rem;
+        align-items: center;
     }
 
-    #price-a, #price-b {
-        margin: 0;
+    #price-a, #price-a {
+        margin-right: 20rem;
     }
 
     .third-page {
