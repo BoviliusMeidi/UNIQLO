@@ -1,0 +1,143 @@
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-weight: 100;
+  color: #333;
+  font-size: 5rem;
+}
+
+.main-section {
+  background-color: #fff;
+  padding: 1rem 3rem 2rem 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 50rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-section h4 {
+  margin: 1rem 0 0.5rem;
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-section h5 {
+  margin: 0rem 0 0.5rem;
+  color: #000000;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 500;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-section input[type="email"],
+.form-section input[type="password"],
+.form-section input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-section input[type="date"] {
+  width: 30%;
+  display: flex;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.checkbox {
+  margin: 0;
+  display: flex;
+}
+
+.form-section .checkbox input[type="checkbox"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.form-section .checkbox p {
+  display: inline;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+.form-section button {
+  width: 40%;
+  padding: 0.8rem;
+  background-color: #000000;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #555;
+}
+
+.terms {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0rem;
+  margin-left: 2rem;
+}
+
+.terms p {
+  margin-top: 0;
+  color: #000000;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.asterisk{
+    color: red;
+}

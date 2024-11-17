@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNIQLO | What is LifeWare Magazine?</title>
+    <link rel="stylesheet" href="../../styles/authentication/register.css" />
+    <!-- link css -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header-container"></header>
+    <!-- finish header -->
+
+    <!-- sidebar -->
+    <div class="sidebar-container"></div>
+    <!-- finish sidebar -->
+
+    <main>
+      <h2>REGISTER</h2>
+      <div class="main-section" ng-controller="UserController">
+        <div class="register-section">
+          <form class="form-section" ng-submit="createUser()">
+            <h4>Email Address <span class="asterisk">*</span></h4>
+            <input
+              type="email"
+              ng-model="newUser.email"
+              placeholder="Email"
+              required
+            />
+            <h4>Password <span class="asterisk">*</span></h4>
+            <input
+              type="password"
+              ng-model="newUser.password"
+              placeholder="Password"
+              id="password-input"
+              required
+            />
+            <div class="checkbox">
+              <input type="checkbox" name="" id="" ng-click="togglePassword()"/>
+              <p>Show Password</p>
+            </div>
+            <h5>Date of Birth</h5>
+            <input
+              type="date"
+              ng-model="newUser.dob"
+              placeholder="Date of Birth"
+            />
+            <div class="checkbox">
+              <input type="checkbox" name="" id="" ng-click=""/>
+              <p>I agree to UNIQLO's Terms of Use and Privacy Policy</p>
+            </div>
+            <div class="terms">
+              <a href=""><p>TERMS OF USE</p></a>
+              <a href=""><p>PRIVACY POLICY</p></a>
+            </div>
+            <p class="error-message" ng-show="message">{{ message }}</p>
+            <button type="submit">REGISTER</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <!-- <footer class="footer-container"></footer> -->
+    <!-- finish footer -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../../scripts/components-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../controllers/userController.js"></script>
+  </body>
+</html>
