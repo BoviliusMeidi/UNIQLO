@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "database": "node config/dbInitialization.js",
+    "dev": "nodemon server.js",
+    "migrate": "npx knex migrate:latest --knexfile ./config/dbKnex.js",
+    "migrate:make": "npx knex migrate:make --knexfile ./config/dbKnex.js",
+    "migrate:rollback": "npx knex migrate:rollback --knexfile ./config/dbKnex.js",
+    "seed": "npx knex seed:run --knexfile ./config/dbKnex.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoviliusMeidi/UNIQLO.git"
+  },
+  "author": "Bovilius Meidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoviliusMeidi/UNIQLO/issues"
+  },
+  "homepage": "https://github.com/BoviliusMeidi/UNIQLO#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "connect-session-knex": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
