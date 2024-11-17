@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-App="myApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNIQLO | Favorite Magazine</title>
-    <link rel="stylesheet" href="../styles/favorite-magazine.css" />
+    <link rel="stylesheet" href="../../styles/favorite-magazine.css" />
     <!-- link css -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -31,15 +31,19 @@
     <main>
       <div class="img-header">
         <img
-          src="../assets/magazine/LifeWear-Magazine.png"
+          src="../../assets/magazine/LifeWear-Magazine.png"
           alt="LifeWear-Magazine"
         />
       </div>
-      <div class="favorite-magazine">
-        <div class="text">
-          <h1>Favorite Magazine</h1>
+      <div class="favorite-magazine" ng-controller="FavoriteController">
+        <h1>{{message}}</h1>
+        <div id="favorite-list">
+          <div ng-repeat="magazine in favoriteMagazines">
+            <img ng-src="{{magazine.img}}" alt="{{magazine.title}}" />
+            <h2>{{magazine.title}}</h2>
+          </div>
         </div>
-        <div id="favorite-list"></div>
+        <button ng-click="logout()">Logout</button>
       </div>
     </main>
 
@@ -47,6 +51,10 @@
     <footer class="footer-container"></footer>
     <!-- finish footer -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="../scripts/components-script.js"></script>
+    <script src="../../scripts/components-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../controllers/favoriteController.js"></script>
   </body>
 </html>

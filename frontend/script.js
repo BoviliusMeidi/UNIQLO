@@ -5,13 +5,13 @@ $(document).ready(function () {
 
     // scroll magazine
     const url = [
-        "contents/what-are-timeless-tone.html",
-        "contents/edinburgh-old-city-new-style.html",
-        "contents/the-playful-pairs.html",
-        "contents/coziness-and-comfort-in-stockholm.html",
-        "contents/the-ins-and-out-of-easy-wear.html",
-        "contents/kagawa-timeless-modern.html",
-        "contents/unique-clothing.html",
+        "views/magazines/what-are-timeless-tone.html",
+        "views/magazines/edinburgh-old-city-new-style.html",
+        "views/magazines/the-playful-pairs.html",
+        "views/magazines/coziness-and-comfort-in-stockholm.html",
+        "views/magazines/the-ins-and-out-of-easy-wear.html",
+        "views/magazines/kagawa-timeless-modern.html",
+        "views/magazines/unique-clothing.html",
     ]
 
     const images = [

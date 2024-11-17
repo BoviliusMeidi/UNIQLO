@@ -1,0 +1,759 @@
+<style>
+  .fullbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-color: rgba(205, 205, 205, 0.7);
+    display: none;
+    z-index: 998;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -55%;
+    border-radius: 2rem 0 0 2rem;
+    width: 55%;
+    height: 100%;
+    background: #ffffff;
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-border-radius: 2rem 0 0 2rem;
+    -moz-border-radius: 2rem 0 0 2rem;
+    -ms-border-radius: 2rem 0 0 2rem;
+    -o-border-radius: 2rem 0 0 2rem;
+    -webkit-transition: right 0.3s ease;
+    -moz-transition: right 0.3s ease;
+    -ms-transition: right 0.3s ease;
+    -o-transition: right 0.3s ease;
+  }
+
+  .fullbar.show {
+    display: block;
+  }
+
+  .sidebar.show {
+    right: 0;
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+  }
+
+  .sidebar:not(.show) {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+  }
+
+  @keyframes slide-in {
+    from {
+      right: -55%;
+    }
+    to {
+      right: 0%;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      right: 0%;
+    }
+    to {
+      right: -55%;
+    }
+  }
+
+  .close {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    cursor: pointer;
+  }
+
+  .close .material-icons {
+    background-color: transparent;
+    color: #333;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hr-top {
+    background-color: #000000;
+    height: 0.1rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    width: 60%;
+  }
+
+  .main-sidebar {
+    padding: 0 4rem;
+  }
+
+  .information-content {
+    margin: 0;
+    padding: 0 0 0 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .content-lists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-lists .list {
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content-lists .list .list-left {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content-lists .list img {
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .content-lists .list .list-text {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-text h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .favorite-icon {
+    font-size: 3rem;
+    color: #999;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+
+  .favorite-container.favorited .favorite-icon {
+    color: red;
+  }
+
+  .footer-sidebar {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-sidebar .heading h1 {
+    text-align: center;
+    margin: 1rem 0 0 0;
+  }
+
+  .footer-sidebar .name {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-sidebar .footer-logo {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .close .material-icons {
+      background-color: transparent;
+      color: #333;
+      font-size: 2rem;
+      font-weight: 900;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .top img {
+      width: 50%;
+    }
+
+    .hr-top {
+      background-color: #000000;
+      height: 0.1rem;
+      margin-top: 1.5rem;
+      padding: 0;
+      width: 50%;
+    }
+
+    .information-content {
+      margin: 0;
+      padding: 0 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .content-lists {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-lists .list {
+      padding: 0;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .content-lists .list img {
+      object-fit: cover;
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .content-lists .list .list-text {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      justify-content: center;
+    }
+
+    .content-lists .list .list-text h1 {
+      font-size: 1rem;
+    }
+
+    .footer-sidebar .heading h1 {
+      text-align: center;
+      font-size: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    .footer-sidebar .name {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-bottom: 0rem;
+    }
+
+    .footer-sidebar .name p {
+      font-size: 0.7rem;
+    }
+
+    .footer-sidebar .footer-logo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-sidebar .footer-logo img {
+      width: 20%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -70%;
+      border-radius: 2rem 0 0 2rem;
+      width: 70%;
+      height: 100%;
+      background: #ffffff;
+      transition: right 0.3s ease;
+      z-index: 999;
+      overflow-y: auto;
+      -webkit-border-radius: 2rem 0 0 2rem;
+      -moz-border-radius: 2rem 0 0 2rem;
+      -ms-border-radius: 2rem 0 0 2rem;
+      -o-border-radius: 2rem 0 0 2rem;
+      -webkit-transition: right 0.3s ease;
+      -moz-transition: right 0.3s ease;
+      -ms-transition: right 0.3s ease;
+      -o-transition: right 0.3s ease;
+    }
+
+    @keyframes slide-in {
+      from {
+        right: -70%;
+      }
+      to {
+        right: 0%;
+      }
+    }
+
+    @keyframes slide-out {
+      from {
+        right: 0%;
+      }
+      to {
+        right: -70%;
+      }
+    }
+
+    .close .material-icons {
+      background-color: transparent;
+      color: #333;
+      font-size: 2rem;
+      font-weight: 900;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .top img {
+      width: 50%;
+    }
+
+    .hr-top {
+      background-color: #000000;
+      height: 0.1rem;
+      margin-top: 1.5rem;
+      padding: 0;
+      width: 50%;
+    }
+
+    .information-content {
+      margin: 0;
+      padding: 0 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .content-lists {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-lists .list {
+      padding: 0;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-lists .list img {
+      object-fit: cover;
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .content-lists .list .list-text {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-lists .list .list-text h1 {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .footer-sidebar .heading h1 {
+      text-align: center;
+      font-size: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    .footer-sidebar .name {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-bottom: 0rem;
+    }
+
+    .footer-sidebar .name p {
+      font-size: 0.7rem;
+    }
+
+    .footer-sidebar .footer-logo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-sidebar .footer-logo img {
+      width: 20%;
+    }
+  }
+
+  @media (max-width: 364px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      border-radius: 2rem 0 0 2rem;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      transition: right 0.3s ease;
+      z-index: 999;
+      overflow-y: auto;
+      -webkit-border-radius: 2rem 0 0 2rem;
+      -moz-border-radius: 2rem 0 0 2rem;
+      -ms-border-radius: 2rem 0 0 2rem;
+      -o-border-radius: 2rem 0 0 2rem;
+      -webkit-transition: right 0.3s ease;
+      -moz-transition: right 0.3s ease;
+      -ms-transition: right 0.3s ease;
+      -o-transition: right 0.3s ease;
+    }
+
+    @keyframes slide-in {
+      from {
+        right: -100%;
+      }
+      to {
+        right: 0%;
+      }
+    }
+
+    @keyframes slide-out {
+      from {
+        right: 0%;
+      }
+      to {
+        right: -100%;
+      }
+    }
+
+    .close .material-icons {
+      background-color: transparent;
+      color: #333;
+      font-size: 2rem;
+      font-weight: 900;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .top img {
+      width: 50%;
+    }
+
+    .hr-top {
+      background-color: #000000;
+      height: 0.1rem;
+      margin-top: 1.5rem;
+      padding: 0;
+      width: 50%;
+    }
+
+    .information-content {
+      margin: 0;
+      padding: 0 0 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .content-lists {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-lists .list {
+      padding: 0;
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-lists .list .list-left{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-lists .list img {
+      object-fit: cover;
+      width: 10rem;
+      height: 10rem;
+    }
+
+    .content-lists .list .list-text {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-lists .list .list-text h1 {
+      font-size: 1rem;
+    }
+
+    .footer-sidebar .heading h1 {
+      text-align: center;
+      font-size: 1rem;
+      margin: 1rem 0 0 0;
+    }
+
+    .footer-sidebar .name {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-bottom: 0rem;
+    }
+
+    .footer-sidebar .name p {
+      font-size: 0.7rem;
+    }
+
+    .footer-sidebar .footer-logo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-sidebar .footer-logo img {
+      width: 20%;
+    }
+  }
+</style>
+
+<div class="fullbar">
+  <div class="sidebar">
+    <button class="close" id="close-sidebar">
+      <span class="material-icons"> close </span>
+    </button>
+    <div class="top">
+      <img
+        src="../assets/magazine/LifeWear-Magazine.png"
+        alt="LifeWear-Magazine"
+      />
+    </div>
+    <hr class="hr-top" />
+    <div class="main-sidebar">
+      <div class="information">
+        <h1>About</h1>
+        <div class="information-content">
+          <a href="../index.html">
+            <img src="../assets/magazine/Magazine-Book.png" alt="Magazine-Book" />
+          </a>
+          <p>
+            LifeWear adalah pakaian yang dirancang untuk membuat kehidupan
+            setiap orang menjadi lebih baik. Pakaian esensial yang simpel dan
+            berkualitas tinggi dengan nuansa keindahan serta keterampilan dalam
+            setiap detailnya. Didesain dan terus dikembangkan untuk memenuhi
+            kebutuhan hidup setiap orang
+          </p>
+        </div>
+      </div>
+
+      <div class="content-lists">
+        <h1>Content List</h1>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/what-are-timeless-tone.html">
+              <img src="../assets/magazine/Magazine_2.png" alt="What are Timeless Tone" />
+            </a>
+            <div class="list-text">
+              <h1>What are Timeless Tone?</h1>
+              <p>
+                Bagaimana pakaian timeless selalu terasa sepeti baru dan cocok
+                di setiap waktunya?
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="2">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/edinburgh-old-city-new-style.html">
+              <img src="../assets/magazine/Magazine_3.png" alt="Edinburgh Old City New Style" />
+            </a>
+            <div class="list-text">
+              <h1>Edinburgh: Old City, New Style</h1>
+              <p>Edinburgh, kota lama dengan gaya berpakaian yang baru.</p>
+            </div>
+          </div>
+          <div class="item" data-id="3">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/the-playful-pairs.html">
+              <img src="../assets/magazine/Magazine_4.png" alt="The Playful Pairs" />
+            </a>
+            <div class="list-text">
+              <h1>The Playful Pairs?</h1>
+              <p>
+                Desain baju yang nyaman dan seru untuk dilihat dan digunakan.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="4">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/coziness-and-comfort-in-stockholm.html">
+              <img src="../assets/magazine/Magazine_5.png" alt="Coziness and Comfort in Stockholm" />
+            </a>
+            <div class="list-text">
+              <h1>Coziness and Comfort in Stockholm</h1>
+              <p>
+                Gaya Nordic yang modern dan fungsional serta bergaya modern.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="5">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/the-ins-and-out-of-easy-wear.html">
+              <img src="../assets/magazine/Magazine_6.png" alt="The Ins and Out of Easy Wear" />
+            </a>
+            <div class="list-text">
+              <h1>The Ins and Out of Easy Wear</h1>
+              <p>Gaya kasual outfit untuk di dalam maupun di luar ruangan.</p>
+            </div>
+          </div>
+          <div class="item" data-id="6">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/kagawa-timeless-modern.html">
+              <img src="../assets/magazine/Magazine_7.png" alt="Kagawa Timeless Modern" />
+            </a>
+            <div class="list-text">
+              <h1>Kagawa: Timeless Modern</h1>
+              <p>
+                Desainer Kagawa dengan pakaian autentiknya, bertema pakaian
+                cocok di setiap waktu.
+              </p>
+            </div>
+          </div>
+          <div class="item" data-id="7">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list-left">
+            <a href="../views/magazines/unique-clothing.html">
+              <img src="../assets/magazine/Magazine_8.png" alt="Unique Clothing" />
+            </a>
+            <div class="list-text">
+              <h1>Unique Clothing</h1>
+              <p>Barang Unilo yang Unique</p>
+            </div>
+          </div>
+          <div class="item" data-id="8">
+            <div class="favorite-container">
+              <span class="material-icons favorite-icon">favorite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="footer-sidebar">
+      <div class="heading">
+        <h1>Life Wear Magazine</h1>
+      </div>
+      <div class="name">
+        <p>Bovilius Meidi (535230014)</p>
+        <p>Hans Thobie Sachio (535230135)</p>
+        <p>Aldian Yohanes (535230139)</p>
+      </div>
+
+      <div class="footer-logo">
+        <img src="../assets/logo/Logo_1.png" alt="Logo Uniqlo" />
+        <img src="../assets/logo/Logo_2.png" alt="Logo Uniqlo" />
+        <img src="../assets/logo/Logo_3.png" alt="Logo Uniqlo" />
+        <img src="../assets/logo/Logo_4.png" alt="Logo Uniqlo" />
+        <img src="../assets/logo/Logo_5.png" alt="Logo Uniqlo" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let favoriteItemsContent = JSON.parse(localStorage.getItem("favoriteItems")) || [];
+
+  function updateIcons() {
+    $(".item").each(function () {
+      const itemId = $(this).data("id");
+      if (favoriteItemsContent.includes(itemId)) {
+        $(this).find(".favorite-container").addClass("favorited");
+      } else {
+        $(this).find(".favorite-container").removeClass("favorited");
+      }
+    });
+  }
+
+  $(".favorite-container").click(function () {
+    const itemId = $(this).closest(".item").data("id");
+
+    if (!favoriteItemsContent.includes(itemId)) {
+      favoriteItemsContent.push(itemId);
+      localStorage.setItem("favoriteItems", JSON.stringify(favoriteItemsContent));
+      $(this).addClass("favorited");
+    } else {
+      favoriteItemsContent = favoriteItemsContent.filter((id) => id !== itemId);
+      localStorage.setItem("favoriteItems", JSON.stringify(favoriteItemsContent));
+      $(this).removeClass("favorited");
+    }
+  });
+
+  updateIcons();
+</script>

@@ -110,14 +110,14 @@
 
 <header>
   <nav>
-    <a href="/" class="logo">
-      <img src="../assets/logo/Logo_7.png" alt="UNIQLO-Logo" />
+    <a href="/frontend" class="logo">
+      <img src="../../assets/logo/Logo_7.png" alt="UNIQLO-Logo" />
     </a>
     <div class="top-icon">
-      <a href="/contents/search-magazine.html">
+      <a href="../../views/magazines/search-magazine.html">
         <span class="material-icons"> search </span>
       </a>
-      <a href="/contents/favorite-magazine.html">
+      <a href="../../views/magazines/favorite-magazine.html">
         <span class="material-icons favorite"> favorite </span>
       </a>
       <button class="menu">
@@ -129,7 +129,7 @@
 
 <script>
   $(".sidebar-container").load(
-    "../components/sidebar-content.html",
+    "../../components/sidebar-content.html",
     function () {
       $("#close-sidebar").click(function () {
         $(".sidebar").removeClass("show");

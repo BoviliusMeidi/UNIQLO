@@ -1,0 +1,157 @@
+<style>
+    header {
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+  
+    header.index {
+      z-index: 0;
+    }
+  
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    header nav .logo {
+      background-color: transparent;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+    }
+  
+    header nav .logo img {
+      width: 3rem;
+      height: auto;
+    }
+  
+    header nav .top-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+    }
+  
+    header nav .favorite{
+      color: red;
+    }
+  
+    header nav .search {
+      background-color: transparent;
+      border: none;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+    }
+  
+    header nav .menu {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    header nav .menu .material-icons {
+      font-size: 36px;
+      color: #333;
+    }
+  
+    main .img-header {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    /* img */
+    main img {
+      width: 12rem;
+      object-fit: cover;
+    }
+  
+    @media (max-width: 364px) {
+      .img-header img {
+        width: 40%;
+      }
+  
+      header nav .logo img {
+        width: 2rem;
+        height: auto;
+      }
+  
+      header nav .top-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0rem;
+      align-items: center;
+    }
+  
+      header nav .menu .material-icons {
+        font-size: 2rem;
+        color: #333;
+      }
+    }
+  </style>
+  
+  <header>
+    <nav>
+      <a href="/frontend" class="logo">
+        <img src="../assets/logo/Logo_7.png" alt="UNIQLO-Logo" />
+      </a>
+      <div class="top-icon">
+        <a href="../views/magazines/search-magazine.html">
+          <span class="material-icons"> search </span>
+        </a>
+        <a href="../views/magazines/favorite-magazine.html">
+          <span class="material-icons favorite"> favorite </span>
+        </a>
+        <button class="menu">
+          <span class="material-icons"> menu </span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  
+  <script>
+    $(".sidebar-container-footer").load(
+      "../components/sidebar-footer.html",
+      function () {
+        $("#close-sidebar").click(function () {
+          $(".sidebar").removeClass("show");
+          setTimeout(() => {
+            $(".fullbar").removeClass("show");
+          }, 500);
+        });
+      }
+    );
+  
+    // menu
+    $(".menu").click(function () {
+      $(".sidebar").addClass("show");
+      $(".fullbar").addClass("show");
+      $("header").addClass("index");
+    });
+  
+    $("#close-sidebar").click(function () {
+      $(".sidebar").removeClass("show");
+      setTimeout(() => {
+        $(".fullbar").removeClass("show");
+      }, 500);
+    });
+  </script>
+  
