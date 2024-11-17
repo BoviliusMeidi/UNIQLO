@@ -1,0 +1,66 @@
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+main h1 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  color: #333;
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+.row-section {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.row-section img {
+  width: 30rem;
+}
+
+.column-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-section h2 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 3rem;
+}
+
+main button {
+  width: 15rem;
+  padding: 0.8rem;
+  background-color: #000000;
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main button:hover {
+  background-color: #555;
+}
