@@ -1,5 +1,6 @@
 $(".header-container").load("../../components/header-content.html");
 $(".header-search-container").load("../../components/header-search.html");
+$(".header-stores").load("../../components/header-stores.html");
 $(".footer-container").load("../../components/footer-content.html");
 
 $(".header-container-footer").load("../components/header-footer.html");
