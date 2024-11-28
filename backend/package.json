@@ -10,7 +10,8 @@
     "migrate": "npx knex migrate:latest --knexfile ./config/dbKnex.js",
     "migrate:make": "npx knex migrate:make --knexfile ./config/dbKnex.js",
     "migrate:rollback": "npx knex migrate:rollback --knexfile ./config/dbKnex.js",
-    "seed": "npx knex seed:run --knexfile ./config/dbKnex.js"
+    "seed": "npx knex seed:run --knexfile ./config/dbKnex.js",
+    "seed:make": "npx knex seed:make --knexfile ./config/dbKnex.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
     "express-session": "^1.18.1",
     "jsonwebtoken": "^9.0.2",
     "knex": "^3.1.0",
+    "multer": "^1.4.5-lts.1",
+    "path": "^0.12.7",
     "pg": "^8.13.1"
   },
   "devDependencies": {
