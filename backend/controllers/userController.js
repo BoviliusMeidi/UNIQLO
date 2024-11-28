@@ -1,8 +1,6 @@
 const bcrypt = require('bcryptjs');
-const { createUser, getUserByEmail, getSessionID ,getUsers } = require('../models/userModel');
+const { createUser, getUserByEmail, getUsers, updateUser, deleteUser, updateProfilePicture } = require('../models/userModel');
 require('dotenv').config();
-
-let sessionID = 0;
 
 const registerUser = async (req, res) => {
     try {
@@ -39,17 +37,26 @@ const loginUser = async (req, res) => {
             return res.status(400).json({ error: 'Invalid credentials' });
         }
 
-        req.session.user = { id: user.id, email: user.email };
-        sessionID = req.sessionID;
-        console.log('Session after login:', req.session);
-        console.log('Session after login:', sessionID);
-        res.status(200).json({ user: req.session.user, sessionID: req.sessionID });
+        req.session.user = { id: user.user_id, email: user.email , is_admin: user.is_admin };
+        res.status(200).json({ user: req.session.user, sessionID: req.sessionID});
     } catch (error) {
         console.error("Error logging in:", error);
         res.status(500).json({ error: 'Server error' });
     }
 };
 
+const getUser = async (req, res) => {
+    try {
+        const user = req.session.user;
+        if (!user) {
+            return res.status(401).json({ error: 'Unauthorized. Please log in.' });
+        }
+        const dataUser = await getUserByEmail(user.email);
+        res.status(201).json({ dataUser });
+    } catch (error) {
+        res.status(500).json({ error: "Failed to get user" });
+    }
+}
 
 const listUsers = async (req, res) => {
     try {
@@ -60,23 +67,69 @@ const listUsers = async (req, res) => {
     }
 }
 
-const checkSession = async (req, res) => {
-    const sessionIDfromDB = await getSessionID(sessionID);
-    if (sessionIDfromDB) {
-        res.status(200).json({ message: 'Session active' });
-    } else {
-        res.status(401).json({ error: 'Not authenticated' });
-    }
-};
-
 const logoutUser = (req, res) => {
-    sessionID = 0;
     req.session.destroy((err) => {
         if (err) {
+            console.log('Error during session destruction:', err);
             return res.status(500).json({ error: 'Failed to logout' });
         }
         res.status(200).json({ message: 'Logged out successfully' });
     });
 };
 
-module.exports = { registerUser, loginUser, listUsers, checkSession, logoutUser };
+const editUser = async (req, res) => {
+    try {
+        const user = req.session.user;
+        if (!user) {
+            return res.status(401).json({ error: 'Unauthorized. Please log in.' });
+        }
+
+        let { email, country, address, phone_number, payment_method } = req.body;
+
+        if (email) {
+            email = email.toLowerCase();
+        }
+
+        const updatedUser = await updateUser(user.id, email, country, address, phone_number, payment_method);
+        res.status(200).json({ updatedUser });
+    } catch (error) {
+        console.error("Error updating user:", error);
+        res.status(500).json({ error: 'Failed to update user' });
+    }
+};
+
+const eraseUser = async (req, res) => {
+    try {
+        const user = req.session.user;
+        if (!user) {
+            return res.status(401).json({ error: 'Unauthorized. Please log in.' });
+        }
+        await deleteUser(user.id);
+        req.session.destroy();
+        res.status(200).json({ message: 'User deleted successfully' });
+    } catch (error) {
+        console.error("Error deleting user:", error);
+        res.status(500).json({ error: 'Failed to delete user' });
+    }
+};
+
+const uploadProfilePicture = async (req, res) => {
+    if (req.file) {
+      const filePath = `../../backend/uploads/users/${req.file.filename}`;
+      try {
+        const updatedUser = await updateProfilePicture(req.session.user.id, filePath);
+        if (updatedUser) {
+          res.json({ image_url: filePath });
+        } else {
+          res.status(404).json({ message: 'User not found' });
+        }
+      } catch (error) {
+        console.error('Error saving image URL to database:', error);
+        res.status(500).json({ message: 'Error saving image URL to database' });
+      }
+    } else {
+      res.status(400).json({ message: 'No file uploaded' });
+    }
+  };
+
+module.exports = { registerUser, loginUser, getUser, listUsers, logoutUser, editUser, eraseUser, uploadProfilePicture };
