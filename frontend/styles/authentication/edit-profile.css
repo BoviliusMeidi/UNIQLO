@@ -1,0 +1,161 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Soft background color */
+  height: 100vh;
+  font-weight: 500;
+  color: #333; /* Standard text color */
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.material-icons {
+    font-size: 18px; /* Set the size for the icon */
+}
+
+
+.profile button {
+  background: #000000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.profile button:hover {
+  background: #0056b3;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.row-section div {
+  display: flex;
+  justify-content: center;
+  width: 45rem;
+  flex-direction: column;
+}
+
+.row-section label {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0rem;
+  margin-top: 0.7rem;
+}
+
+.row-section input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.row-section input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.row-section textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  font-size: 1rem;
+}
+
+.row-section textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.row-section .column-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.column-section button {
+  background: #000000;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  width: 50%;
+
+  width: 10rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.column-section button:hover {
+  background: #218838;
+}
+
+.column-section button:nth-child(3) {
+  background: #dc3545;
+}
+
+.column-section button:nth-child(3):hover {
+  background: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+  }
+
+  .row-section div {
+    flex: 1 1 100%;
+  }
+}
