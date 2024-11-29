@@ -6,12 +6,14 @@ require('dotenv').config();
 
 // Middleware
 const { sessionMiddleware } = require('./middlewares/sessionMiddleware');
+const { isAdmin } = require('./middlewares/adminMiddleware');
 
 // Routes
 const sessionRoutes = require('./routes/sessionRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -33,6 +35,7 @@ app.use('/api', userRoutes);
 app.use('/api', productRoutes);
 app.use('/api', cartRoutes);
 app.use('/api', sessionRoutes);
+app.use('/api/admin', isAdmin, adminRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on http://127.0.0.1:${PORT}`);
