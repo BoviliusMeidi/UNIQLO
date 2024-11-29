@@ -27,7 +27,6 @@ app.controller('UploadController', function ($scope, $http) {
 
     $scope.triggerFileInput = function () {
         document.getElementById('file-upload').click();
-        console.log("test")
     };
 
     $scope.onFileChange = function (type) {
@@ -37,7 +36,7 @@ app.controller('UploadController', function ($scope, $http) {
             if (type === 'user') {
                 $scope.user.profile_picture = URL.createObjectURL(file);
             } else if (type === 'product') {
-                $scope.product.product_pictur = URL.createObjectURL(file);
+                $scope.product.product_picture = URL.createObjectURL(file);
             }
         }
     };

@@ -14,7 +14,7 @@ app.filter('priceFormat', function () {
 app.filter('dateFormat', function() {
     return function(input) {
         if (input) {
-            return input.split('T')[0]; // Extract just the date part
+            return input.split('T')[0];
         }
         return input;
     };
