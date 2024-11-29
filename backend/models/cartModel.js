@@ -1,5 +1,25 @@
 const db = require('../config/dbConfig');
 
+const getCarts = async () => {
+  try {
+      const carts = await db('carts')
+      .join('products', 'carts.product_id', 'products.product_id').join('users', 'carts.user_id', 'users.user_id',)
+      .select(
+        'carts.cart_id',
+        'users.username',
+        'users.email',
+        'products.product_name',
+        'products.price',
+        'products.product_picture',
+        'carts.quantity'
+      );
+      return carts.length > 0 ? carts : null;
+  } catch (error) {
+      console.error('Error fetching carts:', error);
+      throw error;
+  }
+};
+
 const getCartItems = async (user_id) => {
   return await db('carts')
     .join('products', 'carts.product_id', 'products.product_id')
@@ -69,9 +89,24 @@ const removeFromCart = async (cart_id) => {
   await db('carts').where('cart_id', cart_id).del();
 };
 
+const deleteCart = async (cartId) => {
+  try {
+      const deletedCart = await db('carts')
+          .where({ cart_id: cartId })
+          .del()
+          .returning('*');
+      return deletedCart.length > 0 ? deletedCart[0] : null;
+  } catch (error) {
+      console.error('Error deleting cart:', error);
+      throw error;
+  }
+};
+
 module.exports = {
+  getCarts,
   getCartItems,
   addToCart,
   removeFromCart,
-  updateCartItem
+  updateCartItem,
+  deleteCart
 };
