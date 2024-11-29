@@ -113,6 +113,23 @@ const eraseUser = async (req, res) => {
     }
 };
 
+const removeUser = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const deleted = await deleteUser(id);
+  
+      if (deleted) {
+        res.json({ message: "User deleted successfully" });
+      } else {
+        res.status(404).json({ message: "User not found" });
+      }
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      res.status(500).json({ error: "Failed to delete user" });
+    }
+  };
+
 const uploadProfilePicture = async (req, res) => {
     if (req.file) {
       const filePath = `../../backend/uploads/users/${req.file.filename}`;
@@ -132,4 +149,4 @@ const uploadProfilePicture = async (req, res) => {
     }
   };
 
-module.exports = { registerUser, loginUser, getUser, listUsers, logoutUser, editUser, eraseUser, uploadProfilePicture };
+module.exports = { registerUser, loginUser, getUser, listUsers, logoutUser, editUser, eraseUser, removeUser,uploadProfilePicture };
