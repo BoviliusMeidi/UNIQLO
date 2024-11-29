@@ -14,6 +14,15 @@ const getCart = async (req, res) => {
   }
 };
 
+const listCarts = async (req, res) => {
+  try {
+      const listCarts = await cartModel.getCarts();
+      res.status(201).json({ listCarts });
+  } catch (error) {
+      res.status(500).json({ error: "Failed to get user" });
+  }
+}
+
 const addCartItem = async (req, res) => {
   const { product_id, quantity } = req.body;
   const user = req.session.user;
@@ -31,8 +40,8 @@ const addCartItem = async (req, res) => {
 };
 
 const updateCartItem = async (req, res) => {
-  const { id } = req.params; // cart item ID
-  const { quantity } = req.body; // new quantity
+  const { id } = req.params;
+  const { quantity } = req.body;
   const user = req.session.user;
 
   if (!user) {
@@ -48,6 +57,23 @@ const updateCartItem = async (req, res) => {
     res.json({ message: 'Cart item updated successfully.' });
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+};
+
+const removeCart = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deleted = await cartModel.deleteCart(id);
+
+    if (deleted) {
+      res.json({ message: "Cart deleted successfully" });
+    } else {
+      res.status(404).json({ message: "Cart not found" });
+    }
+  } catch (error) {
+    console.error("Error deleting cart:", error);
+    res.status(500).json({ error: "Failed to delete cart" });
   }
 };
 
@@ -69,7 +95,9 @@ const removeCartItem = async (req, res) => {
 
 module.exports = {
   getCart,
+  listCarts,
   addCartItem,
   removeCartItem,
+  removeCart,
   updateCartItem,
 };
