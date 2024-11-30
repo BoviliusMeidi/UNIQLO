@@ -1,6 +1,7 @@
-const app = angular.module('myApp', ['ngRoute']);
+const app = angular.module('myApp', []);
 const API_URL = "http://127.0.0.1:3000/api/";
 const UI_URL = "http://127.0.0.1:5500/frontend/views/";
+const HOME_URL = "http://127.0.0.1:5500/frontend/";
 
 app.filter('priceFormat', function () {
     return function (price) {

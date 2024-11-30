@@ -39,14 +39,14 @@ app.controller('AuthenticationController', function ($scope, $http, $timeout) {
         ).then(function (response) {
             localStorage.removeItem('visitedFavorite');
             if(response.data.user.is_admin === true) {
-                window.location.href = 'http://127.0.0.1:5500/frontend/views/admin/landing-page.html';
+                window.location.href = UI_URL + 'admin/landing-page.html';
             }else{
                 if (localStorage.getItem('visitedFavorite') === 'true') {
                     localStorage.removeItem('visitedFavorite');
-                    window.location.href = 'http://127.0.0.1:5500/frontend/views/magazines/favorite-magazine.html';
+                    window.location.href = UI_URL + 'magazines/favorite-magazine.html';
                 }
                 else {
-                    window.location.href = 'http://127.0.0.1:5500/frontend/';
+                    window.location.href = HOME_URL;
                 }
             }
         }).catch(function (error) {

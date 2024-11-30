@@ -40,10 +40,10 @@ app.controller('UserController', function ($scope, $http) {
 
     $scope.deleteUserProfile = function () {
         if (confirm('Are you sure you want to delete your profile?')) {
-            $http.delete('http://127.0.0.1:3000/api/user', { withCredentials: true })
+            $http.delete(API_URL +'user', { withCredentials: true })
                 .then(function (response) {
                     alert('Your profile has been deleted.');
-                    window.location.href = 'http://127.0.0.1:5500/frontend/views/authentication/login.html';
+                    window.location.href = UI_URL + 'authentication/login.html';
                 })
                 .catch(function (error) {
                     console.error('Error deleting user profile:', error);

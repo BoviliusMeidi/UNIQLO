@@ -40,20 +40,19 @@ app.controller('ProductController', function($http, $scope) {
             product_id: product.product_id,
             quantity: product.selectedQuantity
           };
-          $http.post('http://127.0.0.1:3000/api/cart', cartItem, {withCredentials: true})
+          $http.post(API_URL + 'cart', cartItem, {withCredentials: true})
             .then(function(response) {
               product.stock -= product.selectedQuantity;
-              product.selectedQuantity = 1; // Reset quantity
+              product.selectedQuantity = 1;
               alert(product.product_name + " added to cart!");
             })
             .catch(function(error) {
               console.error('Error adding to cart:', error);
-            //   window.location.href = 'http://127.0.0.1:5500/frontend/views/authentication/login.html';
             });
         }
       };
     
       $scope.showCart = function() {
-        window.location.href = 'http://127.0.0.1:5500/frontend/views/tests/cart.html';
+        window.location.href = UI_URL + 'tests/cart.html';
       };
 });
