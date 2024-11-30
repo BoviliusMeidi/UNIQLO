@@ -40,11 +40,11 @@ const getProductById = async (productId) => {
     }
 };
 
-const updateProduct = async (productId, name, price, description, stock, size, category) => {
+const updateProduct = async (productId, product_name, price, description, stock, size, category) => {
     try {
         const updatedProduct = await db('products')
             .where({ product_id: productId })
-            .update({ product_name: name, category, price, stock, size, description})
+            .update({ product_name, category, price, stock, size, description})
             .returning('*');
         return updatedProduct.length > 0 ? updatedProduct[0] : null;
     } catch (error) {

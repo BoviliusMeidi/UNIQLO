@@ -27,14 +27,14 @@ const makeProduct = async (req, res) => {
 
 const editProduct = async (req, res) => {
   const { id } = req.params;
-  const { name, price, description, stock, size, category } = req.body;
+  const { product_name, price, description, stock, size, category } = req.body;
 
-  if (!name && !price && !description && !stock && !category) {
+  if (!product_name && !price && !description && !stock && !category) {
     return res.status(400).json({ message: "No fields provided for update" });
   }
 
   try {
-    const updatedProduct = await updateProduct(id, name, price, description, stock, size, category );
+    const updatedProduct = await updateProduct(id, product_name, price, description, stock, size, category );
 
     if (updatedProduct) {
       res.json({ message: "Product updated successfully", product: updatedProduct });
