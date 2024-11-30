@@ -10,7 +10,12 @@ exports.seed = function (knex) {
                         {
                             username: 'admin',
                             email: 'admin@example.com',
+                            profile_picture:'../../assets/stores/users/admin.png',
                             password: hashedPassword,
+                            country: 'Indonesia',
+                            address: 'Jakarta',
+                            phone_number:'080000000000',
+                            balance:'9999999999',
                             dob: new Date().toISOString().split('T')[0],
                             is_admin : true,
                         },
