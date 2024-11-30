@@ -1,4 +1,5 @@
 const app = angular.module('adminApp', []);
+const API_ADMIN_URL = "http://127.0.0.1:3000/api/admin/";
 
 app.controller('AdminController', function ($scope, $http) {
   $scope.products = [];
@@ -14,7 +15,7 @@ app.controller('AdminController', function ($scope, $http) {
       const formData = new FormData();
       formData.append('image', file);
 
-      $http.post('http://127.0.0.1:3000/api/admin/product/upload', formData, {
+      $http.post(API_ADMIN_URL + 'product/upload', formData, {
         withCredentials: true,
         headers: {
           'Content-Type': undefined,
@@ -38,7 +39,7 @@ app.controller('AdminController', function ($scope, $http) {
       return;
     }
 
-    $http.post('http://127.0.0.1:3000/api/admin/products', $scope.newProduct, { withCredentials: true })
+    $http.post(API_ADMIN_URL + 'products', $scope.newProduct, { withCredentials: true })
       .then(function (response) {
         $scope.message = 'Product created successfully!';
         $scope.newProduct = {};
@@ -49,7 +50,7 @@ app.controller('AdminController', function ($scope, $http) {
       });
   };
 
-  $http.get('http://127.0.0.1:3000/api/admin/products', { withCredentials: true })
+  $http.get(API_ADMIN_URL + 'products', { withCredentials: true })
     .then(function (response) {
       $scope.products = response.data.listProducts.map(product => ({
         ...product,
@@ -61,7 +62,7 @@ app.controller('AdminController', function ($scope, $http) {
       alert('Failed to load products.');
     });
 
-  $http.get('http://127.0.0.1:3000/api/admin/users', { withCredentials: true })
+  $http.get(API_ADMIN_URL + 'users', { withCredentials: true })
     .then(function (response) {
       $scope.users = response.data.listUsers.map(user => ({
         ...user,
@@ -73,7 +74,7 @@ app.controller('AdminController', function ($scope, $http) {
       alert('Failed to load users.');
     });
 
-  $http.get('http://127.0.0.1:3000/api/admin/carts', { withCredentials: true })
+  $http.get(API_ADMIN_URL + 'carts', { withCredentials: true })
     .then(function (response) {
       if (response.data.listCarts == null) {
         $scope.message = 'Error creating product. Please try again.';
@@ -94,7 +95,7 @@ app.controller('AdminController', function ($scope, $http) {
   };
 
   $scope.saveProduct = function (product) {
-    $http.put(`http://127.0.0.1:3000/api/admin/products/${product.product_id}`, product, { withCredentials: true })
+    $http.put(API_ADMIN_URL + `products/${product.product_id}`, product, { withCredentials: true })
       .then(function () {
         product.isEditing = false;
         alert('Product updated successfully.');
@@ -107,7 +108,7 @@ app.controller('AdminController', function ($scope, $http) {
 
   $scope.deleteProduct = function (productId) {
     if (confirm('Are you sure you want to delete this product?')) {
-      $http.delete(`http://127.0.0.1:3000/api/admin/products/${productId}`, { withCredentials: true })
+      $http.delete(API_ADMIN_URL + `products/${productId}`, { withCredentials: true })
         .then(function () {
           $scope.products = $scope.products.filter(p => p.product_id !== productId);
           alert('Product deleted successfully.');
@@ -121,7 +122,7 @@ app.controller('AdminController', function ($scope, $http) {
 
   $scope.deleteUser = function (userId) {
     if (confirm('Are you sure you want to delete this user?')) {
-      $http.delete(`http://127.0.0.1:3000/api/admin/users/${userId}`, { withCredentials: true })
+      $http.delete(API_ADMIN_URL + `users/${userId}`, { withCredentials: true })
         .then(function () {
           $scope.users = $scope.users.filter(p => p.user_id !== userId);
           alert('User deleted successfully.');
@@ -135,7 +136,7 @@ app.controller('AdminController', function ($scope, $http) {
 
   $scope.deleteCart = function (cartId) {
     if (confirm('Are you sure you want to delete this cart?')) {
-      $http.delete(`http://127.0.0.1:3000/api/admin/carts/${cartId}`, { withCredentials: true })
+      $http.delete(API_ADMIN_URL + `carts/${cartId}`, { withCredentials: true })
         .then(function () {
           $scope.carts = $scope.carts.filter(p => p.cart_id !== cartId);
           alert('Cart deleted successfully.');
