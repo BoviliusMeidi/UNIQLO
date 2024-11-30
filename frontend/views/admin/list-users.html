@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin User Management</title>
+    <link rel="stylesheet" href="../../styles/admin/table-admin.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body ng-controller="AdminController">
+    <h1>Admin User Management</h1>
+
+    <div class="search-bar">
+        <i class="fa fa-search"></i>
+        <input type="text" ng-model="searchQuery" placeholder="Search for users..." />
+    </div>
+
+    <div class="table-container" ng-if="filteredUsers().length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Profile Picture</th>
+                    <th>Country</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Balance</th>
+                    <th>Date Of Birth</th>
+                    <th>Time Created</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in filteredUsers()">
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.username }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.product_name">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.email}}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.category">
+                    </td>
+                    <td>
+                        <img ng-src="{{ user.profile_picture | ifNull }}" alt="{{user.username }}" width="50">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.country | ifNull }}</span>
+                        <input ng-if="user.isEditing" type="number" ng-model="user.country">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.address | ifNull }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.address">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.phone_number | ifNull }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.phone_number">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">Rp {{ user.balance | priceFormat }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.balance">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.dob | dateFormat }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.dob">
+                    </td>
+                    <td>
+                        <span ng-if="!user.isEditing">{{ user.time_created }}</span>
+                        <input ng-if="user.isEditing" type="text" ng-model="user.time_created">
+                    </td>
+                    <td>
+                        <button class="delete-button" ng-click="deleteUser(user.user_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button ng-disabled="currentPage == 1" ng-click="changePage(currentPage - 1, 'users')">Previous</button>
+            <span>Page {{ currentPage }} of {{ getTotalPages('users') }}</span>
+            <button ng-disabled="currentPage == getTotalPages('users')"
+                ng-click="changePage(currentPage + 1, 'users')">Next</button>
+        </div>
+    </div>
+
+    <div ng-if="filteredUsers().length === 0">
+        <p>No users found.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="../../controllers/adminController.js"></script>
+</body>
+
+</html>
