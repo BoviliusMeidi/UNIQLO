@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Cart Management</title>
+    <link rel="stylesheet" href="../../styles/admin/table-admin.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body ng-controller="AdminController">
+    <h1>Admin Cart Management</h1>
+
+    <div class="search-bar">
+        <i class="fa fa-search"></i>
+        <input type="text" ng-model="searchQuery" placeholder="Search for carts..." />
+    </div>
+
+    <div class="table-container" ng-if="filteredCarts().length > 0">
+        <table>
+            <thead>
+                <tr>
+                    <th>Cart Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Product Picture</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cart in filteredCarts()">
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.cart_id }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.cart_id">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.username }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.username">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.email }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.email">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.country | ifNull }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.country">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.product_name }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.product_name">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">Rp {{ cart.price | priceFormat }}</span>
+                        <input ng-if="cart.isEditing" type="number" ng-model="cart.price">
+                    </td>
+                    <td>
+                        <img ng-src="{{ cart.product_picture }}" alt="{{cart.product_picture }}">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.quantity }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.quantity">
+                    </td>
+                    <td>
+                        <button class="delete-button" ng-click="deleteCart(cart.cart_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button ng-disabled="currentPage == 1" ng-click="changePage(currentPage - 1, 'carts')">Previous</button>
+            <span>Page {{ currentPage }} of {{ getTotalPages('carts') }}</span>
+            <button ng-disabled="currentPage == getTotalPages('carts')" ng-click="changePage(currentPage + 1, 'carts')">Next</button>
+        </div>
+    </div>
+
+    <div ng-if="filteredCarts().length === 0" class="no-carts">
+        <p>No carts found.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="../../controllers/adminController.js"></script>
+</body>
+
+</html>
