@@ -1,58 +1,84 @@
-app.controller('ProductController', function($http, $scope) {
-    $scope.message = "Welcome to the Product List!";
-    $scope.loading = true;
-    $scope.products = [];
-    $scope.cart = [];
+app.controller('ProductController', function ($http, $scope) {
+  $scope.message = "Welcome to the Product List!";
+  $scope.loading = true;
+  $scope.ascendingPrice = true;
+  $scope.ascendingSize = true;
+  $scope.searchQuery = '';
+  $scope.products = [];
+  $scope.cart = [];
 
-    $http.get(API_URL + 'products', {withCredentials: true})
-        .then(function(response) {
-            $scope.products = response.data.listProducts.map(product => {
-                product.selectedQuantity = 1;
-                return product;
-            });
-            $scope.loading = false;
+  $http.get(API_URL + 'products', { withCredentials: true })
+    .then(function (response) {
+      $scope.products = response.data.listProducts.map(product => {
+        product.selectedQuantity = 1;
+        return product;
+      });
+      $scope.loading = false;
+    })
+    .catch(function (error) {
+      console.error('Error fetching products:', error);
+      $scope.loading = false;
+    });
+
+  $scope.filteredProducts = function () {
+    const query = $scope.searchQuery.toLowerCase();
+    return $scope.products.filter(product => {
+      return (
+        product.product_name.toLowerCase().includes(query) ||
+        product.description.toLowerCase().includes(query)
+      );
+    });
+  };
+
+  setTimeout(() => {
+    $scope.loading = false;
+    $scope.$apply();
+  }, 1000);
+
+  $scope.increaseQuantity = function (product) {
+    if (product.selectedQuantity < product.stock) {
+      product.selectedQuantity++;
+    }
+  };
+
+  $scope.decreaseQuantity = function (product) {
+    if (product.selectedQuantity > 1) {
+      product.selectedQuantity--;
+    }
+  };
+
+  $scope.addToCart = function (product) {
+    if (product.selectedQuantity > 0 && product.selectedQuantity <= product.stock) {
+      let cartItem = {
+        product_id: product.product_id,
+        quantity: product.selectedQuantity
+      };
+      $http.post(API_URL + 'cart', cartItem, { withCredentials: true })
+        .then(function (response) {
+          product.stock -= product.selectedQuantity;
+          product.selectedQuantity = 1;
+          alert(product.product_name + " added to cart!");
         })
-        .catch(function(error) {
-            console.error('Error fetching products:', error);
-            $scope.loading = false;
+        .catch(function (error) {
+          console.error('Error adding to cart:', error);
         });
-    
-    setTimeout(() => {
-        $scope.loading = false;
-        $scope.$apply();
-    }, 1000);
+    }
+  };
 
-    $scope.increaseQuantity = function(product) {
-        if (product.selectedQuantity < product.stock) {
-            product.selectedQuantity++;
-        }
-    };
+  $scope.showCart = function () {
+    window.location.href = UI_URL + 'tests/cart.html';
+  };
 
-    $scope.decreaseQuantity = function(product) {
-        if (product.selectedQuantity > 1) {
-            product.selectedQuantity--;
-        }
-    };
+  $scope.sortByPrice = function (ascending) {
+    $scope.products.sort(function (a, b) {
+      return ascending ? a.price - b.price : b.price - a.price;
+    });
+  };
 
-    $scope.addToCart = function(product) {
-        if (product.selectedQuantity > 0 && product.selectedQuantity <= product.stock) {
-          let cartItem = {
-            product_id: product.product_id,
-            quantity: product.selectedQuantity
-          };
-          $http.post(API_URL + 'cart', cartItem, {withCredentials: true})
-            .then(function(response) {
-              product.stock -= product.selectedQuantity;
-              product.selectedQuantity = 1;
-              alert(product.product_name + " added to cart!");
-            })
-            .catch(function(error) {
-              console.error('Error adding to cart:', error);
-            });
-        }
-      };
-    
-      $scope.showCart = function() {
-        window.location.href = UI_URL + 'tests/cart.html';
-      };
+  // Sort products by size
+  $scope.sortBySize = function (ascending) {
+    $scope.products.sort(function (a, b) {
+      return ascending ? a.size.localeCompare(b.size) : b.size.localeCompare(a.size);
+    });
+  };
 });
