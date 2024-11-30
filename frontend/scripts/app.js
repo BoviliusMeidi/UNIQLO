@@ -20,3 +20,27 @@ app.filter('dateFormat', function() {
         return input;
     };
 });
+
+app.filter('sortByPrice', function() {
+    return function(products, ascending) {
+        return products.sort(function(a, b) {
+            if (ascending) {
+                return a.price - b.price;
+            } else {
+                return b.price - a.price;
+            }
+        });
+    };
+});
+
+app.filter('sortBySize', function() {
+    return function(products, ascending) {
+        return products.sort(function(a, b) {
+            if (ascending) {
+                return a.size.localeCompare(b.size);
+            } else {
+                return b.size.localeCompare(a.size);
+            }
+        });
+    };
+});
