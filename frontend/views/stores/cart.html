@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIQLO | Cart</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles/stores/cart.css">
+</head>
+
+<body>
+  <div ng-controller="CartController" class="cart-container">
+    <div class="cart-header">Shopping Cart</div>
+
+    <div ng-if="loading" class="loading">
+      Loading your cart...
+    </div>
+
+    <div class="cart-section" ng-if="!loading && carts.length > 0">
+      <div class="right-section">
+        <div class="cart-title">
+          <h3 class="title-product">Product</h3>
+          <h3>Quantity</h3>
+          <h3>Total Price</h3>
+        </div>
+
+        <div ng-repeat="item in carts" class="cart-item">
+          <img ng-src="{{ item.product_picture }}" alt="{{ item.product_name }}">
+          <div class="product-name-size">
+            <div class="cart-item-name">{{ item.product_name }}</div>
+            <div class="cart-item-size">Size: {{ item.size }}</div>
+          </div>
+          <div class="cart-item-quantity">
+            <button class="quantity-button" ng-click="decreaseQuantity(item)">-</button>
+            <span>{{ item.quantity }}</span>
+            <button class="quantity-button" ng-click="increaseQuantity(item)">+</button>
+          </div>
+          <div class="price-section">
+            <button class="remove-section-button" ng-click="removeFromCart(item.cart_id)">
+              <span class="material-icons">close</span>
+            </button>
+            <div class="cart-item-price">Rp {{ item.price * item.quantity | priceFormat }}</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="left-section">
+        <div class="outer-cart-section">
+          <div class="inner-left-section">
+            <h1>Cart Total</h1>
+            <div ng-repeat="item in carts" class="cart-items">
+              <div class="cart-item-price">Rp {{ item.price * item.quantity | priceFormat }}</div>
+            </div>
+            <h1 class="subtotal">Cart SubTotal</h1>
+            <div class="cart-item-price">
+              Rp {{ getSubtotal() | priceFormat }}
+            </div>
+            <button class="checkout-button">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-if="!loading && carts.length === 0" class="empty-cart-message">
+      Your cart is empty.
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../controllers/cartController.js"></script>
+</body>
+
+</html>
