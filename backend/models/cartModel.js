@@ -27,6 +27,7 @@ const getCartItems = async (user_id) => {
       'carts.cart_id',
       'products.product_name',
       'products.price',
+      'products.size',
       'products.product_picture',
       'carts.quantity'
     ).where('carts.user_id', user_id);
