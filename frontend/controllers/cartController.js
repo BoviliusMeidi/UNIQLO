@@ -50,4 +50,12 @@ app.controller('CartController', function ($http, $scope) {
         console.error('Error removing from cart:', error);
       });
   };
+
+  $scope.getSubtotal = function() {
+    let subtotal = 0;
+    for (let i = 0; i < $scope.carts.length; i++) {
+      subtotal += $scope.carts[i].price * $scope.carts[i].quantity;
+    }
+    return subtotal;
+  };
 });
