@@ -30,15 +30,21 @@ const getProducts = async () => {
     }
 };
 
-const getProductById = async (productId) => {
+const getProductById = async (id) => {
     try {
-        const products = await db('products').where({ product_id: productId }).select('*');
-        return products.length > 0 ? products[0] : null;
+        const product = await db('products')
+            .where({ product_id: id })
+            .first();
+        if (!product) {
+            throw new Error(`Product with ID ${id} not found.`);
+        }
+        return product;
     } catch (error) {
-        console.error('Error fetching product by ID:', error);
+        console.error('Error fetching product by ID:', error.message || error);
         throw error;
     }
 };
+
 
 const updateProduct = async (productId, product_name, price, description, stock, size, category) => {
     try {

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Detail Product</title>
+</head>
+
+<body>
+  <div ng-controller="DetailProductController">
+    <h1>{{ product.product_name }}</h1>
+    <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
+    <p>Price: ${{ product.price | priceFormat }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Stock: {{ product.stock }}</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../controllers/detailProductController.js"></script>
+</body>
+
+</html>

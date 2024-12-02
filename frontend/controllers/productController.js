@@ -87,9 +87,13 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.searchProducts = function () {
     if ($scope.searchQuery) {
       console.log('Searching for:', $scope.searchQuery);
-      // Tambahkan logika pencarian lainnya di sini (misal, filter produk atau API call)
     } else {
       console.log('Please enter a search term.');
     }
+  };
+
+  $scope.goToDetail = function (product) {
+    const detailUrl = UI_URL + 'tests/selectedProduct.html?product_id=' + product.product_id;
+    window.location.href = detailUrl;
   };
 });
