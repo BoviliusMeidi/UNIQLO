@@ -1,0 +1,143 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.title-section {
+  padding-top: 2vh;
+  margin: 8rem;
+  margin-bottom: 0;
+}
+
+.title-section .explore-header {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.title-section .explore-paragraph {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.category-tabs {
+  margin: 8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* max-width: 60rem; */
+  border-bottom: 2px solid #000;
+}
+
+.category-tabs .tab-link {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  font-size: 2rem;
+}
+
+.tab-link:active {
+  border-bottom: 4px solid #000;
+}
+
+.tab-link:hover {
+  background-color: #ddd;
+}
+
+.sort-tabs {
+  display: flex;
+  flex-direction: row;
+  margin: 0 8rem;
+}
+
+.sort-tabs button {
+  background-color: #f9f9f9;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 10rem;
+  margin: 0 2rem 1rem 1rem;
+  margin-left: 0;
+
+  font-size: 1rem;
+  height: 2rem;
+}
+/* General Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  margin: 8rem;
+  margin-top: 0;
+}
+
+/* Filtering Sidebar */
+.filter {
+  width: 20%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.filter h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.filter-section h4 {
+  margin: 10px 0 5px;
+}
+.filter label {
+  display: block;
+  margin: 5px 0;
+}
+.reset-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reset-button:hover {
+  background-color: #d33;
+}
+
+/* Product List */
+.products {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+.product-image {
+  width: 100%;
+  height: 150px;
+  background: #eee;
+  margin-bottom: 10px;
+}
+.product h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.product p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+.rating {
+  font-size: 0.9rem;
+  color: #f90;
+}

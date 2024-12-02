@@ -1,10 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const session = require('express-session');
-const KnexSessionStore = require('./config/dbKnexSession');
 const cors = require('cors');
-const userRoutes = require('./routes/userRoutes');
+const path = require('path');
 require('dotenv').config();
+
+// Middleware
+const { sessionMiddleware } = require('./middlewares/sessionMiddleware');
+const { isAdmin } = require('./middlewares/adminMiddleware');
+
+// Routes
+const sessionRoutes = require('./routes/sessionRoutes');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,28 +23,20 @@ const corsOptions = {
     credentials: true
 };
 
-const store = new KnexSessionStore({
-    table: 'sessions',
-    ttl: 86400,
-});
+app.use(express.urlencoded({ extended: true }));
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.use(session({
-    secret: process.env.SESSION_SECRET || 'secret_key',
-    resave: false,
-    saveUninitialized: false,
-    store,
-    cookie: {
-        httpOnly: true,
-        secure: false,
-        maxAge: 60 * 60 * 1000,
-        sameSite: "lax",
-    },
-}));
+app.use(sessionMiddleware);
 
 app.use('/api', userRoutes);
+app.use('/api', productRoutes);
+app.use('/api', cartRoutes);
+app.use('/api', sessionRoutes);
+app.use('/api/admin', isAdmin, adminRoutes);
+
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://127.0.0.1:${PORT}`);
 });

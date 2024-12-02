@@ -1,11 +1,15 @@
 const express = require('express');
-const { registerUser, loginUser, listUsers, checkSession, logoutUser } = require('../controllers/userController');
+const { registerUser, loginUser, getUser, logoutUser, editUser, eraseUser, uploadProfilePicture } = require('../controllers/userController');
+const uploadMiddleware = require('../middlewares/uploadMiddleware');
 const router = express.Router();
 
-router.get('/users', listUsers);
+// users
+router.get('/user', getUser);
+router.put('/user', editUser);
 router.post('/users', registerUser);
 router.post('/login', loginUser);
-router.get('/check-session', checkSession);
-router.post('/logout', logoutUser);
+router.post('/user/upload', uploadMiddleware.single('image'), uploadProfilePicture);
+router.delete('/user', eraseUser);
+router.delete('/logout', logoutUser);
 
 module.exports = router;

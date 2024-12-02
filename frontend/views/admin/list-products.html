@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Product Management</title>
+  <link rel="stylesheet" href="../../styles/admin/table-admin.css">
+  <link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+  />
+</head>
+<body ng-controller="AdminController">
+  <h1>Admin Product Management</h1>
+
+  <div class="search-bar">
+    <i class="fa fa-search"></i>
+    <input type="text" ng-model="searchQuery" placeholder="Search for products..." />
+  </div>
+
+  <div class="table-container" ng-if="filteredProducts().length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Size</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="product in filteredProducts()">
+          <td>
+            <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">{{ product.product_name }}</span>
+            <input ng-if="product.isEditing" type="text" ng-model="product.product_name">
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">{{ product.category }}</span>
+            <select ng-if="product.isEditing" ng-model="product.category">
+              <option ng-repeat="category in categories" value="{{ category }}">{{ category }}</option>
+            </select>
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">Rp {{ product.price | priceFormat }}</span>
+            <input ng-if="product.isEditing" type="number" ng-model="product.price">
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">{{ product.stock }}</span>
+            <input ng-if="product.isEditing" type="number" ng-model="product.stock">
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">{{ product.size }}</span>
+            <select ng-if="product.isEditing" ng-model="product.size">
+              <option ng-repeat="size in sizes" value="{{ size }}">{{ size }}</option>
+            </select>
+          </td>
+          <td>
+            <span ng-if="!product.isEditing">{{ product.description }}</span>
+            <input ng-if="product.isEditing" type="text" ng-model="product.description">
+          </td>
+          <td class="action-buttons">
+            <button class="save-button" ng-if="product.isEditing" ng-click="saveProduct(product)">Save</button>
+            <button class="edit-button" ng-if="!product.isEditing" ng-click="editProduct(product)">Edit</button>
+            <button class="delete-button" ng-click="deleteProduct(product.product_id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button ng-disabled="currentPage == 1" ng-click="changePage(currentPage - 1, 'products')">Previous</button>
+      <span>Page {{ currentPage }} of {{ getTotalPages('products') }}</span>
+      <button ng-disabled="currentPage == getTotalPages('products')" ng-click="changePage(currentPage + 1, 'products')">Next</button>
+    </div>
+  </div>
+
+  <div ng-if="filteredProducts().length === 0" class="no-products">
+    <p>No products found.</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script src="../../controllers/adminController.js"></script>
+</body>
+</html>

@@ -30,7 +30,7 @@
 
     <main>
       <h2>LOGIN</h2>
-      <div class="main-section" ng-controller="UserController">
+      <div class="main-section" ng-controller="AuthenticationController">
         <div class="login-section">
           <form class="form-section" ng-submit="loginUser()">
             <h4>Email Address</h4>
@@ -52,7 +52,6 @@
               <input type="checkbox" name="" id="" ng-click="togglePassword()"/>
               <p>Show Password</p>
             </div>
-            <!-- Show message only if alertShown is false -->
             <p class="error-message" ng-show="!alertShown && message">{{ message }}</p>
             <button type="submit">Login</button>
           </form>
@@ -64,10 +63,9 @@
     <!-- <footer class="footer-container"></footer> -->
     <!-- finish footer -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="../../scripts/components-script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <script src="../../scripts/components-script.js"></script>
     <script src="../../scripts/app.js"></script>
-    <script src="../../controllers/userController.js"></script>
+    <script src="../../controllers/authenticationController.js"></script>
   </body>
 </html>

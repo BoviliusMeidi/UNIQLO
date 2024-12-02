@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNIQLO | What is LifeWare Magazine?</title>
+    <link
+      rel="stylesheet"
+      href="../../styles/authentication/edit-profile.css"
+    />
+    <!-- link css -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header-stores"></header>
+    <!-- finish header -->
+
+    <!-- sidebar -->
+    <div class="sidebar-container"></div>
+    <!-- finish sidebar -->
+
+    <main>
+      <div class="main-section" ng-controller="UserController">
+        <div>
+          <div ng-if="user">
+            <h1>Account Details</h1>
+            <div class="profile">
+                <div class="profile-picture">
+                    <img ng-src="../../../backend/{{user.profile_picture}}" alt="Profile Picture"/>
+                </div>
+                <form ng-controller="UploadController" enctype="multipart/form-data">
+                    <input type="file" id="file-upload" ng-model="user.profile_picture"  onchange="angular.element(this).scope().uploadImage('user')"
+                    style="display: none;" />
+                    <button type="button" ng-click="triggerFileInput()">
+                        <span class="material-icons">file_upload</span> Edit Photo
+                    </button>
+                </form>
+            </div>
+            
+            <form name="profileForm">
+              <div class="row-section">
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="edit_name"
+                    ng-model="user.username"
+                    ng-disabled="!isEditMode"
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="edit_email"
+                    ng-model="user.email"
+                    ng-disabled="!isEditMode"
+                  />
+                </div>
+                <div>
+                  <label for="phone_number">Phone Number</label>
+                  <input
+                    type="text"
+                    id="edit_phone_number"
+                    ng-model="user.phone_number"
+                    ng-disabled="!isEditMode"
+                  />
+                </div>
+                <div>
+                  <label for="payment">Payment Method</label>
+                  <input
+                    type="text"
+                    id="edit_payment"
+                    ng-model="user.payment_method"
+                    ng-disabled="!isEditMode"
+                  />
+                </div>
+              </div>
+              <div class="row-section">
+                <div>
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    id="edit_country"
+                    ng-model="user.country"
+                    ng-disabled="!isEditMode"
+                  />
+                </div>
+                <div>
+                  <label for="address">Address</label>
+                  <textarea
+                    id="edit_address"
+                    ng-model="user.address"
+                    ng-disabled="!isEditMode"
+                    rows="6"
+                  ></textarea>
+                </div>
+                <div class="column-section">
+                  <button
+                    type="button"
+                    ng-click="editUserProfile()"
+                    ng-disabled="isEditMode"
+                    ng-show="!isEditMode"
+                  >
+                    Edit Profile
+                  </button>
+                  <button
+                    type="button"
+                    ng-click="saveUserProfile()"
+                    ng-disabled="!isEditMode"
+                    ng-show="isEditMode"
+                  >
+                    Save Profile
+                  </button>
+                  <button type="button" ng-click="deleteUserProfile()">
+                    Delete Profile
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Loading message if user data is not available -->
+          <div ng-if="!user">
+            <p>Loading profile...</p>
+          </div>
+
+          <p>{{ message }}</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <!-- <footer class="footer-container"></footer> -->
+    <!-- finish footer -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../../scripts/components-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../controllers/userController.js"></script>
+    <script src="../../controllers/uploadController.js"></script>
+  </body>
+</html>

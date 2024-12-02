@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIQLO | Cart</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles/stores/products.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-stores"></header>
+    <!-- finish header -->
+     
+    <div ng-controller="ProductController">
+      <div class="title-section">
+        <h2 class="explore-header">EXPLORE THE LATEST {{category[2]}}'S COLLECTION</h2>
+        <p class="explore-paragraph">Discover the latest {{categoryLowercase[2]}}'s collection with special offers from our magazine.</p>
+      </div>
+
+      <div class="category-tabs">
+        <button class="tab-link active" onclick="openTab(event, 'Men')">MEN</button>
+        <button class="tab-link" onclick="openTab(event, 'Woman')">WOMAN</button>
+        <button class="tab-link" onclick="openTab(event, 'Kids')">KIDS</button>
+      </div>
+
+      <div class="sort-tabs">
+        <button ng-click="sortByPrice(true)">Sort by Price (Low to High)</button>
+        <button ng-click="sortByPrice(false)">Sort by Price (High to Low)</button>
+        <button ng-click="sortBySize(true)">Sort by Size (A to Z)</button>
+        <button ng-click="sortBySize(false)">Sort by Size (Z to A)</button>      </div>
+      
+      <div class="container">
+        <!-- Sidebar Filtering -->
+        <div class="filter">
+          <h3>Filter</h3>
+          <!-- Filter Berdasarkan -->
+          <div class="filter-section">
+            <h4>Pilih Berdasarkan</h4>
+            <label><input type="checkbox" value="new"> New Arrival</label><br>
+            <label><input type="checkbox" value="sale"> On Sale</label><br>
+          </div>
+          <!-- Filter Harga -->
+          <div class="filter-section">
+            <h4>Harga</h4>
+            <label for="min-price">Min:</label>
+            <input type="number" id="min-price" placeholder="0"><br>
+            <label for="max-price">Max:</label>
+            <input type="number" id="max-price" placeholder="500000">
+          </div>
+          <!-- Filter Ukuran -->
+          <div class="filter-section">
+            <h4>Ukuran</h4>
+            <label><input type="radio" name="size" value="S"> S</label><br>
+            <label><input type="radio" name="size" value="M"> M</label><br>
+            <label><input type="radio" name="size" value="L"> L</label><br>
+            <label><input type="radio" name="size" value="XL"> XL</label>
+          </div>
+          <!-- Tambahan: Filter Warna -->
+          <div class="filter-section">
+            <h4>Warna</h4>
+            <label><input type="checkbox" value="black"> Black</label><br>
+            <label><input type="checkbox" value="white"> White</label><br>
+            <label><input type="checkbox" value="blue"> Blue</label><br>
+          </div>
+          <!-- Tombol Reset Filter -->
+          <button class="reset-button">Reset Filter</button>
+        </div>
+      
+        <!-- Product List -->
+        <div class="products">
+          <div class="product">
+            <div class="product-image"></div>
+            <h4>Jaket Tailored Fit Rileks</h4>
+            <p>Rp 499.000</p>
+            <span class="rating">★★★★★ (5.0)</span>
+          </div>
+          <!-- Tambahkan hingga maksimal 15 produk -->
+          <div class="product">
+            <div class="product-image"></div>
+            <h4>Jaket Tailored Fit Rileks</h4>
+            <p>Rp 499.000</p>
+            <span class="rating">★★★★★ (5.0)</span>
+          </div>
+
+          <div class="product">
+            <div class="product-image"></div>
+            <h4>Jaket Tailored Fit Rileks</h4>
+            <p>Rp 499.000</p>
+            <span class="rating">★★★★★ (5.0)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../../scripts/components-script.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../controllers/productController.js"></script>
+
+  <script>
+function openTab(event, tabName) {
+  // Sembunyikan semua tab
+  const tabContents = document.querySelectorAll(".tab-content");
+  tabContents.forEach(tab => (tab.style.display = "none"));
+
+  // Hilangkan kelas aktif dari semua tab link
+  const tabLinks = document.querySelectorAll(".tab-link");
+  tabLinks.forEach(tab => tab.classList.remove("active"));
+
+  // Tampilkan tab yang diklik
+  document.getElementById(tabName).style.display = "block";
+
+  // Tambahkan kelas aktif pada tombol yang diklik
+  event.currentTarget.classList.add("active");
+}
+
+document.querySelector('.reset-button').addEventListener('click', () => {
+  // Reset semua filter
+  document.querySelectorAll('.filter input').forEach(input => {
+    if (input.type === 'checkbox' || input.type === 'radio') {
+      input.checked = false;
+    } else if (input.type === 'number') {
+      input.value = '';
+    }
+  });
+});
+
+  </script>
+</body>
+
+</html>
