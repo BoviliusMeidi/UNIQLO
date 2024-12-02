@@ -109,6 +109,7 @@ body {
   gap: 20px;
   margin: 8rem;
   margin-top: 0;
+  margin-bottom: 2rem;
   height: auto;
 }
 
@@ -126,8 +127,11 @@ body {
 }
 
 .filter-section {
-  /* background-color: red; */
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.filter-section input {
+  margin-bottom: 1rem;
 }
 .filter-section h4 {
   margin: 0;
@@ -137,7 +141,6 @@ body {
   display: flex;
 }
 .filter-section .price-input {
-  /* background-color: aqua; */
   display: flex;
   gap: 0.5rem;
 }
@@ -154,16 +157,17 @@ body {
   display: block;
 }
 .reset-button {
-  margin-top: 20px;
+  margin-bottom: 2rem;
   padding: 10px;
-  background-color: #f44;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid var(--primary-black);
+  border-radius: 1rem;
   cursor: pointer;
 }
 .reset-button:hover {
-  background-color: #d33;
+  border-color: #d33;
+  background-color: #ff9999;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* Product List */
@@ -211,4 +215,37 @@ body {
 .rating {
   font-size: 0.9rem;
   color: #f90;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 1rem; 
+  width: 5rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  border: 1px solid #000;
+}
+
+.pagination button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #333;
 }

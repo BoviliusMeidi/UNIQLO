@@ -68,38 +68,32 @@
           <!-- Filter Berdasarkan -->
           <div class="filter-section type">
             <h4>Pilih Berdasarkan</h4>
-            <label><input type="checkbox" value="new"> New Arrival</label>
-            <label><input type="checkbox" value="sale"> On Sale</label>
+            <label><input type="checkbox" ng-model="filters.newArrival"> New Arrival</label>
+            <label><input type="checkbox" ng-model="filters.onSale"> On Sale</label>
           </div>
           <!-- Filter Harga -->
           <div class="filter-section price">
               <h4>Harga</h4>
               <div class="price-input">
                 <label for="min-price">Min:</label>
-              <input type="number" id="min-price" placeholder="Rp 0"><br>
+              <input type="number" ng-model="filters.minPrice" placeholder="Rp 0"><br>
               </div>
               <div class="price-input">
                 <label for="max-price">Max:</label>
-                <input type="number" id="max-price" placeholder="Rp 500.000">
+                <input type="number" ng-model="filters.maxPrice" placeholder="Rp 500.000">
               </div>
           </div>
           <!-- Filter Ukuran -->
           <div class="filter-section">
             <h4>Ukuran</h4>
-            <label><input type="radio" name="size" value="S"> S</label>
-            <label><input type="radio" name="size" value="M"> M</label>
-            <label><input type="radio" name="size" value="L"> L</label>
-            <label><input type="radio" name="size" value="XL"> XL</label>
-          </div>
-          <!-- Tambahan: Filter Warna -->
-          <div class="filter-section">
-            <h4>Warna</h4>
-            <label><input type="checkbox" value="black"> Black</label>
-            <label><input type="checkbox" value="white"> White</label>
-            <label><input type="checkbox" value="blue"> Blue</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="S"> S</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="M"> M</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="L"> L</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="XL"> XL</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="XXL"> XXL</label>
           </div>
           <!-- Tombol Reset Filter -->
-          <button class="reset-button">Reset Filter</button>
+          <button class="reset-button" ng-click="resetFilters()">Reset Filter</button>
         </div>
       
         <!-- Product List -->
@@ -117,6 +111,15 @@
         </div>
 
       </div>
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button ng-click="goToPage(1)" ng-disabled="currentPage === 1">First</button>
+        <button ng-click="goToPage(currentPage - 1)" ng-disabled="currentPage === 1">Prev</button>
+        <span>Page {{currentPage}} of {{totalPages}}</span>
+        <button ng-click="goToPage(currentPage + 1)" ng-disabled="currentPage === totalPages">Next</button>
+        <button ng-click="goToPage(totalPages)" ng-disabled="currentPage === totalPages">Last</button>
+      </div>
+
     </div>
     
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
