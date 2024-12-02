@@ -6,6 +6,8 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.searchQuery = '';
   $scope.products = [];
   $scope.cart = [];
+  $scope.category = ["MEN", "WOMAN", "KIDS"];
+  $scope.categoryLowercase = $scope.category.map(item => item.toLowerCase());
 
   $http.get(API_URL + 'products', { withCredentials: true })
     .then(function (response) {
@@ -80,5 +82,14 @@ app.controller('ProductController', function ($http, $scope) {
     $scope.products.sort(function (a, b) {
       return ascending ? a.size.localeCompare(b.size) : b.size.localeCompare(a.size);
     });
+  };
+
+  $scope.searchProducts = function () {
+    if ($scope.searchQuery) {
+      console.log('Searching for:', $scope.searchQuery);
+      // Tambahkan logika pencarian lainnya di sini (misal, filter produk atau API call)
+    } else {
+      console.log('Please enter a search term.');
+    }
   };
 });
