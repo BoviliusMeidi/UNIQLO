@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>Product List</title>
+  <style>
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      max-width: 200px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .loading {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .counter button {
+      font-size: 1.2rem;
+      padding: 5px 10px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .add-to-cart {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .add-to-cart:disabled {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-controller="ProductController">
+    <p>{{message}}</p>
+    <div ng-if="loading" class="loading">
+      Loading products...
+    </div>
+
+    <div class="search-bar">
+      <input type="text" ng-model="searchQuery" placeholder="Search for products..." />
+    </div>
+
+    <div>
+      <button ng-click="sortByPrice(true)">Sort by Price (Low to High)</button>
+      <button ng-click="sortByPrice(false)">Sort by Price (High to Low)</button>
+      <button ng-click="sortBySize(true)">Sort by Size (A to Z)</button>
+      <button ng-click="sortBySize(false)">Sort by Size (Z to A)</button>
+    </div>
+
+    <div ng-if="!loading && filteredProducts().length > 0" class="product-list">
+      <div ng-repeat="product in filteredProducts()" class="product-card">
+        <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
+        <h2>{{ product.product_name }}</h2>
+        <p>Price: ${{ product.price | priceFormat }}</p>
+        <p>{{ product.description }}</p>
+        <p>{{ product.stock }}</p>
+
+        <div class="counter">
+          <button ng-click="decreaseQuantity(product)" ng-disabled="product.selectedQuantity <= 1">-</button>
+          <span>{{ product.selectedQuantity || 1 }}</span>
+          <button ng-click="increaseQuantity(product)"
+            ng-disabled="product.selectedQuantity >= product.stock">+</button>
+        </div>
+
+        <button ng-click="addToCart(product)" class="add-to-cart"
+          ng-disabled="product.selectedQuantity <= 0 || product.selectedQuantity > product.stock">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div ng-if="!loading && products.length === 0">
+      <p>No products available.</p>
+    </div>
+
+    <!-- View Cart Section -->
+    <div ng-if="cart.length > 0">
+      <h3>Cart</h3>
+      <ul>
+        <li ng-repeat="item in cart">
+          {{ item.name }} (x{{ item.quantity }}) - ${{ item.price | priceFormat }}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../controllers/productController.js"></script>
+</body>
+
+</html>
