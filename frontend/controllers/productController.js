@@ -8,6 +8,7 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.cart = [];
   $scope.category = ["MEN", "WOMAN", "KIDS"];
   $scope.categoryLowercase = $scope.category.map(item => item.toLowerCase());
+  $scope.currentIndex = 2;
 
   $http.get(API_URL + 'products', { withCredentials: true })
     .then(function (response) {
@@ -95,5 +96,15 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.goToDetail = function (product) {
     const detailUrl = UI_URL + 'tests/selectedProduct.html?product_id=' + product.product_id;
     window.location.href = detailUrl;
+  };
+
+  // For switch tab
+  $scope.openTab = function(index) {
+    $scope.currentIndex = index;
+    
+  };
+
+  $scope.isTabActive = function(index) {
+    return $scope.currentIndex === index;
   };
 });

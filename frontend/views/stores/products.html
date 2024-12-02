@@ -21,14 +21,25 @@
      
     <div ng-controller="ProductController">
       <div class="title-section">
-        <h2 class="explore-header">EXPLORE THE LATEST {{category[2]}}'S COLLECTION</h2>
-        <p class="explore-paragraph">Discover the latest {{categoryLowercase[2]}}'s collection with special offers from our magazine.</p>
+        <h2 class="explore-header">
+          EXPLORE THE LATEST {{ category[currentIndex] }}'S COLLECTION</h2>
+        <p class="explore-paragraph">
+          Discover the latest {{ categoryLowercase[currentIndex] }}'s collection with special offers from our magazine.</p>
       </div>
 
       <div class="category-tabs">
-        <button class="tab-link active" onclick="openTab(event, 'Men')">MEN</button>
-        <button class="tab-link" onclick="openTab(event, 'Woman')">WOMAN</button>
-        <button class="tab-link" onclick="openTab(event, 'Kids')">KIDS</button>
+        <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive('Men') }"
+          ng-click="openTab(0)">MEN</button>
+          <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive('Woman') }"
+          ng-click="openTab(1)">WOMAN</button>
+          <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive('Men') }"
+          ng-click="openTab('Kids')">KIDS</button>
       </div>
 
       <div class="action-bar">
@@ -93,7 +104,7 @@
       
         <!-- Product List -->
         <div ng-if="!loading && filteredProducts().length > 0" class="products">
-          <div ng-repeat="product in filteredProducts()" class="product">
+          <div ng-repeat="product in filteredProducts()" class="product" ng-click="goToDetail(product)">
             <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
             <p>{{ product.product_name }}</p>
             <h2>Rp {{ product.price | priceFormat }}</h2>
