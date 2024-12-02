@@ -12,6 +12,11 @@ git clone https://github.com/BoviliusMeidi/UNIQLO.git
 cd UNIQLO
 ```
 ### Run the BackEnd Environment
+0. Change to the backend directory first.
+```bash
+cd backend
+```
+
 1. Install the node package manager, that we need for this websnpm --versioite.
 ```bash
 npm install
