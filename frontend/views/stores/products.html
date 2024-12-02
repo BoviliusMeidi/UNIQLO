@@ -53,35 +53,39 @@
       <div class="container">
         <!-- Sidebar Filtering -->
         <div class="filter">
-          <h3>Filter</h3>
+          <h3>Filters</h3>
           <!-- Filter Berdasarkan -->
-          <div class="filter-section">
+          <div class="filter-section type">
             <h4>Pilih Berdasarkan</h4>
-            <label><input type="checkbox" value="new"> New Arrival</label><br>
-            <label><input type="checkbox" value="sale"> On Sale</label><br>
+            <label><input type="checkbox" value="new"> New Arrival</label>
+            <label><input type="checkbox" value="sale"> On Sale</label>
           </div>
           <!-- Filter Harga -->
-          <div class="filter-section">
-            <h4>Harga</h4>
-            <label for="min-price">Min:</label>
-            <input type="number" id="min-price" placeholder="0"><br>
-            <label for="max-price">Max:</label>
-            <input type="number" id="max-price" placeholder="500000">
+          <div class="filter-section price">
+              <h4>Harga</h4>
+              <div class="price-input">
+                <label for="min-price">Min:</label>
+              <input type="number" id="min-price" placeholder="Rp 0"><br>
+              </div>
+              <div class="price-input">
+                <label for="max-price">Max:</label>
+                <input type="number" id="max-price" placeholder="Rp 500.000">
+              </div>
           </div>
           <!-- Filter Ukuran -->
           <div class="filter-section">
             <h4>Ukuran</h4>
-            <label><input type="radio" name="size" value="S"> S</label><br>
-            <label><input type="radio" name="size" value="M"> M</label><br>
-            <label><input type="radio" name="size" value="L"> L</label><br>
+            <label><input type="radio" name="size" value="S"> S</label>
+            <label><input type="radio" name="size" value="M"> M</label>
+            <label><input type="radio" name="size" value="L"> L</label>
             <label><input type="radio" name="size" value="XL"> XL</label>
           </div>
           <!-- Tambahan: Filter Warna -->
           <div class="filter-section">
             <h4>Warna</h4>
-            <label><input type="checkbox" value="black"> Black</label><br>
-            <label><input type="checkbox" value="white"> White</label><br>
-            <label><input type="checkbox" value="blue"> Blue</label><br>
+            <label><input type="checkbox" value="black"> Black</label>
+            <label><input type="checkbox" value="white"> White</label>
+            <label><input type="checkbox" value="blue"> Blue</label>
           </div>
           <!-- Tombol Reset Filter -->
           <button class="reset-button">Reset Filter</button>
