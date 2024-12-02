@@ -7,7 +7,7 @@ exports.up = function (knex) {
         table.increments('product_id').primary();
         table.string('product_picture', 255).notNullable();
         table.string('product_name', 255).notNullable();
-        table.enum('category', ['MAN', 'WOMAN', 'KIDS']).notNullable();
+        table.enum('category', ['MEN', 'WOMAN', 'KIDS']).notNullable();
         table.integer('price', 10).notNullable();
         table.integer('stock', 8).notNullable();
         table.enum('size', ['S', 'M', 'L', 'XL', 'XXL']).notNullable();

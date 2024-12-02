@@ -21,22 +21,49 @@
      
     <div ng-controller="ProductController">
       <div class="title-section">
-        <h2 class="explore-header">EXPLORE THE LATEST {{category[2]}}'S COLLECTION</h2>
-        <p class="explore-paragraph">Discover the latest {{categoryLowercase[2]}}'s collection with special offers from our magazine.</p>
+        <h2 class="explore-header">
+          EXPLORE THE LATEST {{ category[currentIndex] }}'S COLLECTION</h2>
+        <p class="explore-paragraph">
+          Discover the latest {{ categoryLowercase[currentIndex] }}'s collection with special offers from our magazine.</p>
       </div>
 
       <div class="category-tabs">
-        <button class="tab-link active" onclick="openTab(event, 'Men')">MEN</button>
-        <button class="tab-link" onclick="openTab(event, 'Woman')">WOMAN</button>
-        <button class="tab-link" onclick="openTab(event, 'Kids')">KIDS</button>
+        <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive(0) }"
+          ng-click="openTab(0)">MEN</button>
+          <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive(1) }"
+          ng-click="openTab(1)">WOMAN</button>
+          <button 
+          class="tab-link" 
+          ng-class="{ active: isTabActive(2) }"
+          ng-click="openTab(2)">KIDS</button>
       </div>
 
       <div class="action-bar">
         <div class="sort-tabs">
-          <button ng-click="sortByPrice(true)">Sort by Price (Low to High)</button>
-          <button ng-click="sortByPrice(false)">Sort by Price (High to Low)</button>
-          <button ng-click="sortBySize(true)">Sort by Size (A to Z)</button>
-          <button ng-click="sortBySize(false)">Sort by Size (Z to A)</button>      
+          <button 
+            ng-click="sortByPrice(true)"
+            ng-class="{ active: isSortActive('priceLow') }">
+            Sort by Price (Low to High)
+          </button>
+          <button 
+            ng-click="sortByPrice(false)"
+            ng-class="{ active: isSortActive('priceHigh') }">
+            Sort by Price (High to Low)
+          </button>
+          <button 
+            ng-click="sortBySize(true)"
+            ng-class="{ active: isSortActive('sizeAtoZ') }">
+            Sort by Size (A to Z)
+          </button>
+          <button 
+            ng-click="sortBySize(false)"
+            ng-class="{ active: isSortActive('sizeZtoA') }">
+            Sort by Size (Z to A)
+          </button>      
         </div>
 
         <div class="search-bar">
@@ -53,43 +80,41 @@
       <div class="container">
         <!-- Sidebar Filtering -->
         <div class="filter">
-          <h3>Filter</h3>
+          <h3>Filters</h3>
           <!-- Filter Berdasarkan -->
-          <div class="filter-section">
+          <div class="filter-section type">
             <h4>Pilih Berdasarkan</h4>
-            <label><input type="checkbox" value="new"> New Arrival</label><br>
-            <label><input type="checkbox" value="sale"> On Sale</label><br>
+            <label><input type="checkbox" ng-model="filters.newArrival"> New Arrival</label>
+            <label><input type="checkbox" ng-model="filters.onSale"> On Sale</label>
           </div>
           <!-- Filter Harga -->
-          <div class="filter-section">
-            <h4>Harga</h4>
-            <label for="min-price">Min:</label>
-            <input type="number" id="min-price" placeholder="0"><br>
-            <label for="max-price">Max:</label>
-            <input type="number" id="max-price" placeholder="500000">
+          <div class="filter-section price">
+              <h4>Harga</h4>
+              <div class="price-input">
+                <label for="min-price">Min:</label>
+              <input type="number" ng-model="filters.minPrice" placeholder="Rp 0"><br>
+              </div>
+              <div class="price-input">
+                <label for="max-price">Max:</label>
+                <input type="number" ng-model="filters.maxPrice" placeholder="Rp 500.000">
+              </div>
           </div>
           <!-- Filter Ukuran -->
           <div class="filter-section">
             <h4>Ukuran</h4>
-            <label><input type="radio" name="size" value="S"> S</label><br>
-            <label><input type="radio" name="size" value="M"> M</label><br>
-            <label><input type="radio" name="size" value="L"> L</label><br>
-            <label><input type="radio" name="size" value="XL"> XL</label>
-          </div>
-          <!-- Tambahan: Filter Warna -->
-          <div class="filter-section">
-            <h4>Warna</h4>
-            <label><input type="checkbox" value="black"> Black</label><br>
-            <label><input type="checkbox" value="white"> White</label><br>
-            <label><input type="checkbox" value="blue"> Blue</label><br>
+            <label><input type="radio" name="size" ng-model="filters.size" value="S"> S</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="M"> M</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="L"> L</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="XL"> XL</label>
+            <label><input type="radio" name="size" ng-model="filters.size" value="XXL"> XXL</label>
           </div>
           <!-- Tombol Reset Filter -->
-          <button class="reset-button">Reset Filter</button>
+          <button class="reset-button" ng-click="resetFilters()">Reset Filter</button>
         </div>
       
         <!-- Product List -->
         <div ng-if="!loading && filteredProducts().length > 0" class="products">
-          <div ng-repeat="product in filteredProducts()" class="product">
+          <div ng-repeat="product in filteredProducts()" class="product" ng-click="goToDetail(product)">
             <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
             <p>{{ product.product_name }}</p>
             <h2>Rp {{ product.price | priceFormat }}</h2>
@@ -102,6 +127,15 @@
         </div>
 
       </div>
+      <!-- Pagination Controls -->
+      <div class="pagination">
+        <button ng-click="goToPage(1)" ng-disabled="currentPage === 1">First</button>
+        <button ng-click="goToPage(currentPage - 1)" ng-disabled="currentPage === 1">Prev</button>
+        <span>Page {{currentPage}} of {{totalPages}}</span>
+        <button ng-click="goToPage(currentPage + 1)" ng-disabled="currentPage === totalPages">Next</button>
+        <button ng-click="goToPage(totalPages)" ng-disabled="currentPage === totalPages">Last</button>
+      </div>
+
     </div>
     
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>

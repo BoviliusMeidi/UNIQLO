@@ -48,7 +48,7 @@ body {
   font-size: 2rem;
 }
 
-.tab-link:active {
+.tab-link.active {
   border-bottom: 4px solid var(--primary-black);
 }
 
@@ -91,17 +91,23 @@ body {
   outline: none;
   border: 1px solid var(--secondary-black);
   border-radius: 10rem;
-  margin: 0 2rem 1rem 1rem;
+  margin: 0 1rem 1rem 1rem;
   margin-left: 0;
+  padding: 0 1rem 0 1rem;
 
   font-size: 1rem;
   color: var(--secondary-black);
   height: 2rem;
 }
 
-.sort-tabs button:active {
-  border: 1px solid var(--primary-black);
+.sort-tabs button.active {
+  border: 3px solid var(--primary-black);
   color: var(--primary-black);
+}
+
+.sort-tabs button:hover {
+  color: white;
+  background-color: var(--secondary-black);
 }
 /* General Layout */
 .container {
@@ -109,6 +115,7 @@ body {
   gap: 20px;
   margin: 8rem;
   margin-top: 0;
+  margin-bottom: 2rem;
   height: auto;
 }
 
@@ -116,32 +123,57 @@ body {
 .filter {
   width: 20%;
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 0 20px;
   background: #f9f9f9;
   border-radius: 5px;
 }
 .filter h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.filter-section {
+  margin: 0 0 1.5rem 0;
+}
+
+.filter-section input {
+  margin-bottom: 1rem;
 }
 .filter-section h4 {
-  margin: 10px 0 5px;
+  margin: 0;
 }
+
+.filter-section .price {
+  display: flex;
+}
+.filter-section .price-input {
+  display: flex;
+  gap: 0.5rem;
+}
+.filter-section .price-input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--secondary-black);
+
+  font-size: 0.8rem;
+  height: 1.5rem;
+}
+
 .filter label {
   display: block;
-  margin: 5px 0;
 }
 .reset-button {
-  margin-top: 20px;
+  margin-bottom: 2rem;
   padding: 10px;
-  background-color: #f44;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid var(--primary-black);
+  border-radius: 1rem;
   cursor: pointer;
 }
 .reset-button:hover {
-  background-color: #d33;
+  border-color: #d33;
+  background-color: #ff9999;
+  color: white;
+  transform: scale(1.05);
 }
 
 /* Product List */
@@ -151,7 +183,14 @@ body {
   padding: 10px;
   text-align: left;
   background: white;
-  height: auto;
+  max-height: 90vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-color: #aaa;
+  cursor: pointer;
 }
 .products {
   width: 80%;
@@ -161,7 +200,6 @@ body {
 }
 .product img {
   width: 100%;
-  height: 300px;
   background: #eee;
 }
 .product p {
@@ -182,4 +220,37 @@ body {
 .rating {
   font-size: 0.9rem;
   color: #f90;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 1rem; 
+  width: 5rem;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  border: 1px solid #000;
+}
+
+.pagination button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 14px;
+  padding: 0 10px;
+  color: #333;
 }

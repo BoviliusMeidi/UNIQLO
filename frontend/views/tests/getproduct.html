@@ -75,7 +75,7 @@
     </div>
 
     <div ng-if="!loading && filteredProducts().length > 0" class="product-list">
-      <div ng-repeat="product in filteredProducts()" class="product-card">
+      <div ng-repeat="product in filteredProducts()" class="product-card" ng-click="goToDetail(product)">
         <img ng-src="{{ product.product_picture }}" alt="{{ product.product_name }}">
         <h2>{{ product.product_name }}</h2>
         <p>Price: ${{ product.price | priceFormat }}</p>
