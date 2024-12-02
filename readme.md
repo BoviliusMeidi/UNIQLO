@@ -12,12 +12,12 @@ git clone https://github.com/BoviliusMeidi/UNIQLO.git
 cd UNIQLO
 ```
 ### Run the BackEnd Environment
-0. Change to the backend directory first.
+1. Change to the backend directory first.
 ```bash
 cd backend
 ```
 
-1. Install the node package manager, that we need for this websnpm --versioite.
+2. Install the node package manager, that we need for this websnpm --versioite.
 ```bash
 npm install
 ```
@@ -35,11 +35,11 @@ Package NPM (Node Package Manager) yang akan terinstall
 "pg": "^8.13.1" -> Menghubungkan dan berinteraksi dengan PostgreSQL dari aplikasi Node.js.
 "nodemon": "^3.1.7" -> Alat pengembangan untuk Node.js yang secara otomatis memulai ulang server ketika ada perubahan pada file.
 ```
-2. Copy file `.env.example` to the `.env`.
+3. Copy file `.env.example` to the `.env`.
 ```bash
 cp .env.example .env
 ```
-3. Open file `.env` and re-configuration to the your system environment database.
+4. Open file `.env` and re-configuration to the your system environment database.
 ```bash
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
@@ -48,19 +48,19 @@ DB_DATABASE=uniqlo
 DB_USERNAME=postgres *username
 DB_PASSWORD= *password
 ```
-4. Build the database
+5. Build the database
 ```bash
 npm run database
 ```
-5. Build the migration
+6. Build the migration
 ```bash
 npm run migrate
 ```
-6. Add the seeder for database
+7. Add the seeder for database
 ```bash
 npm run seed
 ```
-7. Run the server
+8. Run the server
 ```bash
 npm run dev
 ```
