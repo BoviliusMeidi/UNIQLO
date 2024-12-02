@@ -151,7 +151,7 @@ body {
   padding: 10px;
   text-align: left;
   background: white;
-  height: auto;
+  max-height: fit-content;
 }
 .products {
   width: 80%;
