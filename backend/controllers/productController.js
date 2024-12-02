@@ -1,4 +1,4 @@
-const { getProducts, updateProduct, createProduct, deleteProduct, updateProductImage } = require('../models/productModel');
+const { getProducts, updateProduct, createProduct, deleteProduct, updateProductImage, getProductById } = require('../models/productModel');
 
 const listProducts = async (req, res) => {
   try {
@@ -7,6 +7,17 @@ const listProducts = async (req, res) => {
   } catch (error) {
     console.error("Error fetching products:", error);
     res.status(500).json({ error: "Failed to get products" });
+  }
+};
+
+const listProductsbyID = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const product = await getProductById(id);
+    res.status(200).json({ product });
+  } catch (error) {
+    console.error("Error fetching product:", error);
+    res.status(500).json({ error: "Failed to get product" });
   }
 };
 
@@ -97,5 +108,5 @@ const uploadProductImage = (req, res) => {
 };
 
 module.exports = {
-  listProducts, makeProduct, editProduct, removeProduct, uploadProduct, uploadProductImage
+  listProducts, listProductsbyID,makeProduct, editProduct, removeProduct, uploadProduct, uploadProductImage
 };
