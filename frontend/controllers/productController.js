@@ -83,4 +83,13 @@ app.controller('ProductController', function ($http, $scope) {
       return ascending ? a.size.localeCompare(b.size) : b.size.localeCompare(a.size);
     });
   };
+
+  $scope.searchProducts = function () {
+    if ($scope.searchQuery) {
+      console.log('Searching for:', $scope.searchQuery);
+      // Tambahkan logika pencarian lainnya di sini (misal, filter produk atau API call)
+    } else {
+      console.log('Please enter a search term.');
+    }
+  };
 });
