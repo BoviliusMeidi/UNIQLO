@@ -16,6 +16,7 @@ body {
 .product-image {
     width: 40rem;
     height: 20rem;
+    aspect-ratio: 1 / 1; 
 }
 
 .product-image img {
@@ -24,11 +25,12 @@ body {
     object-fit: cover; 
 }
 
-
 .product-info {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
+    flex: 1;
+    min-width: 0; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .product-title {
@@ -105,6 +107,11 @@ body {
     cursor: pointer;
     font-size: 16px;
     border-radius: 2rem;
+    width: 100%; 
+    max-width: 40rem;
+    display: block; 
+    text-align: center; 
+    margin-top: 1rem;
 }
 
 .add-to-cart:hover {

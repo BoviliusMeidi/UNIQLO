@@ -35,3 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function shareProduct() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'UNIQLO Product',
+        text: 'Check out this product from UNIQLO!',
+        url: window.location.href
+      })
+      .then(() => console.log('Successfully shared'))
+      .catch((error) => console.error('Error sharing', error));
+    } else {
+      alert('Web Share API is not supported in this browser.');
+    }
+  }

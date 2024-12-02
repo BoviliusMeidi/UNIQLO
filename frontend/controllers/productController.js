@@ -145,7 +145,7 @@ $scope.filteredProducts = function () {
   };
 
   $scope.goToDetail = function (product) {
-    const detailUrl = UI_URL + 'tests/selectedProduct.html?product_id=' + product.product_id;
+    const detailUrl = UI_URL + 'stores/product-detail.html?product_id=' + product.product_id;
     window.location.href = detailUrl;
   };
 
