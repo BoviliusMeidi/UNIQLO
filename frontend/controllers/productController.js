@@ -6,6 +6,8 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.searchQuery = '';
   $scope.products = [];
   $scope.cart = [];
+  $scope.category = ["MEN", "WOMAN", "KIDS"];
+  $scope.categoryLowercase = $scope.category.map(item => item.toLowerCase());
 
   $http.get(API_URL + 'products', { withCredentials: true })
     .then(function (response) {
