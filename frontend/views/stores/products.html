@@ -44,10 +44,26 @@
 
       <div class="action-bar">
         <div class="sort-tabs">
-          <button ng-click="sortByPrice(true)">Sort by Price (Low to High)</button>
-          <button ng-click="sortByPrice(false)">Sort by Price (High to Low)</button>
-          <button ng-click="sortBySize(true)">Sort by Size (A to Z)</button>
-          <button ng-click="sortBySize(false)">Sort by Size (Z to A)</button>      
+          <button 
+            ng-click="sortByPrice(true)"
+            ng-class="{ active: isSortActive('priceLow') }">
+            Sort by Price (Low to High)
+          </button>
+          <button 
+            ng-click="sortByPrice(false)"
+            ng-class="{ active: isSortActive('priceHigh') }">
+            Sort by Price (High to Low)
+          </button>
+          <button 
+            ng-click="sortBySize(true)"
+            ng-class="{ active: isSortActive('sizeAtoZ') }">
+            Sort by Size (A to Z)
+          </button>
+          <button 
+            ng-click="sortBySize(false)"
+            ng-class="{ active: isSortActive('sizeZtoA') }">
+            Sort by Size (Z to A)
+          </button>      
         </div>
 
         <div class="search-bar">

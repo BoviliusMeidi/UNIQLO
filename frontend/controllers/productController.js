@@ -9,6 +9,8 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.category = ["MEN", "WOMAN", "KIDS"];
   $scope.categoryLowercase = $scope.category.map(item => item.toLowerCase());
   $scope.currentIndex = 0;
+
+  // Filtering and sorting
   $scope.filters = {
     newArrival: false,
     onSale: false,
@@ -16,6 +18,8 @@ app.controller('ProductController', function ($http, $scope) {
     maxPrice: null,
     size: null,
   };
+
+  $scope.currentSort = '';
 
   // Pagination
   $scope.pageSize = 6; // Jumlah produk per halaman
@@ -114,14 +118,19 @@ $scope.filteredProducts = function () {
     window.location.href = UI_URL + 'tests/cart.html';
   };
 
+  $scope.isSortActive = function(sortType) {
+    return $scope.currentSort === sortType;
+  };
+
   $scope.sortByPrice = function (ascending) {
+    $scope.currentSort = ascending ? 'priceLow' : 'priceHigh';
     $scope.products.sort(function (a, b) {
       return ascending ? a.price - b.price : b.price - a.price;
     });
   };
 
-  // Sort products by size
   $scope.sortBySize = function (ascending) {
+    $scope.currentSort = ascending ? 'sizeAtoZ' : 'sizeZtoA'; 
     $scope.products.sort(function (a, b) {
       return ascending ? a.size.localeCompare(b.size) : b.size.localeCompare(a.size);
     });
