@@ -30,16 +30,16 @@
       <div class="category-tabs">
         <button 
           class="tab-link" 
-          ng-class="{ active: isTabActive('Men') }"
+          ng-class="{ active: isTabActive(0) }"
           ng-click="openTab(0)">MEN</button>
           <button 
           class="tab-link" 
-          ng-class="{ active: isTabActive('Woman') }"
+          ng-class="{ active: isTabActive(1) }"
           ng-click="openTab(1)">WOMAN</button>
           <button 
           class="tab-link" 
-          ng-class="{ active: isTabActive('Men') }"
-          ng-click="openTab('Kids')">KIDS</button>
+          ng-class="{ active: isTabActive(2) }"
+          ng-click="openTab(2)">KIDS</button>
       </div>
 
       <div class="action-bar">

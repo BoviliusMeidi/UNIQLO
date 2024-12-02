@@ -8,7 +8,7 @@ app.controller('ProductController', function ($http, $scope) {
   $scope.cart = [];
   $scope.category = ["MEN", "WOMAN", "KIDS"];
   $scope.categoryLowercase = $scope.category.map(item => item.toLowerCase());
-  $scope.currentIndex = 2;
+  $scope.currentIndex = 0;
 
   $http.get(API_URL + 'products', { withCredentials: true })
     .then(function (response) {
@@ -23,15 +23,19 @@ app.controller('ProductController', function ($http, $scope) {
       $scope.loading = false;
     });
 
-  $scope.filteredProducts = function () {
-    const query = $scope.searchQuery.toLowerCase();
-    return $scope.products.filter(product => {
-      return (
-        product.product_name.toLowerCase().includes(query) ||
-        product.description.toLowerCase().includes(query)
-      );
-    });
-  };
+    $scope.filteredProducts = function () {
+      const query = $scope.searchQuery.toLowerCase();
+      const selectedCategory = $scope.category[$scope.currentIndex]; // Get the current category
+    
+      return $scope.products.filter(product => {
+        return (
+          (product.product_name.toLowerCase().includes(query) ||
+            product.description.toLowerCase().includes(query)) &&
+          product.category.toUpperCase() === selectedCategory // Match the category
+        );
+      });
+    };
+    
 
   setTimeout(() => {
     $scope.loading = false;
@@ -105,6 +109,6 @@ app.controller('ProductController', function ($http, $scope) {
   };
 
   $scope.isTabActive = function(index) {
-    return $scope.currentIndex === index;
+    return $scope.currentIndex == index;
   };
 });
