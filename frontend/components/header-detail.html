@@ -1,0 +1,137 @@
+<style>
+    header {
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0.5rem;
+      transition: transform 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    header.index {
+      z-index: 0;
+    }
+  
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    header nav .logo {
+      background-color: transparent;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+    }
+  
+    header nav .logo img {
+      width: 15rem;
+      height: auto;
+      margin-left: 1.5rem;
+    }
+  
+    header nav .top-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2.5rem;
+      align-items: center;
+      margin-right: 1.5rem;
+      text-decoration: none;
+    }
+
+    header nav .top-icon a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header nav .menu {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    header nav .menu-links {
+        display: flex;
+        gap: 5rem; 
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: black; 
+    }
+
+    header nav .menu-links a {
+        text-decoration: none; 
+        color: inherit;
+        transition: color 0.3s ease;
+    }
+
+    header nav .menu-links a:hover {
+        color: gray;
+    }
+  
+    main .img-header {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    /* img */
+    main img {
+      width: 12rem;
+      object-fit: cover;
+    }
+  
+    @media (max-width: 364px) {
+      .img-header img {
+        width: 40%;
+      }
+  
+      header nav .logo img {
+        width: 10rem;
+        height: auto;
+      }
+  
+      header nav .top-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0rem;
+      align-items: center;
+    }
+
+    }
+  </style>
+  
+  <header>
+    <nav>
+      <a href="/frontend/views/stores/store-landingpage.html" class="logo">
+        <img src="../../assets/magazine/LifeWear-Magazine.png" alt="LifeWear-Logo" />
+      </a>
+      <div class="top-icon">
+        <a href="/frontend/views/magazines/favorite-magazine.html" title="favorite icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png" alt="favorite icon" style="width: 35px; height: auto;">
+            <span class="top-icon"> </span>
+        </a>
+        <a href="/frontend/views/stores/cart.html" title="shopping cart icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/833/833314.png" alt="shopping cart icon" style="width: 35px; height: auto;">
+            <span class="top-icon"> </span>
+        </a>   
+        <a href="/frontend/views/authentication/edit-profile.html" title="account icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/15494/15494722.png" alt="account icon" style="width: 35px; height: auto;">
+            <span class="top-icon"> </span>
+        </a>          
+      </div>
+    </nav>
+  </header>
+  
