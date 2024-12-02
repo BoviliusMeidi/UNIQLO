@@ -1,54 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UNIQLO Store</title>
-    <link rel="stylesheet" href="../../styles/stores/store-landingpage.css" />
-    <!-- link css -->
-    <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UNIQLO Store</title>
+  <link rel="stylesheet" href="../../styles/stores/store-landingpage.css" />
+  <!-- link css -->
+  <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- header -->
-    <header class="header-stores"></header>
-    <!-- finish header -->
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
 
-    <!-- sidebar -->
-    <div class="sidebar-container"></div>
-    <!-- finish sidebar -->
+<body>
+  <!-- header -->
+  <header class="header-stores"></header>
+  <!-- finish header -->
 
-    <main>
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <!-- sidebar -->
+  <div class="sidebar-container"></div>
+  <!-- finish sidebar -->
+
+  <main>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://im.uniqlo.com/global-cms/spa/resf04badd44dbe321f9ff872247cc81fdffr.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://im.uniqlo.com/global-cms/spa/res6cd60f7d36a0cbd943b3cfa153957e64fr.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://im.uniqlo.com/global-cms/spa/resfb29c95372880e3f2b2573ec039a4884fr.jpg"
+            class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
+          <!-- Slide 1 -->
           <div class="carousel-item active">
-            <img src="https://im.uniqlo.com/global-cms/spa/resf04badd44dbe321f9ff872247cc81fdffr.jpg" class="d-block w-100" alt="...">
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 1">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 2">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 3">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 4">
+            </div>
           </div>
+
+          <!-- Slide 2 -->
           <div class="carousel-item">
-            <img src="https://im.uniqlo.com/global-cms/spa/res6cd60f7d36a0cbd943b3cfa153957e64fr.jpg" class="d-block w-100" alt="...">
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 5">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 6">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 7">
+            </div>
+            <div class="card">
+              <img src="https://via.placeholder.com/200" class="card-img-top" alt="Card Image 8">
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="https://im.uniqlo.com/global-cms/spa/resfb29c95372880e3f2b2573ec039a4884fr.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <!-- Navigasi -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="third-page" id="about">
+      <div class="content-section">
+        <div class="text">
+          <div class="up-text">
+            <img src="/frontend/assets/magazine/LifeWear-Magazine.png" alt="LifeWear-Magazine" />
+          </div>
+          <p>
+            LifeWear is clothing designed to make everyone's life better.
+            Simple, high-quality essential clothing with a sense of beauty and craftsmanship in every detail.
+            Designed and continuously developed to meet the needs of everyone's life.
+          </p>
+          <p>
+            As a way of helping people around the world to explore the specifications of these garments and the
+            concepts
+            behind their production, we established LifeWear magazine.
+          </p>
+        </div>
+      </div>
+      <div class="content-section">
+        <div class="image">
+          <img src="/frontend/assets/magazine/Magazine-Book.png" alt="Magazine-Book" />
+          <p>Artwork by Hanna Peterson</p>
+        </div>
+        <div class="text">
+          <p>
+            On June 2, 1984, the first store opened in Fukuromachi, Hiroshima Prefecture.
+            At that time, the store was still called UNIQUE CLOTHING WAREHOUSE.
+            Although the store name has changed now, our mission to create essential clothing that everyone can
+            wear
+            remains the same.
+            Meanwhile, these classic items have gradually evolved, bringing better functionality with the latest
+            materials to produce lighter garments and softer materials. We aim for these garments to become
+            favorite
+            items that you will wear for years. For this excellence to continue, it is important to constantly
+            evaluate
+            the entire manufacturing process.
+          </p>
+          <div class="readmore">
+            <a href="/frontend/index.html"> Read More </a>
           </div>
         </div>
       </div>
-    </main>
 
-    <!-- footer -->
-    <!-- <footer class="footer-container"></footer> -->
-    <!-- finish footer -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="../../scripts/components-script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  </main>
+
+  <!-- footer -->
+  <!-- <footer class="footer-container"></footer> -->
+  <!-- finish footer -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="../../scripts/components-script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
