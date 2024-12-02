@@ -10,7 +10,7 @@ body {
     display: flex;
     padding: 9rem;
     gap: 5rem;
-    height: 100vh;
+    height:80vh;
 }
 
 .product-image {
@@ -132,20 +132,42 @@ body {
 }
 
 .product-description {
-    padding: 20px;
+    padding: 9rem;
+    height: 52vh;
 }
 
 .product-description h2 {
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 .product-description h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .product-description p {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.5;
+    text-align: justify;
+}
+
+.evaluation{
+    padding: 9rem;
+    height: 100vh;
+}
+
+.evaluation h1{
+    font-size: 40px;
+    margin-top: -5rem;
+}
+
+.evaluation h2{
+    font-size: 32px;
+}
+
+.evaluation p{
+    font-size: 20px;
+    text-align: justify;
 }
