@@ -24,7 +24,7 @@ const listCarts = async (req, res) => {
 }
 
 const addCartItem = async (req, res) => {
-  const { product_id, quantity } = req.body;
+  const { product_id, stock, quantity, size } = req.body;
   const user = req.session.user;
   
   if (!user) {
@@ -32,7 +32,7 @@ const addCartItem = async (req, res) => {
   }
 
   try {
-    await cartModel.addToCart(user.id, product_id, quantity);
+    await cartModel.addToCart(user.id, product_id, stock ,quantity, size);
     res.json({ message: 'Added to cart.' });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -41,7 +41,8 @@ const addCartItem = async (req, res) => {
 
 const updateCartItem = async (req, res) => {
   const { id } = req.params;
-  const { quantity } = req.body;
+  const { quantity, size } = req.body;
+  console.log(req.body)
   const user = req.session.user;
 
   if (!user) {
@@ -53,7 +54,7 @@ const updateCartItem = async (req, res) => {
   }
 
   try {
-    await cartModel.updateCartItem(id, quantity);
+    await cartModel.updateCartItem(id, quantity, size);
     res.json({ message: 'Cart item updated successfully.' });
   } catch (error) {
     res.status(500).json({ error: error.message });

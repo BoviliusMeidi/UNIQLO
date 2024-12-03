@@ -11,7 +11,8 @@ const getCarts = async () => {
         'products.product_name',
         'products.price',
         'products.product_picture',
-        'carts.quantity'
+        'carts.quantity',
+        'carts.size'
       );
       return carts.length > 0 ? carts : null;
   } catch (error) {
@@ -26,35 +27,30 @@ const getCartItems = async (user_id) => {
     .select(
       'carts.cart_id',
       'products.product_name',
-      'products.price',
-      'products.size',
       'products.product_picture',
-      'carts.quantity'
+      'products.price',
+      'carts.size',
+      'carts.quantity',
     ).where('carts.user_id', user_id);
 };
 
-const addToCart = async (user_id, product_id, quantity) => {
-  const product = await db('products').where('product_id', product_id).first();
-  if (!product || product.stock < quantity) {
-    throw new Error('Insufficient stock');
-  }
+const addToCart = async (user_id, product_id, stock, quantity, size) => {
+  await db('carts').insert({user_id, product_id, quantity, size });
 
-  await db('carts').insert({user_id, product_id, quantity });
-
-  await db('products')
-    .where('product_id', product_id)
-    .update({ stock: product.stock - quantity });
+  await db('product_sizes')
+    .where('size', size)
+    .update({ stock: stock - quantity });
 
   return true;
 };
 
-const updateCartItem = async (cart_id, newQuantity) => {
+const updateCartItem = async (cart_id, newQuantity, size) => {
   const cartItem = await db('carts').where('cart_id', cart_id).first();
   if (!cartItem) {
     throw new Error('Cart item not found');
   }
 
-  const product = await db('products').where('product_id', cartItem.product_id).first();
+  const product = await db('product_sizes').where('size', size).first();
   if (!product) {
     throw new Error('Product not found');
   }
@@ -65,8 +61,8 @@ const updateCartItem = async (cart_id, newQuantity) => {
     throw new Error('Insufficient stock available');
   }
 
-  await db('products')
-    .where('product_id', cartItem.product_id)
+  await db('product_sizes')
+    .where('size', size)
     .update({ stock: product.stock - quantityDifference });
 
   await db('carts')
@@ -75,17 +71,16 @@ const updateCartItem = async (cart_id, newQuantity) => {
 };
 
 
-const removeFromCart = async (cart_id) => {
+const removeFromCart = async (cart_id, size) => {
   const cartItem = await db('carts').where('cart_id', cart_id).first();
   if (!cartItem) {
     throw new Error('Cart item not found');
   }
+  const product = await db('product_sizes').where('size', cartItem.size).first();
 
-  const product = await db('products').where('product_id', cartItem.product_id).first();
-
-  await db('products')
-    .where('product_id', cartItem.product_id)
-    .update({ stock: product.stock + cartItem.quantity });
+  await db('product_sizes')
+    .where('size', cartItem.size)
+    .update({ stock: product.stock  + cartItem.quantity });
 
   await db('carts').where('cart_id', cart_id).del();
 };

@@ -8,6 +8,7 @@ exports.up = function(knex) {
     table.integer('user_id').unsigned().notNullable().references('user_id').inTable('users').onDelete('CASCADE');
     table.integer('product_id').unsigned().notNullable().references('product_id').inTable('products').onDelete('CASCADE');
     table.integer('quantity').notNullable();
+    table.enum('size', ['S', 'M', 'L', 'XL', 'XXL']);
   })
 };
 
