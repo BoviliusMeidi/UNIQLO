@@ -13,7 +13,9 @@ exports.up = function (knex) {
         table.integer('price', 10).notNullable();
         // table.integer('stock', 8).notNullable();
         // table.enum('size', ['S', 'M', 'L', 'XL', 'XXL']).notNullable();
-        table.string('description', 255).notNullable();
+        table.text('description');
+        table.text('material');
+        table.text('fitur');
         table.integer('code_product', 10).notNullable().unique();
     });
 };
