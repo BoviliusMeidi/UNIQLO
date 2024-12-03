@@ -21,9 +21,9 @@ exports.seed = async function (knex) {
       code_product:469926
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/KemejaBroadcloth_1.jpg', 
+      product_picture_2: '../../assets/stores/products/KemejaBroadcloth_2.jpg', 
+      product_picture_3: '../../assets/stores/products/KemejaBroadcloth_3.jpg',
       product_name: 'Kemeja Broadcloth Oversize | Lengan Panjang', 
       category: 'MEN', 
       price: '499000', 
@@ -33,9 +33,9 @@ exports.seed = async function (knex) {
       code_product:478812
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/CelanaChino_1.jpg', 
+      product_picture_2: '../../assets/stores/products/CelanaChino_2.jpg', 
+      product_picture_3: '../../assets/stores/products/CelanaChino_3.jpg',
       product_name: 'Celana Chino Slim Fit', 
       category: 'MEN', 
       price: '599000',
@@ -45,9 +45,9 @@ exports.seed = async function (knex) {
       code_product:463915
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/T-ShirtSoftTouch_1.jpg', 
+      product_picture_2: '../../assets/stores/products/T-ShirtSoftTouch_2.jpg', 
+      product_picture_3: '../../assets/stores/products/T-ShirtSoftTouch_3.jpg',
       product_name: 'T-Shirt Soft Touch (Soft brushed) Kerah Bulat | Lengan Panjang', 
       category: 'MEN', 
       price: '199000',
@@ -57,9 +57,9 @@ exports.seed = async function (knex) {
       code_product:469940
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/KaosKakiWarna_1.jpg', 
+      product_picture_2: '../../assets/stores/products/KaosKakiWarna_2.jpg', 
+      product_picture_3: '../../assets/stores/products/KaosKakiWarna_3.jpg',
       product_name: 'Kaos Kaki Warna', 
       category: 'MEN', 
       price: '39000',
@@ -69,9 +69,9 @@ exports.seed = async function (knex) {
       code_product:477157
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/JaketBlouson_1.jpg', 
+      product_picture_2: '../../assets/stores/products/JaketBlouson_2.jpg', 
+      product_picture_3: '../../assets/stores/products/JaketBlouson_3.jpg',
       product_name: 'Jaket Blouson Pendek Utilitas', 
       category: 'MEN', 
       price: '499000',
@@ -81,9 +81,9 @@ exports.seed = async function (knex) {
       code_product:459592
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/SweaterExtraFine_1.jpg', 
+      product_picture_2: '../../assets/stores/products/SweaterExtraFine_2.jpg', 
+      product_picture_3: '../../assets/stores/products/SweaterExtraFine_3.jpg',
       product_name: 'Sweater Extra Fine Merino Kerah Bulat Lengan Panjang', 
       category: 'MEN', 
       price: '499000',
@@ -93,9 +93,9 @@ exports.seed = async function (knex) {
       code_product:469395
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/KemejaOxford_1.jpg', 
+      product_picture_2: '../../assets/stores/products/KemejaOxford_2.jpg', 
+      product_picture_3: '../../assets/stores/products/KemejaOxford_3.jpg',
       product_name: 'Kemeja Oxford | Lengan Panjang Regular Fit', 
       category: 'MEN', 
       price: '399000',
@@ -105,9 +105,9 @@ exports.seed = async function (knex) {
       code_product:475998
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/JeansSlimFit_1.jpg', 
+      product_picture_2: '../../assets/stores/products/JeansSlimFit_2.jpg', 
+      product_picture_3: '../../assets/stores/products/JeansSlimFit_3.jpg',
       product_name: 'Jeans Slim Fit Stretch Selvedge', 
       category: 'MEN', 
       price: '599000',
@@ -117,9 +117,9 @@ exports.seed = async function (knex) {
       code_product:475548
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/KemejaLuaranJersey_1.jpg', 
+      product_picture_2: '../../assets/stores/products/KemejaLuaranJersey_2.jpg', 
+      product_picture_3: '../../assets/stores/products/KemejaLuaranJersey_3.jpg',
       product_name: 'Kemeja Luaran Jersey | Lengan Panjang', 
       category: 'MEN', 
       price: '599000',
@@ -129,9 +129,9 @@ exports.seed = async function (knex) {
       code_product:470298
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/KemejaOxfordGaris_1.jpg', 
+      product_picture_2: '../../assets/stores/products/KemejaOxfordGaris_2.jpg', 
+      product_picture_3: '../../assets/stores/products/KemejaOxfordGaris_3.jpg',
       product_name: 'Kemeja Oxford Garis | Lengan Panjang Regular Fit', 
       category: 'MEN', 
       price: '399000',
@@ -141,9 +141,9 @@ exports.seed = async function (knex) {
       code_product:475999
     },
 
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', 
-      product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg',
+    { product_picture: '../../assets/stores/products/JeansWarnaUltra_1.jpg', 
+      product_picture_2: '../../assets/stores/products/JeansWarnaUltra_2.jpg', 
+      product_picture_3: '../../assets/stores/products/JeansWarnaUltra_3.jpg',
       product_name: 'Jeans Warna Ultra Stretch (Skinny Fit)', 
       category: 'MEN', 
       price: '399000',
