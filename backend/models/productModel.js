@@ -22,7 +22,9 @@ const createProduct = async (product_name, product_picture, category, price, sto
 
 const getProducts = async () => {
     try {
-        const products = await db('products').select('*');
+        const products = await db('products')
+        .join('product_sizes', 'products.code_product', 'product_sizes.code_product')
+        .select('*');
         return products.length > 0 ? products : null;
     } catch (error) {
         console.error('Error fetching products:', error);
