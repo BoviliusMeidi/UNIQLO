@@ -36,7 +36,7 @@ app.controller('AdminController', function ($scope, $http) {
   $scope.carts = [];
   $scope.searchQuery = '';
   $scope.newProduct = {};
-  $scope.categories = ['MAN', 'WOMAN', 'KIDS'];
+  $scope.categories = ['MEN', 'WOMAN', 'KIDS'];
   $scope.sizes = ['S', 'M', 'L', 'XL', 'XXL'];
 
   // function for load data
@@ -125,11 +125,11 @@ app.controller('AdminController', function ($scope, $http) {
   };
 
   // delete function
-  $scope.deleteProduct = function (productId) {
+  $scope.deleteProduct = function (productId, size) {
     if (confirm('Are you sure you want to delete this product?')) {
-      $http.delete(API_ADMIN_URL + `products/${productId}`, { withCredentials: true })
+      $http.delete(API_ADMIN_URL + `products/${productId}/${size}`, { withCredentials: true })
         .then(function () {
-          $scope.products = $scope.products.filter(p => p.product_id !== productId);
+          $scope.products = $scope.products.filter(p => p.size !== size);
           alert('Product deleted successfully.');
         })
         .catch(function (error) {

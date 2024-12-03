@@ -59,10 +59,10 @@ const editProduct = async (req, res) => {
 };
 
 const removeProduct = async (req, res) => {
-  const { id } = req.params;
+  const { id, size } = req.params;
 
   try {
-    const deleted = await deleteProduct(id);
+    const deleted = await deleteProduct(id, size);
 
     if (deleted) {
       res.json({ message: "Product deleted successfully" });

@@ -68,7 +68,7 @@
           <td class="action-buttons">
             <button class="save-button" ng-if="product.isEditing" ng-click="saveProduct(product)">Save</button>
             <button class="edit-button" ng-if="!product.isEditing" ng-click="editProduct(product)">Edit</button>
-            <button class="delete-button" ng-click="deleteProduct(product.product_id)">Delete</button>
+            <button class="delete-button" ng-click="deleteProduct(product.product_id, product.size)">Delete</button>
           </td>
         </tr>
       </tbody>

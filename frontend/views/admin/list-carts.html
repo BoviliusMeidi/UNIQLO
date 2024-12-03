@@ -30,6 +30,7 @@
                     <th>Product Name</th>
                     <th>Price</th>
                     <th>Product Picture</th>
+                    <th>Size</th>
                     <th>Quantity</th>
                     <th>Actions</th>
                 </tr>
@@ -62,6 +63,10 @@
                     </td>
                     <td>
                         <img ng-src="{{ cart.product_picture }}" alt="{{cart.product_picture }}">
+                    </td>
+                    <td>
+                        <span ng-if="!cart.isEditing">{{ cart.size }}</span>
+                        <input ng-if="cart.isEditing" type="text" ng-model="cart.size">
                     </td>
                     <td>
                         <span ng-if="!cart.isEditing">{{ cart.quantity }}</span>

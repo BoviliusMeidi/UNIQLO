@@ -10,14 +10,14 @@ app.controller('CartController', function ($http, $scope) {
     .catch(function (error) {
       console.error('Error fetching cart:', error);
       localStorage.setItem('showAlert', true);
-      window.location.href = UI_URL + 'authentication/login.html';
+      // window.location.href = UI_URL + 'authentication/login.html';
       $scope.loading = false;
     });
 
   $scope.increaseQuantity = function (cartItem) {
     const newQuantity = cartItem.quantity + 1;
 
-    $http.put(API_URL + `cart/${cartItem.cart_id}`, { quantity: newQuantity }, { withCredentials: true })
+    $http.put(API_URL + `cart/${cartItem.cart_id}`, { quantity: newQuantity, size:cartItem.size }, { withCredentials: true })
       .then(() => {
         cartItem.quantity = newQuantity;
       })
@@ -30,7 +30,7 @@ app.controller('CartController', function ($http, $scope) {
     if (cartItem.quantity > 1) {
       const newQuantity = cartItem.quantity - 1;
 
-      $http.put(API_URL + `cart/${cartItem.cart_id}`, { quantity: newQuantity }, { withCredentials: true })
+      $http.put(API_URL + `cart/${cartItem.cart_id}`, { quantity: newQuantity, size:cartItem.size  }, { withCredentials: true })
         .then(() => {
           cartItem.quantity = newQuantity;
         })
