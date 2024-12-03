@@ -8,7 +8,19 @@ exports.seed = async function (knex) {
     { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Kemeja Flannel I Lengan Panjang Kotak (Button-down)', category: 'MEN', price: '399000', stock: '100', size: 'XL', description: 'Kemeja Panjang' },
     
     // Stockholm
-    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Rompi Ultra Light Down', category: 'MEN', price: '699000', stock: '100', size: 'XL', description: 'Kode Produk: 472294' },
+
+    //Men Category
+
+    //Edinburgh
+    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Jaket Trucker Denim', category: 'MEN', price: '699000', stock: '100', size: 'XL', description: 'Kode Produk: 472294' },
+    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Sweater', category: 'MEN', price: '399000', stock: '100', size: 'XL', description: 'Kode Produk: 469926' },
+    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Kemeja broadcloth Oversize | Lengan Panjang', category: 'MEN', price: '499000', stock: '100', size: 'XL', description: 'Kode Produk: 478812' },
+    { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_2: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_picture_3: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Celana Chino Slim Fit', category: 'MEN', price: '599000', stock: '100', size: 'XL', description: 'Kode Produk: 475560' },
+
+
+    //Woman Category
+
+    //Edinburgh
     { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Kemeja Flannel | Lengan Panjang Kotak', category: 'MEN', price: '399000', stock: '100', size: 'XL', description: 'Kode Produk: 470189' },
     { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Kemeja Flannel | Lengan Panjang Kotak', category: 'WOMAN', price: '399000', stock: '100', size: 'XL', description: 'Kode Produk: 470189' },
     { product_picture: '../../assets/stores/products/KemejaFlannelILenganPanjangKotak(Button-Down).jpg', product_name: 'Celana Chino Fit Lebar', category: 'MEN', price: '599000', stock: '100', size: 'XL', description: 'Kode Produk: 475564' },
