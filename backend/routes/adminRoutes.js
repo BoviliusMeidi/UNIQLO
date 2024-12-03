@@ -14,7 +14,7 @@ router.get('/products', listProducts);
 router.post('/product/upload', uploadMiddleware.single('image'), uploadProductImage);
 router.get('/products', makeProduct);
 router.put('/products/:id', editProduct);
-router.delete('/products/:id', removeProduct);
+router.delete('/products/:id/:size', removeProduct);
 
 // carts
 router.get('/carts', listCarts);
