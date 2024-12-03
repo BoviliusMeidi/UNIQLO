@@ -29,11 +29,11 @@
                 <img ng-src="{{ product.product_picture }}" class="d-block w-100" alt="Image 1">
               </div>
               <div class="carousel-item">
-                <img src="https://www.uniqlo.com/id/en/news/topics/2024110801/img/mimg_1_m.jpg" class="d-block w-100"
+                <img ng-src="{{ product.product_picture_2 }}" class="d-block w-100"
                   alt="Image 2">
               </div>
               <div class="carousel-item">
-                <img src="/frontend/assets/magazine/Magazine_7.png" class="d-block w-100" alt="Image 3">
+                <img ng-src="{{ product.product_picture_3 }}" class="d-block w-100" alt="Image 3">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -80,18 +80,14 @@
       <div class="product-description">
         <h2>Deskripsi</h2>
         <h3>Detail</h3>
+        <p>{{ product.fitur }}</p>
+        <hr>
         <p>{{ product.description }}</p>
-      </div>
-      <div class="product-description">
+        <hr>
         <h3>Material / Pertunjuk Perawatan</h3>
-        <p>Kode Produk 476316</p>
-        <p>Harap dicatat bahwa produk ini mungkin memiliki ID produk yang berbeda, meskipun itu adalah produk yang
-          serupa. Detail kain Kulit: 84% Poliester, 16% Kapas (50% Menggunakan Serat Poliester Daur Ulang)/ Pelapis:
-          100% Poliester/ Kain Kantong: 100% Poliester</p>
-        <p>Instruksi pencucian</p>
-        <p>Dicuci dengan tangan, Tidak boleh dilakukan dry clean, Jangan gunakan mesin pengering.</p>
+        <p>{{ product.material }}</p>
       </div>
-      <div class="evaluation">
+      <!-- <div class="evaluation">
         <h1>Ulasan</h1>
         <hr>
         <h2>Love the design and quality</h2>
@@ -99,12 +95,12 @@
           touch of art. The quality and attention to detail are impressive, and it's perfect for adding a bold statement
           to any outfit. Definitely a must-have for any KAWS fan or anyone who appreciates stylish, artistic outerwear!
         </p>
-      </div>
+      </div> -->
     </div>
   </main>
 
   <!-- footer -->
-  <!-- <footer class="footer-container"></footer> -->
+  <footer class="footer-container"></footer>
   <!-- finish footer -->
   <script src="/frontend/scripts/product-detail.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>

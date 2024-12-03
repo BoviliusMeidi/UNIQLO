@@ -145,7 +145,7 @@ body {
 
 .product-description {
   padding: 9rem;
-  height: 52vh;
+  height: auto;
 }
 
 .product-description h2 {
@@ -165,9 +165,9 @@ body {
   text-align: justify;
 }
 
-.evaluation {
+/* .evaluation {
   padding: 9rem;
-  height: 100vh;
+  height: auto;
 }
 
 .evaluation h1 {
@@ -182,7 +182,7 @@ body {
 .evaluation p {
   font-size: 20px;
   text-align: justify;
-}
+} */
 
 .selected-size {
   color: #ff0000;

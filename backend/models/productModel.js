@@ -10,7 +10,7 @@ const createProduct = async (product_name, product_picture, category, price, sto
                 price,
                 stock,
                 size,
-                description
+                description,
             })
             .returning('*');
         return product;
@@ -46,6 +46,8 @@ const getProductById = async (id) => {
                 'products.category',
                 'products.price',
                 'products.description',
+                'products.fitur',
+                'products.material',
                 'products.code_product',
                 'product_sizes.id',
                 'product_sizes.size',
@@ -65,6 +67,8 @@ const getProductById = async (id) => {
             category: product[0].category,
             price: product[0].price,
             description: product[0].description,
+            fitur: product[0].fitur,
+            material: product[0].material,
             code_product: product[0].code_product,
             sizes: product.map((p) => ({
                 id: p.id,
