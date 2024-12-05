@@ -1,6 +1,10 @@
+html{
+  overflow-x: hidden;
+}
+
 .carousel {
-  margin-top: 8rem;
   position: relative;
+  margin-top: 6rem;
 }
 
 .carousel-inner {
@@ -8,8 +12,16 @@
 }
 
 .carousel-item img {
-  object-fit: fill;
-  height: 30rem;
+  object-fit:cover;
+  height: 50rem;
+  width: 100vm;
+}
+
+.container h1{
+  text-align: center;
+  justify-content: center;
+  font-size: 40;
+  margin-top: 2rem;
 }
 
 .custom-card {
@@ -17,6 +29,7 @@
   width: auto;
   overflow: hidden; 
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .custom-card img {
@@ -25,9 +38,30 @@
   object-fit: cover;
 }
 
+.video {
+  width: 100vw;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  margin-top: 3rem;
+}
+
+iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw; 
+  height: 56.25vw; 
+}
+
 /* Third Page Styles */
 .third-page {
-  height: 100vh;
+  height: 85vh;
   padding: 2rem 12rem 0;
   display: flex;
   flex-direction: column;
