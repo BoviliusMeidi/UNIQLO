@@ -10,7 +10,7 @@ app.controller('CartController', function ($http, $scope) {
     .catch(function (error) {
       console.error('Error fetching cart:', error);
       localStorage.setItem('showAlert', true);
-      // window.location.href = UI_URL + 'authentication/login.html';
+      window.location.href = UI_URL + 'authentication/login.html';
       $scope.loading = false;
     });
 

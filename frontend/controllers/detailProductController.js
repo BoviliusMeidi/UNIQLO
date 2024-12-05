@@ -54,6 +54,7 @@ app.controller('DetailProductController', function ($http, $scope, $location) {
         .catch(function (error) {
           console.error('Error adding to cart:', error);
           alert("You must login first.");
+          window.location.href = UI_URL + 'authentication/login.html';
         })
         .finally(function () {
           $scope.loadingCart = false;
